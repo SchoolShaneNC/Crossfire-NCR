@@ -1,0 +1,308 @@
+/* Basic reset for padding/margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.webpageSettings {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* Navbar */
+.topbar {
+    background-color: #fff;
+    position: fixed; 
+    margin-left: 0%;
+    top: 0;
+    width: 100%;
+    z-index: 1; 
+    height: 70px;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 7%;
+    background-color: #5897c9;
+    color: white;
+    position: fixed;
+    top: 50px; 
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    display: block;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.sidebar img {
+    width: 100%;
+}
+
+/* Styling for each bar (the logo and user sections) */
+.bar {
+    display: flex;
+    align-items: center;
+    background-color: #173541;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Styling for the images */
+.bar-image {
+    width: 100%; 
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Styling for the username text */
+.username {
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/* Add some padding to the content so it doesn't hide under the navbar */
+.bkgr-main {
+    margin-left: 7%;
+    padding-top: 60px; 
+    background-color: gray;
+    height: 450px;
+}
+
+.reportClass {
+    margin-left: 7%;
+    padding-top: 60px; 
+    height: 450px;
+}
+
+.form-class {
+    margin-left: 7%;
+    padding-bottom: 60px;
+}
+
+#view-forms-h1 {
+    margin-top: 100px;
+}
+
+.reportClass h1 {
+    display: block;
+    align-items: center;
+}
+
+.bkgr-main img {
+    display: block;
+    margin: auto;
+}
+
+/* Container for the 4 sections */
+.content-nav {
+    margin-left: 7%;
+    padding-top: 60px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Styling for each section */
+.grid-section {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 100%;
+    margin: 0 70px 0 70px;
+    padding: 50px;
+}
+
+.grid-section div, .grid-section h2{
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.grid-section h2{
+    margin-bottom: 5px;
+}
+
+.grid-section a {
+    border-radius: 10px;
+    background-color: #5897c9;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+.grid-section a:visited, .grid-section a:link{
+    color: #fff;
+    text-decoration: none;
+}
+
+.grid-section a:hover{
+    background-color: #173541;
+}
+
+/* Box at the top of each section */
+.top-box {
+    width: 50%;
+    height: 50%;
+    background-color: #ccc;
+    margin-bottom: 10px; 
+}
+
+/* Header styling */
+h2 {
+    margin: 0 0 10px 0; 
+    font-size: 1.5em;
+}
+
+/* Paragraph styling */
+p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Center the h1 title */
+.center-text {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Align h2 to the left */
+.left-align {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Form styling */
+.ncr-form {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* General input styling */
+input[type="text"], input[type="number"], textarea, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/* Grid layout for the 4 corners in Product Details */
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Grid layout for the Final Section with two fields beside each other */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Radio button group */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Fieldset styling */
+fieldset {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for textareas */
+textarea {
+    resize: vertical; 
+}
+
+/* Center the save button */
+.button{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #5897c9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #173541;
+}
+
+#return-button {
+    margin-top: 40px;
+    width: 150px;
+    text-align: center;
+}
+
+.styled-table {
+    width: 65%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: left;
+}
+
+tr {
+    background-color: #daeeff;
+}
+
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; 
+}
+
+.styled-table thead tr {
+    background-color: #173541;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3; /* Add zebra-striping to rows */
+}
+
+.styled-table tbody tr:hover {
+    color: #fff;
+    background-color: #5897c9; /* Add hover effect */
+}
+
+.filter-box {
+    width: 50%; 
+    margin: 20px auto;
+    margin-bottom: 50px; 
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}

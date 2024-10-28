@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body class="webpageSettings">
+    <header>
+        <div class="topbar">
+            <div class="logo">
+                <div>
+                    <img src="Images/crossfire-logo-no-bkgd.png" alt="Logo" class="bar-image"
+                    height="189" width="867">
+                </div>
+            </div>
+        
+
+            <div class="bar">
+                <p class="username">FirstName LastName : Manager</p> 
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="sidebar">
+            <a href="index.html"><img src="Images/iconTesting.png" alt="Home" /></a>
+            <a href="formCreate.html"><img src="Images/iconTesting.png" alt="Create forms" /></a>
+            <a href="formView.html"><img src="Images/iconTesting.png" alt="View and edit forms" /></a>
+        </div>
+    
+        <div class="form-class">
+
+            <h1 id="view-forms-h1" class="center-text">NCR Report List</h1>
+            
+            <div class="filter-box">
+                <h2>Filter Options</h2>
+                
+                <label for="filter1">Product Name:</label>
+                <input type="text" id="filter1" name="filter1" placeholder="Enter Name..."><br><br>
+            
+                <label for="filter2">Quantity Received:</label>
+                <input type="text" id="filter2" name="filter2" placeholder="Enter Quantity..."><br><br>
+            
+                <label for="filter3">Quantity Defective:</label>
+                <input type="text" id="filter3" name="filter3" placeholder="Enter Quantity..."><br><br>
+            
+                <button id="resetButton" class="button">Reset Filters</button>
+            </div>
+    
+    
+            <table id="ncrTable" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>NCR No.</th>
+                        <th>Product Name</th>
+                        <th>Quantity Received</th>
+                        <th>Quantity Defective</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>001</td>
+                        <td>Product A</td>
+                        <td>100</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Product B</td>
+                        <td>200</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Product C</td>
+                        <td>150</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Product D</td>
+                        <td>300</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Product E</td>
+                        <td>120</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Product F</td>
+                        <td>500</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>007</td>
+                        <td>Product G</td>
+                        <td>450</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>Product H</td>
+                        <td>250</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td>Product I</td>
+                        <td>100</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>010</td>
+                        <td>Product J</td>
+                        <td>600</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td>Product K</td>
+                        <td>700</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>012</td>
+                        <td>Product L</td>
+                        <td>250</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>013</td>
+                        <td>Product M</td>
+                        <td>350</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>014</td>
+                        <td>Product N</td>
+                        <td>180</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>015</td>
+                        <td>Product O</td>
+                        <td>400</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>016</td>
+                        <td>Product P</td>
+                        <td>220</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>017</td>
+                        <td>Product Q</td>
+                        <td>320</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>018</td>
+                        <td>Product R</td>
+                        <td>100</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>019</td>
+                        <td>Product S</td>
+                        <td>450</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>020</td>
+                        <td>Product T</td>
+                        <td>560</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>021</td>
+                        <td>Product U</td>
+                        <td>310</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>022</td>
+                        <td>Product V</td>
+                        <td>170</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>023</td>
+                        <td>Product W</td>
+                        <td>280</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a id="return-button" class="button" href="index.html">Back to home page</a>
+        </div>
+    </main>
+    <script src="scripts/FilterReset.js"></script>
+</body>
+</html>
+
+
+
