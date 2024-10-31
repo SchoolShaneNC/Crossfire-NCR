@@ -35,16 +35,17 @@ function searchFilter()
                 }
         }
     }
+    
     //on button click
     let reset = document.getElementById("resetButton").addEventListener("click", resetFilters);
     function resetFilters()
     {
-    //sets all filter textboxs to empty
+        //sets all filter textboxs to empty
         document.getElementById("filter1").value = "";
         document.getElementById("filter2").value = "";
         document.getElementById("filter3").value = "";
-    //retrieves table once again, loops through each row and displays it
-    //without table stays on the filtered version with emptied filters
+        //retrieves table once again, loops through each row and displays it
+        //without table stays on the filtered version with emptied filters
         var table = document.getElementById("ncrTable");
         var tr = table.getElementsByTagName("tr");
         for (var i = 0; i < tr.length; i++) {
