@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body class="webpageSettings">
     <header>
@@ -16,7 +19,6 @@
                 </div>
             </div>
         
-
             <div class="bar">
                 <p class="username">FirstName LastName : Manager</p> 
             </div>
@@ -25,83 +27,111 @@
     
     <main>
         <div class="sidebar">
-            <a href="index.html"><img src="Images/iconTesting.png" alt="Home" /></a>
-            <a href="formCreate.html"><img src="Images/iconTesting.png" alt="Create forms" /></a>
-            <a href="formView.html"><img src="Images/iconTesting.png" alt="View and edit forms" /></a>
+            <a href="index.html"><img src="Images/home-icon.png" alt="Home"></a>
+            <a href="formCreate.html"><img src="Images/add-file-icon.png" alt="Create forms"></a>
+            <a href="formView.html"><img src="Images/lookup-icon.png" alt="View and edit forms"></a>
         </div>
-        
-        <a class="button" href="index.html">Back to home page</a>
 
-        <div class="reportClass">   
-            <form class="ncr-form">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Create</li>
+        </ul>
+
+        <div class="form-class">
+            <h1 class="header-text">Non-Conformance Report</h1>
+
+            <div>   
+                <form class="ncr-form filter-box">
+
+                    <div id="form-big-overall" class="grid-4">
+                        <div>
+                            <h2 class="left-align">NCR Details</h2>
+                            <!-- NCR No. -->
+                            <label for="ncrNo">NCR No.</label>
+                            <input type="text" id="ncrNo" name="ncrNo">
+
+                            <div id="identity-process-label">
+                                <label for="identity-process">Identity Process Applicable</label>
+                            
+                                <div id="identity-process" class="radio-group">
+                                    <input type="radio" id="supplier-rec-insp" name="nonConforming" value="supplier">
+                                    <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
+                        
+                                    <input type="radio" id="wip" name="nonConforming" value="wip">
+                                    <label for="wip">WIP (Production Order)</label>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Product Details -->
+                            <h2 class="left-align">Product Details</h2>
+                                        
+                            <label for="supplierName">Supplier Name</label>
+                            <input type="text" id="supplierName" name="supplierName"><br><br>
+
+                            <div class="grid-4">
+                                <div>
+                                    <label for="poProdNo">PO or Prod. No.</label>
+                                    <input type="text" id="poProdNo" name="poProdNo">
+                                </div>
+                                <div>
+                                    <label for="salesOrderNo">Sales Order No.</label>
+                                    <input type="text" id="salesOrderNo" name="salesOrderNo">
+                                </div>
+                                <div>
+                                    <label for="quantityReceived">Quantity Received</label>
+                                    <input type="number" id="quantityReceived" name="quantityReceived">
+                                </div>
+                                <div>
+                                    <label for="quantityDefective">Quantity Defective</label>
+                                    <input type="number" id="quantityDefective" name="quantityDefective">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <!-- Item Details -->
+                            <h2 class="left-align">Item Details</h2>
                 
-                <h1 class="center-text">Non-Conformance Report</h1>
-
-                <!-- NCR No. -->
-                <label for="ncrNo">NCR No.:</label>
-                <input type="text" id="ncrNo" name="ncrNo"><br><br>
-    
-                <!-- Product Details -->
-                <h2 class="left-align">Product Details</h2>
-    
-                <label for="supplierName">Supplier Name:</label>
-                <input type="text" id="supplierName" name="supplierName"><br><br>
-    
-                <div class="grid-4">
-                    <div>
-                        <label for="poProdNo">PO or Prod. No.:</label>
-                        <input type="text" id="poProdNo" name="poProdNo">
+                            <label for="itemDescription">Description of Item</label><br>
+                            <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea>
+                
+                            <label for="itemDefect">Description of Defect</label><br>
+                            <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"></textarea>
+                        </div>
                     </div>
-                    <div>
-                        <label for="salesOrderNo">Sales Order No.:</label>
-                        <input type="text" id="salesOrderNo" name="salesOrderNo">
+                    
+                    <div id="form-final-section">
+                        <!-- Final Section -->
+                        <h2 class="left-align">Final Section</h2>
+                
+                        <label for="non-con">Item marked Non-Conforming</label>
+                        <div id="non-con" class="radio-group">
+                            <input type="radio" id="yes" name="nonConforming" value="yes">
+                            <label for="yes">Yes</label>
+                
+                            <input type="radio" id="no" name="nonConforming" value="no">
+                            <label for="no">No</label>
+                        </div>
+                
+                        <div id="quality-rep" class="grid-2">
+                            <div>
+                                <label for="qualityRepName">Quality Representative's Name</label>
+                                <input type="text" id="qualityRepName" name="qualityRepName">
+                            </div>
+                            <div>
+                                <label for="date">Date:</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label for="quantityReceived">Quantity Received:</label>
-                        <input type="number" id="quantityReceived" name="quantityReceived">
-                    </div>
-                    <div>
-                        <label for="quantityDefective">Quantity Defective:</label>
-                        <input type="number" id="quantityDefective" name="quantityDefective">
-                    </div>
-                </div><br>
-    
-                <!-- Item Details -->
-                <h2 class="left-align">Item Details</h2>
-    
-                <label for="itemDescription">Description of Item:</label><br>
-                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea><br><br>
-    
-                <label for="itemDefect">Description of Defect:</label><br>
-                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"></textarea><br><br>
-    
-                <!-- Final Section -->
-                <h2 class="left-align">Final Section</h2>
-    
-                <p class="left-align">Item marked Non-Conforming:</p>
-                <div class="radio-group">
-                    <input type="radio" id="yes" name="nonConforming" value="yes">
-                    <label for="yes">Yes</label>
-    
-                    <input type="radio" id="no" name="nonConforming" value="no">
-                    <label for="no">No</label>
-                </div><br>
-    
-                <div class="grid-2">
-                    <div>
-                        <label for="qualityRepName">Quality Representative's Name:</label>
-                        <input type="text" id="qualityRepName" name="qualityRepName">
-                    </div>
-                    <div>
-                        <label for="date">Date:</label>
-                        <input type="date" id="date" name="date">
-                    </div>
-                </div><br>
-    
-                <!-- Save Button -->
-                <button type="submit" class="button">Save Document</button>
-            </form>
+        
+                    <!-- Save Button -->
+                    <button id="save-doc-button" type="submit" class="button">Save Document</button>
+                </form>
+            </div>
         </div>
     </main>
+    <script src="scripts/save-doc-popup.js"></script>
 </body>
 </html>

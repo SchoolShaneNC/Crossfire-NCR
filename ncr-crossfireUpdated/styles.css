@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
 
 .webpageSettings {
@@ -12,7 +13,7 @@
 
 /* Navbar */
 .topbar {
-    background-color: #fff;
+    background-color: #173541;
     position: fixed; 
     margin-left: 0%;
     top: 0;
@@ -28,7 +29,6 @@
 .sidebar {
     width: 7%;
     background-color: #5897c9;
-    color: white;
     position: fixed;
     top: 50px; 
     bottom: 0;
@@ -39,14 +39,20 @@
 
 /* Sidebar links */
 .sidebar a {
+    background-image:linear-gradient(to top,  #fff 40%, #f0f0f0 60%) ;
+    border-radius: 10px;
     display: block;
-    color: white;
-    padding: 10px 15px;
+    padding: 5px 10px;
+    margin: 20px 20px 20px;
     text-decoration: none;
 }
 
 .sidebar img {
     width: 100%;
+}
+
+.sidebar img:hover{
+
 }
 
 /* Styling for each bar (the logo and user sections) */
@@ -56,6 +62,12 @@
     background-color: #173541;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.logo{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3px 10px 0;
 }
 
 /* Styling for the images */
@@ -72,18 +84,8 @@
 }
 
 
-/* Add some padding to the content so it doesn't hide under the navbar */
-.bkgr-main {
-    margin-left: 7%;
-    padding-top: 60px; 
-    background-color: gray;
-    height: 450px;
-}
-
 .reportClass {
-    margin-left: 7%;
-    padding-top: 60px; 
-    height: 450px;
+    padding-top: 20px; 
 }
 
 .form-class {
@@ -92,7 +94,7 @@
 }
 
 #view-forms-h1 {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .reportClass h1 {
@@ -105,16 +107,22 @@
     margin: auto;
 }
 
+#grid-form-view{
+    display: grid;
+    grid-template-columns: 1.25fr 2fr;
+    gap: 50px;
+    margin: 0 175px;
+}
+
 /* Container for the 4 sections */
 .content-nav {
-    margin-left: 7%;
-    padding-top: 60px;
-    height: 500px;
+    padding-top: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    gap: 20px;
+    gap: 60px;
     justify-content: center; 
     align-items: center; 
+    margin: 0 100px;
 }
 
 /* Styling for each section */
@@ -122,11 +130,10 @@
     background-color: #f0f0f0;
     border-radius: 10px;
     height: 100%;
-    margin: 0 70px 0 70px;
     padding: 50px;
 }
 
-.grid-section div, .grid-section h2{
+.grid-section, .grid-section h2{
     margin: 0 auto;
     margin-bottom: 15px;
     text-align: center;
@@ -141,9 +148,9 @@
     background-color: #5897c9;
     display: block;
     text-align: center;
-    padding: 30px;
+    padding: 20px 20px 40px;
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
 }
 
 
@@ -157,11 +164,10 @@
 }
 
 /* Box at the top of each section */
-.top-box {
-    width: 50%;
-    height: 50%;
-    background-color: #ccc;
-    margin-bottom: 10px; 
+
+.grid-section img{
+    width:40%;
+    margin-bottom: 25px;
 }
 
 /* Header styling */
@@ -177,24 +183,15 @@ p {
 }
 
 /* Center the h1 title */
-.center-text {
-    text-align: center;
+.header-text {
     font-size: 2em;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0 20px 90px;
 }
 
 /* Align h2 to the left */
 .left-align {
     text-align: left;
     margin-bottom: 10px;
-}
-
-/* Form styling */
-.ncr-form {
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 50px;
 }
 
 /* General input styling */
@@ -224,6 +221,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-top: 7px;
 }
 
 /* Fieldset styling */
@@ -256,14 +254,22 @@ textarea {
     background-color: #173541;
 }
 
+#scrollbar{
+    height: 408px;
+    overflow: scroll;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
 #return-button {
     margin-top: 40px;
-    width: 150px;
+    width: 200px;
     text-align: center;
 }
 
 .styled-table {
-    width: 65%;
+    width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
     font-size: 18px;
@@ -274,7 +280,6 @@ tr {
     background-color: #daeeff;
 }
 
-
 .styled-table th, .styled-table td {
     padding: 12px 15px;
     border: 1px solid #ddd; 
@@ -282,7 +287,7 @@ tr {
 
 .styled-table thead tr {
     background-color: #173541;
-    color: #ffffff;
+    color: #fff;
     text-align: left;
 }
 
@@ -296,13 +301,71 @@ tr {
 }
 
 .filter-box {
-    width: 50%; 
-    margin: 20px auto;
-    margin-bottom: 50px; 
+    width: 100%; 
+    margin: 0 auto;
+    margin-bottom: 30px; 
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; 
+}
+
+/* Form styling */
+.ncr-form {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.ncr-form button{
+    margin-top: 30px;
+}
+
+#form-big-overall{
+    row-gap: 20px;
+    column-gap: 85px;
+}
+
+#form-big-overall textarea{
+    height: 158px;
+}
+
+.ncr-form h2{
+    margin-top: 10px;
+}
+
+#quality-rep{
+    margin-top: 20px;
+}
+
+
+/**************Breadcrumb trail**************/
+.breadcrumb {
+    margin-top: 100px;
+    margin-left: 10%;
+    display: block;
+}
+
+.breadcrumb li {
+    display: inline;
+    list-style: none;
+}
+
+.breadcrumb li+li:before {
+    color: #173541;
+    content: ">\00a0";
+}
+
+.breadcrumb li a:visited, .breadcrumb li a{
+    color: #5897c9;
+    text-decoration: none;
+}
+
+.breadcrumb li a:hover{
+    color: #173541;
+}
+
+#identity-process-label{
+    margin-top: 10px;
 }
