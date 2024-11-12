@@ -6,7 +6,7 @@
     font-family: 'Roboto';
 }
 
-.grid-section, .grid-section h2, .button, .grid-section a,
+.grid-section, .grid-section h2, .grid-section a,
 #scrollbar, .filter-box, .styled-table, .ncr-form, img {
     margin: 0 auto;
 }
@@ -18,7 +18,7 @@ input[type="number"], textarea, input[type="date"],
 }
 
 .username, .grid-section a:visited, .grid-section a:link,
-.styled-table tbody tr:hover, .styled-table thead tr, .button {
+.styled-table tbody tr:hover, .styled-table thead tr, button {
     color: #fff;
 }
 
@@ -27,16 +27,50 @@ input[type="number"], textarea, input[type="date"],
 }
 
 .topbar, .bar, .grid-section a:hover,
-.styled-table thead tr, .button:hover {
+.styled-table thead tr, button:hover {
     background-color: #173541;
 }
 
-a{
+/*basic styling*/
+a {
     text-decoration: none;
+}
+
+button {
+    background-color: #5897c9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    margin-top: .2em;
+    padding: 0.2rem 0.2rem;
+    text-decoration: none;
+    width: 5em;
+}
+
+fieldset {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    margin: 0 0 10px 0; 
+    font-size: 1.5em;
 }
 
 img {
     height: auto;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+}
+
+textarea {
+    resize: vertical; 
 }
 
 .webpageSettings {
@@ -318,18 +352,6 @@ img {
     margin-bottom: 25px;
 }
 
-/* Header styling */
-h2 {
-    margin: 0 0 10px 0; 
-    font-size: 1.5em;
-}
-
-/* Paragraph styling */
-p {
-    margin: 0;
-    text-align: center;
-}
-
 /* Center the h1 title */
 .header-text {
     font-size: 2em;
@@ -370,31 +392,6 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     align-items: center;
     margin-top: 7px;
 }
-
-/* Fieldset styling */
-fieldset {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Styling for textareas */
-textarea {
-    resize: vertical; 
-}
-
-/* Center the save button */
-.button {
-    display: block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #5897c9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
 
 .scrollbar{
     height: 408px;
@@ -452,10 +449,6 @@ tr {
     padding-bottom: 50px;
 }
 
-.ncr-form button{
-    margin-top: 30px;
-}
-
 #form-big-overall{
     row-gap: 20px;
     column-gap: 85px;
@@ -472,7 +465,6 @@ tr {
 #quality-rep{
     margin-top: 20px;
 }
-
 
 /**************Breadcrumb trail**************/
 .breadcrumb {
