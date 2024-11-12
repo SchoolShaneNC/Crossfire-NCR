@@ -217,6 +217,11 @@ img {
     animation-duration: 1s;
 }
 
+.bell-anchor:hover::after{
+    animation-name: scrollbar-revert;
+    animation-duration: 1s;
+}
+
 .bell-anchor li{
     padding: 5px 10px;
     background-color: #fff;
@@ -229,9 +234,10 @@ img {
 .bell-anchor div{
     animation-name: scrollbar-revert;
     animation-duration: 500ms;
+    background-color: #d9d9d9;
     display: inline-block;
     position: absolute;
-    width: 225px;
+    width: 215px;
     height: 200px;
     right: 35px;
     top: 60px;
