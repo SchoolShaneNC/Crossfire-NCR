@@ -1,15 +1,12 @@
-
-window.onload = function() {
-    const todayDate = new Date();
-
-    const day = todayDate.getDate();
-    const month = todayDate.getMonth();
-    const year = todayDate.getFullYear();
-
-    const dateString = `${day}/${month}/${year}`;
+function autoDate(){
+        const todayDate = new Date.now();
     const dateInput = document.getElementById("date");
 
-    if (dateInput) {
-        dateInput.value = dateString;
+    if (!dateInput) {
+        dateInput.value = todayDate;
     }
+}
+
+window.onload = function() {
+ autoDate()
 };
