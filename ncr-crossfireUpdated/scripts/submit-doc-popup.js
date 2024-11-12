@@ -1,6 +1,6 @@
 document.getElementById("submit-doc-button")
     .addEventListener("click", function(){
-        let test = document.createTextNode("Saved a Document")
+        let test = document.createTextNode("Submitted a Document")
         let ul = document.getElementById("notification-list")
         let li = document.createElement("li")
 
