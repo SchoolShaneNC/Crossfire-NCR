@@ -22,9 +22,6 @@
                         <li>Welcome User</li>
                         <li>Welcome User</li>
                         <li>Welcome User</li>
-                        <li>Welcome User</li>
-                        <li>Welcome User</li>
-                        <li>Welcome User</li>
                     </ul>
                 </div>
             </button>    
@@ -45,6 +42,10 @@
                 <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
                 <p>Select form to edit</p>
             </a>
+            <a href="archivedReports.html" title="View forms list">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>Archived Reports</p>
+            </a>
         </div>
 
         <ul class="breadcrumb">
@@ -55,119 +56,188 @@
         <div class="form-class">
             <h1 class="header-text">Non-Conformance Report</h1>
 
-            <div>   
-                <form class="ncr-form filter-box">
+            <div>
+                <details>
+                    <summary class="summary"><strong>Quality Inspector</strong></summary>
 
-                    <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
+                    <form class="ncr-form filter-box">
 
-                    <div id="form-big-overall" class="grid-4">
-                        <div>
-                            <h2 class="left-align">NCR Details</h2>
-                            <!-- NCR No. -->
-                            <div class="required-field"></div>
-                            <label for="ncrNo">NCR No.</label>
-                            <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">
-                            
+                        <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
 
-                            <div id="identity-process-label">
+                        <div id="form-big-overall" class="grid-4">
+                            <div>
+                                <h2 class="left-align">NCR Details</h2>
+                                <!-- NCR No. -->
                                 <div class="required-field"></div>
-                                <label for="identity-process">Identity Process Applicable</label>
-                            
-                                <div id="identity-process" class="radio-group">
-                                    <div>
-                                        <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked>
-                                        <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
-                                    </div>
+                                <label for="ncrNo">NCR No.</label>
+                                <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">
+                                
 
-                                    <div>
-                                        <input type="radio" id="wip" name="identity-process" value="wip">
-                                        <label for="wip">WIP (Production Order)</label>
+                                <div id="identity-process-label">
+                                    <div class="required-field"></div>
+                                    <label for="identity-process">Identity Process Applicable</label>
+                                
+                                    <div id="identity-process" class="radio-group">
+                                        <div>
+                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked>
+                                            <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
+                                        </div>
+
+                                        <div>
+                                            <input type="radio" id="wip" name="identity-process" value="wip">
+                                            <label for="wip">WIP (Production Order)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Product Details -->
+                                <h2 class="left-align">Product Details</h2>
+                                
+                                <div class="required-field"></div>
+                                <label for="supplierName">Supplier Name</label>
+                                <input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">
+
+                                <div class="grid-4">
+                                    <div title="Product number">
+                                        <div class="required-field"></div>
+                                        <label for="poProdNo">PO or Prod. No.</label>
+                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############">
+                                    </div>
+                                    <div title="Sales order number">
+                                        <div class="required-field"></div>
+                                        <label for="salesOrderNo">Sales Order No.</label>
+                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required>
+                                    </div>
+                                    <div title="Number of products received from sale order">
+                                        <div class="required-field"></div>
+                                        <label for="quantityReceived">Quantity Received</label>
+                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required>
+                                    </div>
+                                    <div title="Number of defective products found in sale order">
+                                        <div class="required-field"></div>
+                                        <label for="quantityDefective">Quantity Defective</label>
+                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required>
                                     </div>
                                 </div>
                             </div>
                             
-
-                            <!-- Product Details -->
-                            <h2 class="left-align">Product Details</h2>
-                             
-                            <div class="required-field"></div>
-                            <label for="supplierName">Supplier Name</label>
-                            <input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">
-
-                            <div class="grid-4">
-                                <div title="Product number">
-                                    <div class="required-field"></div>
-                                    <label for="poProdNo">PO or Prod. No.</label>
-                                    <input type="text" id="poProdNo" name="poProdNo" required placeholder="############">
-                                </div>
-                                <div title="Sales order number">
-                                    <div class="required-field"></div>
-                                    <label for="salesOrderNo">Sales Order No.</label>
-                                    <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required>
-                                </div>
-                                <div title="Number of products received from sale order">
-                                    <div class="required-field"></div>
-                                    <label for="quantityReceived">Quantity Received</label>
-                                    <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required>
-                                </div>
-                                <div title="Number of defective products found in sale order">
-                                    <div class="required-field"></div>
-                                    <label for="quantityDefective">Quantity Defective</label>
-                                    <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required>
-                                </div>
+                            <div>
+                                <!-- Item Details -->
+                                <h2 class="left-align">Item Details</h2>
+                    
+                                <div class="required-field"></div>
+                                <label for="itemDescription">Description of Item</label>
+                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required></textarea>
+                    
+                                <div class="required-field"></div>
+                                <label for="itemDefect">Description of Defect</label>
+                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required></textarea>
                             </div>
                         </div>
                         
-                        <div>
-                            <!-- Item Details -->
-                            <h2 class="left-align">Item Details</h2>
-                
-                            <div class="required-field"></div>
-                            <label for="itemDescription">Description of Item</label>
-                            <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required></textarea>
-                
-                            <div class="required-field"></div>
-                            <label for="itemDefect">Description of Defect</label>
-                            <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required></textarea>
-                        </div>
-                    </div>
+                        <div id="form-final-section">
+                            <!-- Final Section -->
+                            <h2 class="left-align">Final Section</h2>
                     
-                    <div id="form-final-section">
-                        <!-- Final Section -->
-                        <h2 class="left-align">Final Section</h2>
-                
-                        <div class="required-field"></div>
-                        <label for="non-con">Item marked Non-Conforming</label>
-                        <div id="non-con" class="radio-group">
-                            <div>
-                                <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
-                                <label for="qi-yes">Yes</label>
+                            <div class="required-field"></div>
+                            <label for="non-con">Item marked Non-Conforming</label>
+                            <div id="non-con" class="radio-group">
+                                <div>
+                                    <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
+                                    <label for="qi-yes">Yes</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="qi-no" name="nonConforming" value="no">
+                                    <label for="qi-no">No</label>
+                                </div>
+                                
                             </div>
-                            
-                            <div>
-                                <input type="radio" id="qi-no" name="nonConforming" value="no">
-                                <label for="qi-no">No</label>
-                            </div>
-                            
-                        </div>
-                
-                        <div id="quality-rep" class="grid-2">
-                            <div>
-                                <div class="required-field"></div>
-                                <label for="qualityRepName">Quality Representative's Name</label>
-                                <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required>
-                            </div>
-                            <div>
-                                <div class="required-field"></div>
-                                <label for="date">Date:</label>
-                                <input type="date" id="date" name="date" required>
+                    
+                            <div id="quality-rep" class="grid-2">
+                                <div>
+                                    <div class="required-field"></div>
+                                    <label for="qualityRepName">Quality Representative's Name</label>
+                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required>
+                                </div>
+                                <div>
+                                    <div class="required-field"></div>
+                                    <label for="date">Date:</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
                             </div>
                         </div>
-                    </div>
-        
-                    <!-- Save Button -->
-                    <button id="save-doc-button" type="submit" class="button">Save Document</button>
-                </form>
+            
+                        <!-- Save Button -->
+                        <button id="save-doc-button" type="submit" class="button">Save Document</button>
+                    </form>
+                </details>
+
+                <details>
+                    <summary class="summary"><strong>Engineering</strong></summary>
+                    
+                    <form class="ncr-form filter-box">
+                        <h2 class="left-align">Review by CF Engineering</h2>
+                        
+                        <div>
+                            <h2 class="left-align">Disposition</h2>
+                        </div>
+                        
+                        <label>Indicate disposition by checking one of the following:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="use-as-is" name="disposition">
+                            <label for="use-as-is">Use As Is</label>
+                            <input type="radio" id="repair" name="disposition">
+                            <label for="repair">Repair</label>
+                            <input type="radio" id="rework" name="disposition">
+                            <label for="rework">Rework</label>
+                            <input type="radio" id="scrap" name="disposition">
+                            <label for="scrap">Scrap</label>
+                        </div>
+
+                        <div>
+                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated"></textarea>
+                        </div>
+
+                        <div class="grid-2">
+                            <div>
+                                <label>Does the customer require a notification for the NCR?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="notifyes" name="notification">
+                                    <label for="yes">Yes</label>
+                                    <input type="radio" id="notifno"  name="notification">
+                                    <label for="no">No</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Does the drawing require updating?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="updyes" name="update">
+                                    <label for="updyes">Yes</label>
+                                    <input type="radio" id="updno"  name="update">
+                                    <label for="updno">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-2">
+                            <label for="orgrevnum">Original Revision Number</label>
+                            <input type="number" id="orgrevnum">
+                            <label for="updrevnum">Updated Revision Number</label>
+                            <input type="number" id="updrevnum">
+                            <script src="scripts/revisionValidaton.js"></script>
+                        </div>
+                        <div class="grid-2">
+                            <label for="engName">Name of Engineer</label>
+                            <input type="text" id="engName">
+                            
+                            <label for="engDate">Date:</label>
+                            <input type="date" id="engDate" name="date">
+                        </div>
+                        <button id="save-doc-button" type="submit" class="button">Save Document</button>
+                        <button id="submit-doc-button" type="submit" class="button">Submit Document</button> 
+                    </form>
+                </details>
             </div>
         </div>
     </main>

@@ -20,9 +20,12 @@
 
                 <div class="scrollbar">
                     <ul id="notification-list">
+                        <li>Welcome User</li>
+                        <li>Welcome User</li>
+                        <li>Welcome User</li>
                     </ul>
                 </div>
-            </button> 
+            </button>    
         </div>
     </header>
 
@@ -40,6 +43,10 @@
             <a href="formView.html" title="View forms list">
                 <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
                 <p>Select form to edit</p>
+            </a>
+            <a href="archivedReports.html" title="View forms list">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>Archived Reports</p>
             </a>
         </div>
 
@@ -70,14 +77,62 @@
                 </div>
                 <div class="grid-section">
                     <!--Icon to represent file view required-->
-                    <img src="Images/archive.png" alt="View archive" height="512" width="512">
-                    <a href="formView.html">
-                        <h2>View Archive</h2>
-                        <p>View all closed documents</p>
+                    <img src="Images/iconTesting.png" alt="View Archived forms">
+                    <a href="archivedReports.html">
+                        <h2>View Archived Forms</h2>
+                        <p>View deleted and finished Non-Conformance Report documents</p>
                     </a>
                 </div>
             </div>
+
+            <div id="scrollbar">
+                <table id="ncr-recent" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>NCR No.</th>
+                            <th>Product Name</th>
+                            <th>Quantity Received</th>
+                            <th>Quantity Defective</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-005</td>
+                            <td>Product C</td>
+                            <td>150</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>2024-004</td>
+                            <td>Product D</td>
+                            <td>300</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>2024-003</td>
+                            <td>Product E</td>
+                            <td>120</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>2024-002</td>
+                            <td>Product B</td>
+                            <td>200</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-001</td>
+                            <td>Product A</td>
+                            <td>100</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+        
+
     </main>
 </body>
 </html>

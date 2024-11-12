@@ -508,3 +508,8 @@ tr {
     margin-left: 5px;
     display: inline;
 }
+
+#ncr-recent{
+    width: 60%;
+    margin-top: 50px;
+}
