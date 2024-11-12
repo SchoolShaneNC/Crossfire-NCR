@@ -13,25 +13,34 @@
     <!-- Navigation Bar -->
     <header>
         <div class="topbar">
-            <div class="logo">
-                <div>
-                    <img src="Images/crossfire-logo-no-bkgd.png" alt="Logo" class="bar-image"
-                    height="189" width="867">
-                </div>
-            </div>
+            <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
 
-            <div class="bar">
-                <p class="username">FirstName LastName : Manager</p> 
-            </div>
+            <button class="bell-anchor" type="button" title="Notifications">
+                <img src="images/notification.png" alt="notification bell" width="512" height="512">
+
+                <div class="scrollbar">
+                    <ul id="notification-list">
+                    </ul>
+                </div>
+            </button> 
         </div>
     </header>
 
     <main>
         <!--Sidebar Navigation-->
         <div class="sidebar">
-            <a href="index.html"><img src="Images/home-icon.png" alt="Home"></a>
-            <a href="formCreate.html"><img src="Images/add-file-icon.png" alt="Create forms"></a>
-            <a href="formView.html"><img src="Images/lookup-icon.png" alt="View and edit forms"></a>
+            <a href="index.html" title="Home Page">
+                <img src="Images/home-icon.png" alt="Home" height="512" width="512">
+                <p>Return Home</p>
+            </a>       
+            <a href="formCreate.html" title="Create new form">
+                <img src="Images/add-file-icon.png" alt="Create forms" height="512" width="512">
+                <p>Create a form</p>
+            </a> 
+            <a href="formView.html" title="View forms list">
+                <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
+                <p>Select form to edit</p>
+            </a>
         </div>
 
         <ul class="breadcrumb">
@@ -45,18 +54,26 @@
             <div class="content-nav">
                 <div class="grid-section">
                     <!--Icon to represent file creation required-->
-                    <img src="Images/add-file-icon.png" alt="Create forms">
+                    <img src="Images/add-file-icon.png" alt="Create forms" height="512" width="512">
                     <a href="formCreate.html">
                         <h2>Create</h2>
-                        <p>Generate and save a new Non-Conformance Report document</p>
+                        <p>Generate and save a new document</p>
                     </a>
                 </div>
                 <div class="grid-section">
                     <!--Icon to represent file view required-->
-                    <img src="Images/lookup-icon.png" alt="View and edit forms">
+                    <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
                     <a href="formView.html">
-                        <h2>View and Edit</h2>
-                        <p>View and edit an existing Non-Conformance Report document</p>
+                        <h2>Select and Edit</h2>
+                        <p>Choose an open document to edit</p>
+                    </a>
+                </div>
+                <div class="grid-section">
+                    <!--Icon to represent file view required-->
+                    <img src="Images/archive.png" alt="View archive" height="512" width="512">
+                    <a href="formView.html">
+                        <h2>View Archive</h2>
+                        <p>View all closed documents</p>
                     </a>
                 </div>
             </div>

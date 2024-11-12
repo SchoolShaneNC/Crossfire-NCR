@@ -6,28 +6,46 @@
     font-family: 'Roboto';
 }
 
-.webpageSettings {
-    width: 100%;
-    padding-bottom: 50px;
+.grid-section, .grid-section h2, .button, .grid-section a,
+#scrollbar, .filter-box, .styled-table, .ncr-form, img {
+    margin: 0 auto;
 }
 
-/* Navbar */
-.topbar {
-    background-color: #173541;
-    position: fixed; 
-    margin-left: 0%;
-    top: 0;
+img, .webpageSettings, .topbar, .bar-image, input[type="text"], 
+input[type="number"], textarea, input[type="date"], 
+.styled-table, #scrollbar, .filter-box {
     width: 100%;
-    z-index: 1; 
-    height: 70px;
-    display: flex;
-    justify-content: space-between; 
-    padding: 10px;
+}
+
+.username, .grid-section a:visited, .grid-section a:link,
+.styled-table tbody tr:hover, .styled-table thead tr, .button {
+    color: #fff;
+}
+
+.sidebar:hover a, .breadcrumb li a:hover, .breadcrumb li+li:before {
+    color: #173541;
+}
+
+.topbar, .bar, .grid-section a:hover,
+.styled-table thead tr, .button:hover {
+    background-color: #173541;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+.webpageSettings {
+    padding-bottom: 50px;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 7%;
+    width: 4.5%;
     background-color: #5897c9;
     position: fixed;
     top: 50px; 
@@ -37,31 +55,91 @@
     display: block;
 }
 
+/*Sidebar Animation*/
+@keyframes sidebar-ease {
+    from {width: 5%;}
+    to {width: 18%;}
+}
+
+@keyframes text-fade-in {
+    0% {
+        opacity: 0%;
+        display: none;
+    }
+    60%{
+        opacity: 0%;
+        display: none;
+    }
+    100% {
+        opacity: 100%;
+        display: inline;
+    }
+}
+
 /* Sidebar links */
 .sidebar a {
-    background-image:linear-gradient(to top,  #fff 40%, #f0f0f0 60%) ;
+    background-image:linear-gradient(to top,  #fff 0%, #d9d9d9 70%) ;
     border-radius: 10px;
+    padding: 5px 5px;
+    margin: 0 10px 30px;
     display: block;
-    padding: 5px 10px;
-    margin: 20px 20px 20px;
     text-decoration: none;
 }
 
-.sidebar img {
-    width: 100%;
+.sidebar:hover a{
+    width: 90%;
 }
 
-.sidebar img:hover{
-
+.sidebar:hover{
+    animation-name: sidebar-ease;
+    animation-duration: 350ms;
+    animation-timing-function: ease-out;
+    width: 18%;
+    border-right: 3px solid #173541;
 }
 
-/* Styling for each bar (the logo and user sections) */
-.bar {
+.sidebar:hover img, .sidebar img{
+    height: 38.975px;
+    width: auto;
+}
+
+.sidebar:hover .sidebar-link{
     display: flex;
-    align-items: center;
-    background-color: #173541;
-    padding: 5px 10px;
-    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.sidebar p{
+    display: none;
+}
+
+.sidebar:hover p{
+    animation-name: text-fade-in;
+    animation-duration: 400ms;
+    display: inline;
+    text-align: left;
+    padding: 0 0 0 10px;
+    position: relative;
+    bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sidebar a:hover{
+
+    outline-offset: -2px;
+    outline: 2px solid #173541;
+}
+
+/* Navbar */
+.topbar {
+    position: fixed; 
+    margin-left: 0%;
+    top: 0;
+    z-index: 1; 
+    height: 60px;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
 }
 
 .logo{
@@ -70,26 +148,98 @@
     padding: 3px 10px 0;
 }
 
-/* Styling for the images */
-.bar-image {
-    width: 100%; 
+.crossfire-logo{
+    margin-left: 0;
+}
+
+.topbar img{
     height: 40px;
-    margin-right: 10px;
-}
-
-/* Styling for the username text */
-.username {
-    color: #fff;
-    font-size: 16px;
+    width: auto;
 }
 
 
-.reportClass {
-    padding-top: 20px; 
+/*Bell and scrollbar animations*/
+@keyframes scrollbar-size {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 200px;
+    }
+}
+
+@keyframes scrollbar-revert {
+    0%{
+        height: 200px;
+    }
+    99%{
+        visibility: visible;
+    }
+    100%{
+        height:0px
+    }
+    
+}
+
+@keyframes bell-update {
+    0%{
+        opacity: 50%;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0%;
+        transform: scale(1.5);
+    }
+}
+
+.bell-anchor{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    padding: 0;
+    margin-right: 115px;
+}
+
+.bell-anchor img{
+    display: inline;
+}
+
+.bell-anchor ul{
+    display: inline-block;
+    position:absolute;
+    width: 200px;
+    right: 0;
+    visibility: hidden;
+}
+
+.bell-anchor:hover ul, .bell-anchor:hover div{
+    visibility: visible;
+    animation-name: scrollbar-size;
+    animation-duration: 1s;
+}
+
+.bell-anchor li{
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #173541;
+    text-decoration: none;
+    list-style-type: none;
+    border-bottom: 1px solid #1735413a;
+}
+
+.bell-anchor div{
+    animation-name: scrollbar-revert;
+    animation-duration: 500ms;
+    display: inline-block;
+    position: absolute;
+    width: 225px;
+    height: 200px;
+    right: 35px;
+    top: 60px;
+    visibility: hidden;
 }
 
 .form-class {
-    margin-left: 7%;
+    margin-left: 6%;
     padding-bottom: 60px;
 }
 
@@ -118,7 +268,7 @@
 .content-nav {
     padding-top: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
     gap: 60px;
     justify-content: center; 
     align-items: center; 
@@ -130,11 +280,10 @@
     background-color: #f0f0f0;
     border-radius: 10px;
     height: 100%;
-    padding: 50px;
+    padding: 50px 10px 0;
 }
 
 .grid-section, .grid-section h2{
-    margin: 0 auto;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -149,24 +298,19 @@
     display: block;
     text-align: center;
     padding: 20px 20px 40px;
-    margin: 0 auto;
-    width: 70%;
+    width: 90%;
 }
 
 
 .grid-section a:visited, .grid-section a:link{
-    color: #fff;
     text-decoration: none;
 }
 
-.grid-section a:hover{
-    background-color: #173541;
-}
 
 /* Box at the top of each section */
 
 .grid-section img{
-    width:40%;
+    width:30%;
     margin-bottom: 25px;
 }
 
@@ -196,7 +340,6 @@ p {
 
 /* General input styling */
 input[type="text"], input[type="number"], textarea, input[type="date"] {
-    width: 100%;
     padding: 10px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -237,28 +380,23 @@ textarea {
 }
 
 /* Center the save button */
-.button{
+.button {
     display: block;
-    margin: 0 auto;
     padding: 10px 20px;
     font-size: 1.2em;
     background-color: #5897c9;
-    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
 }
 
-.button:hover {
-    background-color: #173541;
-}
 
-#scrollbar{
+.scrollbar{
     height: 408px;
+    overflow-y:visible;
+    overflow-x: hidden;
     overflow: scroll;
-    width: 100%;
-    margin: 0 auto;
     border-radius: 10px;
 }
 
@@ -269,9 +407,7 @@ textarea {
 }
 
 .styled-table {
-    width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
     font-size: 18px;
     text-align: left;
 }
@@ -285,9 +421,7 @@ tr {
     border: 1px solid #ddd; 
 }
 
-.styled-table thead tr {
-    background-color: #173541;
-    color: #fff;
+.styled-table thead tr{
     text-align: left;
 }
 
@@ -296,13 +430,10 @@ tr {
 }
 
 .styled-table tbody tr:hover {
-    color: #fff;
     background-color: #5897c9; /* Add hover effect */
 }
 
 .filter-box {
-    width: 100%; 
-    margin: 0 auto;
     margin-bottom: 30px; 
     padding: 20px;
     border: 2px solid #ccc;
@@ -314,7 +445,6 @@ tr {
 /* Form styling */
 .ncr-form {
     width: 80%;
-    margin: 0 auto;
     padding-bottom: 50px;
 }
 
@@ -328,7 +458,7 @@ tr {
 }
 
 #form-big-overall textarea{
-    height: 158px;
+    height: 175px;
 }
 
 .ncr-form h2{
@@ -353,7 +483,6 @@ tr {
 }
 
 .breadcrumb li+li:before {
-    color: #173541;
     content: ">\00a0";
 }
 
@@ -362,10 +491,20 @@ tr {
     text-decoration: none;
 }
 
-.breadcrumb li a:hover{
-    color: #173541;
-}
-
 #identity-process-label{
     margin-top: 10px;
+}
+
+.required-field{
+    height: 10px;
+    width: 10px;
+    background-color: #ff7119;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+
+#create-require-notice{
+    margin-left: 5px;
+    display: inline;
 }
