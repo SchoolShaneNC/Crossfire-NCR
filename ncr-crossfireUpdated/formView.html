@@ -14,40 +14,26 @@
 <body class="webpageSettings">
     <header>
         <div class="topbar">
-            <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
-
-            <button class="bell-anchor" type="button" title="Notifications">
-                <img src="images/notification.png" alt="notification bell" width="512" height="512">
-
-                <div class="scrollbar">
-                    <ul id="notification-list">
-                        <li>Welcome User</li>
-                        <li>Welcome User</li>
-                        <li>Welcome User</li>
-                    </ul>
+            <div class="logo">
+                <div>
+                    <img src="Images/crossfire-logo-no-bkgd.png" alt="Logo" class="bar-image"
+                    height="189" width="867">
                 </div>
-            </button>    
+            </div>
+        
+
+            <!--<div class="bar">
+                <p class="username">FirstName LastName : Manager</p> 
+            </div>-->
         </div>
     </header>
     
     <main>
         <div class="sidebar">
-            <a href="index.html" title="Home Page">
-                <img src="Images/home-icon.png" alt="Home" height="512" width="512">
-                <p>Return Home</p>
-            </a>       
-            <a href="formCreate.html" title="Create new form">
-                <img src="Images/add-file-icon.png" alt="Create forms" height="512" width="512">
-                <p>Create a form</p>
-            </a> 
-            <a href="formView.html" title="View forms list">
-                <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
-                <p>Select form to edit</p>
-            </a>
-            <a href="archivedReports.html" title="View forms list">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
-                <p>Archived Reports</p>
-            </a>
+            <a href="index.html"><img src="Images/home-icon.png" alt="Home"></a>
+            <a href="formCreate.html"><img src="Images/add-file-icon.png" alt="Create forms"></a>
+            <a href="formView.html"><img src="Images/lookup-icon.png" alt="View and edit forms"></a>
+            <a href="archivedReports.html"><img src="Images/archive-icon.png" alt="View and edit forms"></a>
         </div>
     
         <ul class="breadcrumb">
@@ -56,154 +42,179 @@
         </ul>
 
         <div class="form-class">
-            <h1 id="view-forms-h1" class="header-text">NCR Report Log</h1>
+            <h1 id="view-forms-h1" class="header-text">NCR Report List</h1>
             
             <div id="grid-form-view">
                 <div class="filter-box">
                 <h2>Filter Options</h2>
-                
-                <label for="filter1">Product Name</label>
-                <input type="text" id="filter1" name="filter1" placeholder="Enter Name..."><br><br>
+                <label for="filter1">NCR Number</label>
+                <input type="text" id="filter1" name="filter1" placeholder="Enter NCR Number..."><br><br>
+
+                <label for="filter2">Date</label>
+                <input type="date" id="fromDate" name="fromDate">
+                <input type="date" id="endDate" name="endDate">
+               <!-- <input type="text" id="filter2" name="filter2" placeholder="Enter Name..."><br><br>-->
             
-                <label for="filter2">Quantity Received</label>
-                <input type="text" id="filter2" name="filter2" placeholder="Enter Quantity..."><br><br>
+                <label for="filter3">Supplier</label>
+                <input type="text" id="filter3" name="filter3" placeholder="Enter Supplier..."><br><br>
             
-                <label for="filter3">Quantity Defective</label>
-                <input type="text" id="filter3" name="filter3" placeholder="Enter Quantity..."><br><br>
+                <label for="filter4">Status</label><br>
+                <label for="Open">Open</label>
+                <input type="radio" id="Open" name="filter4" value="Open"><br>
+                <label for="Closed">Closed</label>
+                <input type="radio" id="Closed" name="filter4" value="Closed"><br><br>
             
                 <button id="resetButton" class="button">Reset Filters</button>
                 </div>
             
-                <div class="scrollbar">
+                <div id="scrollbar">
                     <table id="ncrTable" class="styled-table">
                         <thead>
                             <tr>
                                 <th>NCR No.</th>
-                                <th>Supplier Name</th>
-                                <th>Document Status</th>
-                                <th>Date Created</th>
+                                <th>Date</th>
+                                <th>Supplier</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>2024-001</td>
-                                <td>Pierce & Peters</td>
-                                <td>Open</td>
-                                <td>5</td>
+                                <td>2024-01-24</td>
+                                <td>Wood Co</td>
+                                <td>Closed</td>
                             </tr>
                             <tr>
                                 <td>2024-002</td>
-                                <td>Pierce & Peters</td>
-                                <td>Open</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>2024-003</td>
-                                <td>Pierce & Peters</td>
-                                <td>Open</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>2024-004</td>
-                                <td>Pierce & Peters</td>
-                                <td>Open</td>
-                                <td>15</td>
+                                <td>2024-03-18</td>
+                                <td>Super Supplies Inc</td>
+                                <td>Closed</td>
                             </tr>
                             <tr>
                                 <td>2024-005</td>
-                                <td>Pierce & Peters</td>
+                                <td>2024-03-28</td>
+                                <td>K-Line Manufacturing</td>
                                 <td>Open</td>
-                                <td>8</td>
                             </tr>
                             <tr>
-                                <td>2024-006</td>
-                                <td>Pierce & Peters</td>
+                                <td>2024-004</td>
+                                <td>2024-04-09</td>
+                                <td>The Dennison Industries</td>
                                 <td>Open</td>
-                                <td>25</td>
                             </tr>
                             <tr>
-                                <td>2024-007</td>
-                                <td>Moga</td>
+                                <td>2024-003</td>
+                                <td>2024-04-01</td>
+                                <td>Canada Forging Inc</td>
                                 <td>Open</td>
-                                <td>20</td>
                             </tr>
                             <tr>
-                                <td>2024-008</td>
-                                <td>Moga</td>
+                                <td>2023-001</td>
+                                <td>2023-02-03</td>
+                                <td>K-Line Manufacturing</td>
                                 <td>Closed</td>
-                                <td>12</td>
                             </tr>
                             <tr>
-                                <td>2024-009</td>
-                                <td>Moga</td>
+                                <td>2023-002</td>
+                                <td>2023-05-16</td>
+                                <td>Doofenshmirtz Evil Inc</td>
                                 <td>Closed</td>
-                                <td>4</td>
                             </tr>
                             <tr>
-                                <td>2024-010</td>
-                                <td>Moga</td>
-                                <td>Open</td>
-                                <td>30</td>
-                            </tr>
-                            <tr>
-                                <td>2024-011</td>
-                                <td>Moga</td>
-                                <td>Open</td>
-                                <td>35</td>
-                            </tr>
-                            <tr>
-                                <td>2024-012</td>
-                                <td>Interplex</td>
-                                <td>Open</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>2024-013</td>
-                                <td>Interplex</td>
+                                <td>2023-003</td>
+                                <td>2023-06-29</td>
+                                <td>Doofenshmirtz Evil Inc</td>
                                 <td>Closed</td>
-                                <td>18</td>
                             </tr>
                             <tr>
-                                <td>2024-014</td>
-                                <td>Interplex</td>
+                                <td>2023-004</td>
+                                <td>2023-08-05</td>
+                                <td>Doofenshmirtz Evil Inc</td>
                                 <td>Closed</td>
-                                <td>6</td>
                             </tr>
                             <tr>
-                                <td>2024-015</td>
-                                <td>Interplex</td>
-                                <td>Open</td>
-                                <td>22</td>
-                            </tr>
-                            <tr>
-                                <td>2024-016</td>
-                                <td>Interplex</td>
+                                <td>2023-005</td>
+                                <td>2023-08-19</td>
+                                <td>Doofenshmirtz Evil Inc</td>
                                 <td>Closed</td>
-                                <td>11</td>
                             </tr>
                             <tr>
-                                <td>2024-017</td>
-                                <td>Interplex</td>
+                                <td>2023-006</td>
+                                <td>2023-09-10</td>
+                                <td>Vesuvius Canada Inc</td>
                                 <td>Closed</td>
-                                <td>15</td>
                             </tr>
                             <tr>
-                                <td>2024-018</td>
-                                <td>Interplex</td>
+                                <td>2022-001</td>
+                                <td>2022-01-04</td>
+                                <td>Wood Co</td>
                                 <td>Closed</td>
-                                <td>5</td>
                             </tr>
                             <tr>
-                                <td>2024-019</td>
-                                <td>Interplex</td>
+                                <td>2022-002</td>
+                                <td>2022-01-22</td>
+                                <td>Goodman-White Labs</td>
                                 <td>Closed</td>
-                                <td>21</td>
                             </tr>
                             <tr>
-                                <td>2024-020</td>
-                                <td>Interplex</td>
+                                <td>2022-003</td>
+                                <td>2022-03-24</td>
+                                <td>Super Supplies Inc</td>
                                 <td>Closed</td>
-                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>2022-004</td>
+                                <td>2022-04-09</td>
+                                <td>The Dennison Industries</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2022-005</td>
+                                <td>2022-07-28</td>
+                                <td>Marsh-Foy Manufacturing</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2022-006</td>
+                                <td>2022-11-12</td>
+                                <td>Honda Motor Co</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2022-007</td>
+                                <td>2022-12-25</td>
+                                <td>Santas Factories</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2021-001</td>
+                                <td>2021-02-28</td>
+                                <td>K-Line Manufacturing</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2021-002</td>
+                                <td>2021-05-01</td>
+                                <td>Wood Co</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2021-003</td>
+                                <td>2021-07-11</td>
+                                <td>Goodman-White Labs</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2021-004</td>
+                                <td>2021-09-25</td>
+                                <td>Dailmer AG</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>2021-005</td>
+                                <td>2021-10-31</td>
+                                <td>Skellington Co</td>
+                                <td>Closed</td>
                             </tr>
                         </tbody>
                     </table>
@@ -213,6 +224,10 @@
             <!--<a id="return-button" class="button" href="index.html">Back to home page</a>-->
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/FilterReset.js"></script>
+    <script src="Scripts/CreateNCR.js"></script>
+    <script src="Scripts/LocalStorage_formView.js"></script>
+  
 </body>
 </html>
