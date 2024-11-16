@@ -47,18 +47,19 @@
             <div id="grid-form-view">
                 <div class="filter-box">
                 <h2>Filter Options</h2>
-                <label for="filter1">NCR Number</label>
+                <label for="filter1">NCR Number:</label>
                 <input type="text" id="filter1" name="filter1" placeholder="Enter NCR Number..."><br><br>
 
-                <label for="filter2">Date</label>
+                <label for="fromDate">Start Date:</label>
                 <input type="date" id="fromDate" name="fromDate">
-                <input type="date" id="endDate" name="endDate">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate"><br><br>
                <!-- <input type="text" id="filter2" name="filter2" placeholder="Enter Name..."><br><br>-->
             
-                <label for="filter3">Supplier</label>
+                <label for="filter3">Supplier:</label>
                 <input type="text" id="filter3" name="filter3" placeholder="Enter Supplier..."><br><br>
             
-                <label for="filter4">Status</label><br>
+                <label for="filter4">Status:</label><br>
                 <label for="Open">Open</label>
                 <input type="radio" id="Open" name="filter4" value="Open"><br>
                 <label for="Closed">Closed</label>
@@ -75,6 +76,7 @@
                                 <th>Date</th>
                                 <th>Supplier</th>
                                 <th>Status</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody id="NcrLogTable">

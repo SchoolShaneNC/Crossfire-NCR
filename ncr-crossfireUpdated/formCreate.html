@@ -222,18 +222,24 @@
                             </div>
                         </div>
                         <div class="grid-2">
-                            <label for="orgrevnum">Original Revision Number</label>
-                            <input type="number" id="orgrevnum">
-                            <label for="updrevnum">Updated Revision Number</label>
-                            <input type="number" id="updrevnum">
-                            <script src="scripts/revisionValidaton.js"></script>
+                            <div>
+                                <label for="orgRevNum">Original Revision Number:</label>
+                                <input type="number" id="orgRevNum">
+                            </div>
+                            <div>
+                                <label for="updRevNum">Updated Revision Number:</label>
+                                <input type="number" id="updRevNum">
+                            </div>
                         </div>
                         <div class="grid-2">
-                            <label for="engName">Name of Engineer</label>
-                            <input type="text" id="engName">
-                            
-                            <label for="engDate">Date:</label>
-                            <input type="date" id="engDate" name="date">
+                            <div>
+                                <label for="engName">Name of Engineer</label>
+                                <input type="text" id="engName">
+                            </div>
+                            <div>
+                                <label for="engDate">Date:</label>
+                                <input type="date" id="engDate" name="date">
+                            </div>
                         </div>
                         <div>
                             <button id="save-doc-button" type="submit" >Save</button>
@@ -250,5 +256,6 @@
     <!--<script src="scripts/LocalStorage_formView.js"></script>-->
     <script src="scripts/CreateNCR.js"></script>
     <script src="scripts/quantityValidation.js"></script>
+    <script src="scripts/revisionValidaton.js"></script>
 </body>
 </html>

@@ -366,9 +366,10 @@ textarea {
 
 /* General input styling */
 input[type="text"], input[type="number"], textarea, input[type="date"] {
-    padding: 10px;
-    margin: 8px 0;
+    padding: .75em;
+    margin: 0.5em 0;
     box-sizing: border-box;
+    border-style: solid;
 }
 
 /* Grid layout for the 4 corners in Product Details */
