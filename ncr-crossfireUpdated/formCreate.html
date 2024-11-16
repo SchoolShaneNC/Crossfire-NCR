@@ -112,12 +112,12 @@
                                     <div title="Number of products received from sale order">
                                         <div class="required-field"></div>
                                         <label for="quantityReceived">Quantity Received</label>
-                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required>
+                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0">
                                     </div>
                                     <div title="Number of defective products found in sale order">
                                         <div class="required-field"></div>
                                         <label for="quantityDefective">Quantity Defective</label>
-                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required>
+                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0">
                                     </div>
                                 </div>
                             </div>
@@ -247,7 +247,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/save-doc-popup.js"></script>
     <script src="scripts/autoDate.js"></script>
-    <script src="scripts/LocalStorage_formView.js"></script>
+    <!--<script src="scripts/LocalStorage_formView.js"></script>-->
     <script src="scripts/CreateNCR.js"></script>
+    <script src="scripts/quantityValidation.js"></script>
 </body>
 </html>
