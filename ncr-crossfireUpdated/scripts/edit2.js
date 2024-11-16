@@ -3,6 +3,7 @@
 //displays all log data from the log matched to the button
 //second if is needed since i had null in a log data, looking back on the create page it auto goes to yes (non conforming) so might not be needed
 let ncrButton = localStorage.getItem('editSelect');
+
 for(var i = 0; i < LogData.logs.length; i++){
     if (LogData.logs[i].NcrNo == ncrButton){
         document.getElementById("ncrNo").value = LogData.logs[i].NcrNo;

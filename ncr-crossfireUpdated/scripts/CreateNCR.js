@@ -9,8 +9,10 @@ function ncrNumGenertator()
     //putting the json object into an array to access
     const tableData = localStorage.getItem('tableData');
     const tableData3 = JSON.parse(tableData);
+    console.log(tableData3);
     let tableDataArr = [];
     tableDataArr = tableData3;
+    console.log(tableDataArr);
 
     const theDate = new Date()  //getting the year and an empty array to push filtered data into 
     let theYear = theDate.getFullYear();
@@ -19,6 +21,7 @@ function ncrNumGenertator()
     for (let x of newTable){
         ncrNumArry.push(x.NcrNum);
     }
+    console.log(ncrNumArry);
     newNum = parseInt(ncrNumArry.sort().at(ncrNumArry.length - 1).substring(5)) + 1;//parse the filtered new array, sorts so the biggest num is always at the botton if new logs get added
     newNum = (theYear + "-" + newNum.toString().padStart(3,'0'));     //takes last 3 digits of last item adds 1 then puts that into the final string, padstart makes sure it fills the 3 end digits with 0s if needed
     document.getElementById("ncrNo").value = newNum;

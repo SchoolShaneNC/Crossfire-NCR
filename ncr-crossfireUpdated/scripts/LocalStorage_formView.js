@@ -20,4 +20,5 @@ for (var i = 0; i < tr.length; i++) {
 const tableData2 = JSON.stringify(myTableData);
 localStorage.setItem('tableData', tableData2);
 
+//NEEDS the scr file to go after the editNcrLog src or will not work giving null values
 

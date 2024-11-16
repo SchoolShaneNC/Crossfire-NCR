@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="webpageSettings">
+    <header>
+        <div class="topbar">
+            <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
+
+            <button class="bell-anchor" type="button" title="Notifications">
+                <img src="images/notification.png" alt="notification bell" width="512" height="512">
+
+                <div class="scrollbar">
+                    <ul id="notification-list">
+                        <li>Welcome User</li>
+                        <li>Welcome User</li>
+                        <li>Welcome User</li>
+                    </ul>
+                </div>
+            </button>    
+        </div>
+    </header>
+    
+    <main>
+        <div class="sidebar">
+            <a href="index.html" title="Home Page">
+                <img src="Images/home-icon.png" alt="Home" height="512" width="512">
+                <p>Return Home</p>
+            </a>       
+            <a href="formCreate.html" title="Create new form">
+                <img src="Images/add-file-icon.png" alt="Create forms" height="512" width="512">
+                <p>Create a form</p>
+            </a> 
+            <a href="formView.html" title="View forms list">
+                <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
+                <p>Select form to edit</p>
+            </a>
+            <a href="archivedReports.html" title="View forms list">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>Archived Reports</p>
+            </a>
+        </div>
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Create</li>
+        </ul>
+
+        <div class="form-class">
+            <h1 class="header-text">Non-Conformance Report View</h1>
+
+            <div>
+                <details>
+                    <summary class="summary"><strong>Quality Inspector</strong></summary>
+
+                    <form class="ncr-form filter-box">
+
+                        <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
+
+                        <div id="form-big-overall" class="grid-4">
+                            <div>
+                                <h2 class="left-align">NCR Details</h2>
+                                <!-- NCR No. -->
+                                <div class="required-field"></div>
+                                <label for="ncrNo">NCR No.</label>
+                                <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">
+                                
+
+                                <div id="identity-process-label">
+                                    <div class="required-field"></div>
+                                    <label for="identity-process">Identity Process Applicable</label>
+                                
+                                    <div id="identity-process" class="radio-group">
+                                        <div>
+                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked>
+                                            <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
+                                        </div>
+
+                                        <div>
+                                            <input type="radio" id="wip" name="identity-process" value="wip">
+                                            <label for="wip">WIP (Production Order)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Product Details -->
+                                <h2 class="left-align">Product Details</h2>
+                                
+                                <div class="required-field"></div>
+                                <label for="supplierName">Supplier Name</label>
+                                <input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">
+
+                                <div class="grid-4">
+                                    <div title="Product number">
+                                        <div class="required-field"></div>
+                                        <label for="poProdNo">PO or Prod. No.</label>
+                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############">
+                                    </div>
+                                    <div title="Sales order number">
+                                        <div class="required-field"></div>
+                                        <label for="salesOrderNo">Sales Order No.</label>
+                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required>
+                                    </div>
+                                    <div title="Number of products received from sale order">
+                                        <div class="required-field"></div>
+                                        <label for="quantityReceived">Quantity Received</label>
+                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0">
+                                    </div>
+                                    <div title="Number of defective products found in sale order">
+                                        <div class="required-field"></div>
+                                        <label for="quantityDefective">Quantity Defective</label>
+                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <!-- Item Details -->
+                                <h2 class="left-align">Item Details</h2>
+                    
+                                <div class="required-field"></div>
+                                <label for="itemDescription">Description of Item</label>
+                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required></textarea>
+                    
+                                <div class="required-field"></div>
+                                <label for="itemDefect">Description of Defect</label>
+                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required></textarea>
+                            </div>
+                        </div>
+                        
+                        <div id="form-final-section">
+                            <!-- Final Section -->
+                            <h2 class="left-align">Final Section</h2>
+                    
+                            <div class="required-field"></div>
+                            <label for="non-con">Item marked Non-Conforming</label>
+                            <div id="non-con" class="radio-group">
+                                <div>
+                                    <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
+                                    <label for="qi-yes">Yes</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="qi-no" name="nonConforming" value="no">
+                                    <label for="qi-no">No</label>
+                                </div>
+                                
+                            </div>
+                    
+                            <div id="quality-rep" class="grid-2">
+                                <div >
+                                    <div class="required-field"></div>
+                                    <label for="qualityRepName">Quality Representative's Name</label>
+                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required>
+                                </div>
+                                <div id ="date">
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Save, Submit & Close Button -->
+                         <div>
+                            <button id="save-doc-button" type="submit" >Save</button>
+                            <button id="submit-doc-button" type="submit" >Submit</button>
+                        </div>
+                    </form>
+                </details>
+
+                <details>
+                    <summary class="summary"><strong>Engineering</strong></summary>
+                    
+                    <form class="ncr-form filter-box">
+                        <h2 class="left-align">Review by CF Engineering</h2>
+                        
+                        <div>
+                            <h2 class="left-align">Disposition</h2>
+                        </div>
+                        
+                        <label>Indicate disposition by checking one of the following:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="use-as-is" name="disposition">
+                            <label for="use-as-is">Use As Is</label>
+                            <input type="radio" id="repair" name="disposition">
+                            <label for="repair">Repair</label>
+                            <input type="radio" id="rework" name="disposition">
+                            <label for="rework">Rework</label>
+                            <input type="radio" id="scrap" name="disposition">
+                            <label for="scrap">Scrap</label>
+                        </div>
+
+                        <div>
+                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated"></textarea>
+                        </div>
+
+                        <div class="grid-2">
+                            <div>
+                                <label>Does the customer require a notification for the NCR?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="notifyes" name="notification">
+                                    <label for="yes">Yes</label>
+                                    <input type="radio" id="notifno"  name="notification">
+                                    <label for="no">No</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Does the drawing require updating?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="updyes" name="update">
+                                    <label for="updyes">Yes</label>
+                                    <input type="radio" id="updno"  name="update">
+                                    <label for="updno">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-2">
+                            <label for="orgrevnum">Original Revision Number</label>
+                            <input type="number" id="orgrevnum">
+                            <label for="updrevnum">Updated Revision Number</label>
+                            <input type="number" id="updrevnum">
+                            <script src="scripts/revisionValidaton.js"></script>
+                        </div>
+                        <div class="grid-2">
+                            <label for="engName">Name of Engineer</label>
+                            <input type="text" id="engName">
+                            
+                            <label for="engDate">Date:</label>
+                            <input type="date" id="engDate" name="date">
+                        </div>
+                        <div>
+                            <button id="save-doc-button" type="submit" >Save</button>
+                            <button id="submit-doc-button" type="submit" >Submit</button>
+                        </div>
+                    </form>
+                </details>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/save-doc-popup.js"></script>
+    <script src="scripts/quantityValidation.js"></script>
+    <script src="scripts/editNcrLog.js"></script>
+    <script src="scripts/edit2.js"></script>
+    <script src="scripts/edit3.js"></script>
+    <script src="scripts/LocalStorage_JSONlog.js"></script>
+
+</body>
+</html>

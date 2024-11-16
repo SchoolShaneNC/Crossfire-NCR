@@ -10,11 +10,17 @@ $.each(LogData.logs, function(i, logs) {
     var tblRow =    "<tr><td>" + logs.NcrNo + 
                     "</td><td>" + logs.Dated + 
                     "</td><td>" + logs.SupplierName +
-                    "</td><td>" + logs.Status + 
-                    "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formEdit.html'" + " value=" + logs.NcrNo +">Edit</button>" +
-                    "</td></tr>" 
-                    literalString += tblRow;
-                    document.getElementById("NcrLogTable").innerHTML = literalString;
+                    "</td><td>" + logs.Status;
+                    if (logs.Status == "Open"){
+                        tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formEdit.html'" + " value=" + logs.NcrNo +">Edit</button>"
+                        tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">View</button>"
+                        }else{
+                            tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editError();" +  " value=" + logs.NcrNo +">Edit</button>"
+                            tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">View</button>"
+                        }
+                        tblRow +="</td></tr>" 
+                        literalString += tblRow;
+                        document.getElementById("NcrLogTable").innerHTML = literalString;
 });
 }
 //this gets triggered by the onclick in literalstring and takes the value of what log its on
@@ -22,4 +28,8 @@ $.each(LogData.logs, function(i, logs) {
 function editNCR(value){
     localStorage.setItem('editSelect', value);    
 }
-
+//pop up if you try to edit closed log
+function editError(){
+    alert(`Cannot edit log because status is Closed`);
+    }
+    
