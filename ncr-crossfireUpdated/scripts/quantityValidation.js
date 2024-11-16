@@ -19,4 +19,5 @@ quantityDefective.addEventListener("input", () => {
     if (defectiveValue > parseInt(quantityReceived.value)) {
         quantityDefective.value = quantityReceived.value;
     }
+    
 });
