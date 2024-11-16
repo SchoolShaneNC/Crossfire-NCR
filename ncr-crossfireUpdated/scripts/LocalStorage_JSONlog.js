@@ -36,9 +36,7 @@ LogDataFile = {"logs":[
     ItemMarkedNC : "qi-yes",
     QualRepName : "Zach Milton",
     Dated : "2024-03-18",
-    Status : "Closed",
-    link : "formEdit.html"},
-
+    Status : "Closed"},
 
 
     //NEW LOG ENTRY
@@ -138,7 +136,7 @@ LogDataFile = {"logs":[
         Status : "Closed"},
 
         {NcrNo : "2023-003",
-            IPA : "Supplier or Rec-Insp",
+            IPA : "supplier-rec-insp",
     //Product Details
             SupplierName : "Doofenshmirtz Evil Inc",
             ProductNum : 355323440364,
@@ -174,13 +172,3 @@ LogDataFile = {"logs":[
 ]}
 x = JSON.stringify(LogDataFile);
 localStorage.setItem('LoggedData', x);
-
-
-
-
-
-
-/*'{"employees":[' +
-'{"firstName":"John","lastName":"Doe" },' +
-'{"firstName":"Anna","lastName":"Smith" },' +
-'{"firstName":"Peter","lastName":"Jones" }]}';*/
