@@ -77,12 +77,12 @@
                                     <legend><span class="required-field"></span>Identity Process Applicable</legend>
                                     <div class="radio-group">
                                         <div>
-                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked required>
+                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" disabled checked>
                                             <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" id="wip" name="identity-process" value="wip">
+                                            <input type="radio" id="wip" name="identity-process" value="wip" disabled>
                                             <label for="wip">WIP (Production Order)</label>
                                         </div>
                                     </div>
@@ -100,22 +100,22 @@
                                     <div title="Product number">
                                         <div class="required-field"></div>
                                         <label for="poProdNo">PO or Prod. No.</label>
-                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############">
+                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############" disabled>
                                     </div>
                                     <div title="Sales order number">
                                         <div class="required-field"></div>
                                         <label for="salesOrderNo">Sales Order No.</label>
-                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required>
+                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required disabled>
                                     </div>
                                     <div title="Number of products received from sale order">
                                         <div class="required-field"></div>
                                         <label for="quantityReceived">Quantity Received</label>
-                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0">
+                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0" disabled>
                                     </div>
                                     <div title="Number of defective products found in sale order">
                                         <div class="required-field"></div>
                                         <label for="quantityDefective">Quantity Defective</label>
-                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0">
+                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -126,11 +126,11 @@
                     
                                 <div class="required-field"></div>
                                 <label for="itemDescription">Description of Item</label>
-                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required></textarea>
+                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required disabled></textarea>
                     
                                 <div class="required-field"></div>
                                 <label for="itemDefect">Description of Defect</label>
-                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required></textarea>
+                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required disabled></textarea>
                             </div>
                         </div>
                         
@@ -142,12 +142,12 @@
                                 <legend><span class="required-field"></span>Item marked Non-Conforming</legend>
                                     <div class="radio-group">
                                         <div>
-                                            <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
+                                            <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked disabled>
                                             <label for="qi-yes">Yes</label>
                                         </div>
                                 
                                         <div>
-                                            <input type="radio" id="qi-no" name="nonConforming" value="no">
+                                            <input type="radio" id="qi-no" name="nonConforming" value="no" disabled>
                                             <label for="qi-no">No</label>
                                         </div>
                                     </div>
@@ -157,18 +157,11 @@
                                 <div >
                                     <div class="required-field"></div>
                                     <label for="qualityRepName">Quality Representative's Name</label>
-                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required>
+                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required disabled>
                                 </div>
                                 <div id ="date">
-                                    
                                 </div>
                             </div>
-                        </div>
-            
-                        <!-- Save, Submit & Close Button -->
-                         <div>
-                            <button id="save-doc-button" type="submit" >Save</button>
-                            <button id="submit-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>
@@ -186,60 +179,56 @@
                         <fieldset class="radio-group">
                             <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
                                 
-                                <input type="radio" id="use-as-is" name="disposition">
+                                <input type="radio" id="use-as-is" name="disposition" disabled>
                                 <label for="use-as-is">Use As Is</label>
                                 
-                                <input type="radio" id="repair" name="disposition">
+                                <input type="radio" id="repair" name="disposition" disabled>
                                 <label for="repair">Repair</label>
 
-                                <input type="radio" id="rework" name="disposition">
+                                <input type="radio" id="rework" name="disposition" disabled>
                                 <label for="rework">Rework</label>
 
-                                <input type="radio" id="scrap" name="disposition">
+                                <input type="radio" id="scrap" name="disposition" disabled>
                                 <label for="scrap">Scrap</label>
                         </fieldset>
 
                         <div>
-                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated"></textarea>
+                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" disabled></textarea>
                         </div>
 
                         <div class="grid-2">
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
                                 <div class="radio-group">
-                                    <input type="radio" id="notifYes" name="notification">
+                                    <input type="radio" id="notifYes" name="notification" disabled>
                                     <label for="notifYes">Yes</label>
-                                    <input type="radio" id="notifNo"  name="notification">
+                                    <input type="radio" id="notifNo"  name="notification" disabled>
                                     <label for="notifNo">No</label>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the drawing require updating?</legend>
                                 <div class="radio-group">
-                                    <input type="radio" id="updYes" name="update">
+                                    <input type="radio" id="updYes" name="update" disabled>
                                     <label for="updYes">Yes</label>
-                                    <input type="radio" id="updNo"  name="update">
+                                    <input type="radio" id="updNo"  name="update" disabled>
                                     <label for="updNo">No</label>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="grid-2">
                             <label for="orgrevnum">Original Revision Number</label>
-                            <input type="number" id="orgrevnum">
+                            <input type="number" id="org-rev-num" disabled>
+
                             <label for="updrevnum">Updated Revision Number</label>
-                            <input type="number" id="updrevnum">
-                            <script src="scripts/revisionValidaton.js"></script>
+                            <input type="number" id="upd-rev-num" disabled>
                         </div>
                         <div class="grid-2">
                             <label for="engName">Name of Engineer</label>
-                            <input type="text" id="engName">
+                            <input type="text" id="engName" disabled>
                             
                             <label for="engDate">Date:</label>
-                            <input type="date" id="engDate" name="date">
-                        </div>
-                        <div>
-                            <button id="save-doc-button" type="submit" >Save</button>
-                            <button id="submit-doc-button" type="submit" >Submit</button>
+                            <input type="date" id="engDate" name="date" disabled>
                         </div>
                     </form>
                 </details>
@@ -253,6 +242,7 @@
     <script src="scripts/edit2.js"></script>
     <script src="scripts/edit3.js"></script>
     <script src="scripts/LocalStorage_JSONlog.js"></script>
+    <script src="scripts/revisionValidaton.js"></script>
 
 </body>
 </html>
