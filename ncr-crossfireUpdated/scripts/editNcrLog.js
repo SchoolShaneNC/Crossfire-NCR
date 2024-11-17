@@ -23,6 +23,7 @@ $.each(LogData.logs, function(i, logs) {
                         document.getElementById("NcrLogTable").innerHTML = literalString;
 });
 }
+
 //this gets triggered by the onclick in literalstring and takes the value of what log its on
 //the value is the ncr num to tie the button to the corrosponding log in the table row
 function editNCR(value){
@@ -31,5 +32,19 @@ function editNCR(value){
 //pop up if you try to edit closed log
 function editError(){
     alert(`Cannot edit log because status is Closed`);
+}
+
+document.getElementById("revision-radio").addEventListener("change", function(e){
+    let target = e.target
+
+    if(target.value == "no"){
+        document.getElementById("org-rev-num").disabled=true
+        document.getElementById("upd-rev-num").disabled=true
+        document.getElementById("org-rev-num").value = ""
+        document.getElementById("upd-rev-num").value = ""
     }
-    
+    if(target.value == "yes"){
+        document.getElementById("org-rev-num").disabled=false
+        document.getElementById("upd-rev-num").disabled=false
+    }
+})

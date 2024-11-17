@@ -1,7 +1,7 @@
 //once verything is loaded and js reconizes then it runs the function
 document.addEventListener("DOMContentLoaded", function() {
     ncrNumGenertator();
-  });
+});
 
 function ncrNumGenertator()
 {
@@ -26,6 +26,23 @@ function ncrNumGenertator()
     newNum = (theYear + "-" + newNum.toString().padStart(3,'0'));     //takes last 3 digits of last item adds 1 then puts that into the final string, padstart makes sure it fills the 3 end digits with 0s if needed
     document.getElementById("ncrNo").value = newNum;
 }
+
+document.getElementById("revision-radio").addEventListener("change", function(e){
+    let target = e.target
+
+    if(target.value == "no"){
+        document.getElementById("org-rev-num").disabled=true
+        document.getElementById("upd-rev-num").disabled=true
+        document.getElementById("org-rev-num").value = ""
+        document.getElementById("upd-rev-num").value = ""
+    }
+    if(target.value == "yes"){
+        document.getElementById("org-rev-num").disabled=false
+        document.getElementById("upd-rev-num").disabled=false
+    }  
+})
+
+
 
 /*
 

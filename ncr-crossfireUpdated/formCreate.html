@@ -213,22 +213,22 @@
                             </fieldset>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the drawing require updating?</legend>
-                                <div class="radio-group">
-                                    <input type="radio" id="updYes" name="update">
+                                <div id="revision-radio" class="radio-group">
+                                    <input type="radio" id="updYes" name="update" value="yes" checked>
                                     <label for="updYes">Yes</label>
-                                    <input type="radio" id="updNo"  name="update">
+                                    <input type="radio" id="updNo"  name="update" value="no">
                                     <label for="updNo">No</label>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="grid-2">
                             <div>
-                                <label for="orgrevnum">Original Revision Number:</label>
-                                <input type="number" id="orgrevnum">
+                                <label for="org-rev-num">Original Revision Number:</label>
+                                <input type="number" id="org-rev-num">
                             </div>
                             <div>
-                                <label for="updrevnum">Updated Revision Number:</label>
-                                <input type="number" id="updrevnum">
+                                <label for="upd-rev-num">Updated Revision Number:</label>
+                                <input type="number" id="upd-rev-num">
                             </div>
                         </div>
                         <div class="grid-2">
@@ -257,5 +257,6 @@
     <script src="scripts/CreateNCR.js"></script>
     <script src="scripts/quantityValidation.js"></script>
     <script src="scripts/revisionValidaton.js"></script>
+
 </body>
 </html>
