@@ -34,15 +34,15 @@
                 <img src="Images/home-icon.png" alt="Home" height="512" width="512">
                 <p>Return Home</p>
             </a>       
-            <a href="formCreate.html" title="Create new form">
-                <img src="Images/add-file-icon.png" alt="Create forms" height="512" width="512">
+            <a href="formCreate.html" title="Generate new NCR Document">
+                <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
                 <p>Create a form</p>
             </a> 
-            <a href="formView.html" title="View forms list">
-                <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
+            <a href="formView.html" title="View list of open and closed NCR Documents">
+                <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
                 <p>Select form to edit</p>
             </a>
-            <a href="archivedReports.html" title="View forms list">
+            <a href="archivedReports.html" title="List of all closed NCR documents">
                 <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
                 <p>Archived Reports</p>
             </a>
@@ -60,7 +60,7 @@
                 <details>
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
-                    <form class="ncr-form filter-box">
+                    <form name="ncr-create" class="ncr-form filter-box">
 
                         <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
 
@@ -165,7 +165,7 @@
             
                         <!-- Save, Submit & Close Button -->
                          <div>
-                            <button id="save-doc-button" type="submit" >Save</button>
+                            <button id="save-doc-button">Save</button>
                             <button id="submit-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
