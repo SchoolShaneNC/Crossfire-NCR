@@ -488,10 +488,6 @@ tr {
     text-decoration: none;
 }
 
-#identity-process-label{
-    margin-top: 10px;
-}
-
 .required-field{
     height: 10px;
     width: 10px;
