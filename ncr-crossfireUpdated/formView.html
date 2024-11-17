@@ -72,13 +72,14 @@
             
                 <label for="filter3">Supplier:</label>
                 <input type="text" id="filter3" name="filter3" placeholder="Enter Supplier..."><br><br>
-            
-                <label for="filter4">Status:</label><br>
-                <label for="Open">Open</label>
-                <input type="radio" id="Open" name="filter4" value="Open"><br>
-                <label for="Closed">Closed</label>
-                <input type="radio" id="Closed" name="filter4" value="Closed"><br><br>
-            
+                
+                <fieldset>
+                    <legend>Status:</legend><br>
+                    <label for="Open">Open</label>
+                    <input type="radio" id="Open" name="filter4" value="Open"><br>
+                    <label for="Closed">Closed</label>
+                    <input type="radio" id="Closed" name="filter4" value="Closed"><br><br>
+                </fieldset>
                 <button id="resetButton" class="button">Reset Filters</button>
                 </div>
             
@@ -90,6 +91,7 @@
                                 <th>Date</th>
                                 <th>Supplier</th>
                                 <th>Status</th>
+                                <th></th>
                                 <th></th>
                             </tr>
                         </thead>

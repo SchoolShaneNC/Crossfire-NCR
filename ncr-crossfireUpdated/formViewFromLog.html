@@ -73,14 +73,11 @@
                                 <label for="ncrNo">NCR No.</label>
                                 <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">
                                 
-
-                                <div id="identity-process-label">
-                                    <div class="required-field"></div>
-                                    <label for="identity-process">Identity Process Applicable</label>
-                                
-                                    <div id="identity-process" class="radio-group">
+                                <fieldset>
+                                    <legend><span class="required-field"></span>Identity Process Applicable</legend>
+                                    <div class="radio-group">
                                         <div>
-                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked>
+                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked required>
                                             <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
                                         </div>
 
@@ -89,7 +86,7 @@
                                             <label for="wip">WIP (Production Order)</label>
                                         </div>
                                     </div>
-                                </div>
+                                </fieldset>
                                 
 
                                 <!-- Product Details -->
@@ -141,20 +138,20 @@
                             <!-- Final Section -->
                             <h2 class="left-align">Final Section</h2>
                     
-                            <div class="required-field"></div>
-                            <label for="non-con">Item marked Non-Conforming</label>
-                            <div id="non-con" class="radio-group">
-                                <div>
-                                    <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
-                                    <label for="qi-yes">Yes</label>
-                                </div>
+                            <fieldset>
+                                <legend><span class="required-field"></span>Item marked Non-Conforming</legend>
+                                    <div class="radio-group">
+                                        <div>
+                                            <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
+                                            <label for="qi-yes">Yes</label>
+                                        </div>
                                 
-                                <div>
-                                    <input type="radio" id="qi-no" name="nonConforming" value="no">
-                                    <label for="qi-no">No</label>
-                                </div>
-                                
-                            </div>
+                                        <div>
+                                            <input type="radio" id="qi-no" name="nonConforming" value="no">
+                                            <label for="qi-no">No</label>
+                                        </div>
+                                    </div>
+                            </fieldset>
                     
                             <div id="quality-rep" class="grid-2">
                                 <div >
@@ -186,41 +183,45 @@
                             <h2 class="left-align">Disposition</h2>
                         </div>
                         
-                        <label>Indicate disposition by checking one of the following:</label>
-                        <div class="radio-group">
-                            <input type="radio" id="use-as-is" name="disposition">
-                            <label for="use-as-is">Use As Is</label>
-                            <input type="radio" id="repair" name="disposition">
-                            <label for="repair">Repair</label>
-                            <input type="radio" id="rework" name="disposition">
-                            <label for="rework">Rework</label>
-                            <input type="radio" id="scrap" name="disposition">
-                            <label for="scrap">Scrap</label>
-                        </div>
+                        <fieldset class="radio-group">
+                            <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
+                                
+                                <input type="radio" id="use-as-is" name="disposition">
+                                <label for="use-as-is">Use As Is</label>
+                                
+                                <input type="radio" id="repair" name="disposition">
+                                <label for="repair">Repair</label>
+
+                                <input type="radio" id="rework" name="disposition">
+                                <label for="rework">Rework</label>
+
+                                <input type="radio" id="scrap" name="disposition">
+                                <label for="scrap">Scrap</label>
+                        </fieldset>
 
                         <div>
                             <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated"></textarea>
                         </div>
 
                         <div class="grid-2">
-                            <div>
-                                <label>Does the customer require a notification for the NCR?</label>
+                            <fieldset>
+                                <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
                                 <div class="radio-group">
-                                    <input type="radio" id="notifyes" name="notification">
-                                    <label for="yes">Yes</label>
-                                    <input type="radio" id="notifno"  name="notification">
-                                    <label for="no">No</label>
+                                    <input type="radio" id="notifYes" name="notification">
+                                    <label for="notifYes">Yes</label>
+                                    <input type="radio" id="notifNo"  name="notification">
+                                    <label for="notifNo">No</label>
                                 </div>
-                            </div>
-                            <div>
-                                <label>Does the drawing require updating?</label>
+                            </fieldset>
+                            <fieldset>
+                                <legend><span class="required-field"></span>Does the drawing require updating?</legend>
                                 <div class="radio-group">
-                                    <input type="radio" id="updyes" name="update">
-                                    <label for="updyes">Yes</label>
-                                    <input type="radio" id="updno"  name="update">
-                                    <label for="updno">No</label>
+                                    <input type="radio" id="updYes" name="update">
+                                    <label for="updYes">Yes</label>
+                                    <input type="radio" id="updNo"  name="update">
+                                    <label for="updNo">No</label>
                                 </div>
-                            </div>
+                            </fieldset>
                         </div>
                         <div class="grid-2">
                             <label for="orgrevnum">Original Revision Number</label>
