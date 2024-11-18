@@ -41,7 +41,7 @@
                 <p>Select form to edit</p>
             </a>
             <a href="archivedReports.html" title="List of all closed NCR documents">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
                 <p>Archived Reports</p>
             </a>
         </div>
@@ -168,8 +168,8 @@
                         </div>
                     </form>
                 </details>
-
-                <details>
+                        <!--Engineer Section-->
+                <details id="details-engineer">
                     <summary class="summary"><strong>Engineering</strong></summary>
                     
                     <form class="ncr-form filter-box">
@@ -179,37 +179,40 @@
                             <h2 class="left-align">Disposition</h2>
                         </div>                 
                         
-                        <fieldset class="radio-group">
+                        <fieldset>
                             <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
-                                
-                                <input type="radio" id="use-as-is" name="disposition" required>
+                            <div id="disposition-radio" class="radio-group">
+                                <input type="radio" id="use-as-is" name="disposition" value="use" required>
                                 <label for="use-as-is">Use As Is</label>
                                 
-                                <input type="radio" id="repair" name="disposition">
+                                <input type="radio" id="repair" name="disposition" value="repair">
                                 <label for="repair">Repair</label>
 
-                                <input type="radio" id="rework" name="disposition">
+                                <input type="radio" id="rework" name="disposition" value="rework">
                                 <label for="rework">Rework</label>
 
-                                <input type="radio" id="scrap" name="disposition">
+                                <input type="radio" id="scrap" name="disposition" value="scrap">
                                 <label for="scrap">Scrap</label>
+                            </div>
+                            
                         </fieldset>
 
                         <div>
-                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
+                            <label for="eng-disposition">Repair or Rework</label>
+                            <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
                         </div>
 
-                        <div>
-                            <fieldset>
-                                <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
-                                <div class="radio-group">
-                                    <input type="radio" id="notifYes" name="notification" required>
-                                    <label for="notifYes">Yes</label>
-                                    <input type="radio" id="notifNo"  name="notification">
-                                    <label for="notifNo">No</label>
-                                </div>
-                            </fieldset>
-                        </div>
+                        <fieldset>
+                            <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
+                            <div class="radio-group">
+                                <input type="radio" id="notifYes" name="notification" required>
+                                <label for="notifYes">Yes</label>
+
+                                <input type="radio" id="notifNo"  name="notification">
+                                <label for="notifNo">No</label>
+                            </div>
+                        </fieldset>
+
                         <div>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the drawing require updating?</legend>
@@ -231,7 +234,7 @@
                             <div>
                                 <div class="required-field"></div>
                                 <label for="engName">Name of Engineer</label>
-                                <input type="text" id="engName">
+                                <input type="text" id="engName" placeholder="i. e. Ellen Joe">
                             </div>
                             <div>
                                 <div class="required-field"></div>
