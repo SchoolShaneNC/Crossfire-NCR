@@ -75,14 +75,3 @@ document.getElementById("qi-change-doc-button")
     li.appendChild(test)
     ul.appendChild(li)
 })
-
-/*
-//Nofication local storage
-const notifications = []
-
-var ul
-li = document.getElementsByTagName("li")
-notifications.push(li)
-
-sessionStorage.setItem('notifData', notifications)
-*/
