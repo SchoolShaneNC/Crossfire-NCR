@@ -17,7 +17,16 @@ LogDataFile = {"logs":[
         QualRepName : "Shane Milton",
         Dated : "2024-01-24",
         Status : "Closed",
-        link : "formEdit.html"},
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
     //NEW LOG ENTRY
     //NCR Details
@@ -36,7 +45,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Zach Milton",
         Dated : "2024-03-18",
-        Status : "Closed"},
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
 
     //NEW LOG ENTRY
@@ -56,7 +75,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Zach Milton",
         Dated : "2024-04-01",
-        Status : "Open"},
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
 
     //NEW LOG ENTRY
@@ -76,7 +105,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Connor Foy",
         Dated : "2024-04-09",
-        Status : "Open"},
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
 
     //NCR Details
@@ -95,7 +134,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : null,
         QualRepName : "Connor Foy",
         Dated : "2024-04-09",
-        Status : "Open"},
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
         
     //NCR Details
@@ -114,7 +163,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Shane Milton",
         Dated : "2023-02-03",
-        Status : "Closed"},
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
 
     //NCR Details
@@ -133,7 +192,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Shane Milton",
         Dated : "2023-05-16",
-        Status : "Closed"},
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
     {NcrNo : "2023-003",
         IPA : "supplier-rec-insp",
@@ -150,7 +219,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Zach Milton",
         Dated : "2023-06-29",
-        Status : "Closed"},
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    },
 
 
     {NcrNo : "2023-004",
@@ -168,7 +247,17 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Zach Milton",
         Dated : "2023-08-05",
-        Status : "Closed"}
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : "",
+        UpdRevNum : "",
+        EngName : "",
+        EngDate : "2024-02-24"
+    }
 ]}
 x = JSON.stringify(LogDataFile);
 localStorage.setItem('LoggedData', x);
