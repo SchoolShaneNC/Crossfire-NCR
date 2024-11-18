@@ -36,8 +36,22 @@ a {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 button, .radio-log, #submit-doc-button, #save-doc-button{
     display: inline;
+=======
+.pdfbutton {
+    background-color: #5897c9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    margin-top: .2em;
+    padding: 0.2rem 0.2rem;
+    text-decoration: none;
+    width: 10em;
+>>>>>>> Stashed changes
 }
 
 button {
