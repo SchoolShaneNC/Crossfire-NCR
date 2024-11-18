@@ -41,4 +41,3 @@ function editNCR(value){
 function editError(){
     alert(`Cannot edit log because status is Closed`);
 }
-
