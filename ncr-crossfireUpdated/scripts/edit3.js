@@ -19,7 +19,6 @@ for(var i = 0; i < LogData.logs.length; i++){
         document.getElementById("quantityDefective").disabled = true;
         document.getElementById("itemDescription").disabled = true;
         document.getElementById("itemDefect").disabled = true;
-        document.getElementById("itemDefect").disabled = true;
         document.getElementById("qi-yes").disabled = true;
         document.getElementById("qi-no").disabled = true;
         }
