@@ -34,6 +34,7 @@ function editError(){
     alert(`Cannot edit log because status is Closed`);
 }
 
+//Radio button interactions
 document.getElementById("revision-radio").addEventListener("change", function(e){
     let target = e.target
 
@@ -46,5 +47,19 @@ document.getElementById("revision-radio").addEventListener("change", function(e)
     if(target.value == "yes"){
         document.getElementById("org-rev-num").disabled=false
         document.getElementById("upd-rev-num").disabled=false
+    }
+})
+
+document.getElementById("disposition-radio").addEventListener("change", function(e){
+    let target = e.target
+
+    if(target.value == "repair" || target.value == "rework"){
+        document.getElementById("eng-disposition").disabled=true
+        document.getElementById("eng-disposition").value = ""
+        document.getElementById("eng-disposition").required = false
+    }
+    else{
+        document.getElementById("eng-disposition").disabled=false
+        document.getElementById("eng-disposition").required = true
     }
 })
