@@ -179,37 +179,39 @@
                             <h2 class="left-align">Disposition</h2>
                         </div>                 
                         
-                        <fieldset class="radio-group">
+                        <fieldset>
                             <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
-                                
-                                <input type="radio" id="use-as-is" name="disposition" required>
+                            <div id="disposition-radio" class="radio-group">
+                                <input type="radio" id="use-as-is" name="disposition" value="use" required>
                                 <label for="use-as-is">Use As Is</label>
                                 
-                                <input type="radio" id="repair" name="disposition">
+                                <input type="radio" id="repair" name="disposition" value="repair">
                                 <label for="repair">Repair</label>
 
-                                <input type="radio" id="rework" name="disposition">
+                                <input type="radio" id="rework" name="disposition" value="rework">
                                 <label for="rework">Rework</label>
 
-                                <input type="radio" id="scrap" name="disposition">
+                                <input type="radio" id="scrap" name="disposition" value="scrap">
                                 <label for="scrap">Scrap</label>
+                            </div>
+                            
                         </fieldset>
 
                         <div>
-                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
+                            <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
                         </div>
 
-                        <div>
-                            <fieldset>
-                                <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
-                                <div class="radio-group">
-                                    <input type="radio" id="notifYes" name="notification" required>
-                                    <label for="notifYes">Yes</label>
-                                    <input type="radio" id="notifNo"  name="notification">
-                                    <label for="notifNo">No</label>
-                                </div>
-                            </fieldset>
-                        </div>
+                        <fieldset>
+                            <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
+                            <div class="radio-group">
+                                <input type="radio" id="notifYes" name="notification" required>
+                                <label for="notifYes">Yes</label>
+
+                                <input type="radio" id="notifNo"  name="notification">
+                                <label for="notifNo">No</label>
+                            </div>
+                        </fieldset>
+
                         <div>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the drawing require updating?</legend>
