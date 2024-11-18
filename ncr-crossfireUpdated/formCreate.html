@@ -20,11 +20,9 @@
                 <div class="scrollbar">
                     <ul id="notification-list">
                         <li>Welcome User</li>
-                        <li>Welcome User</li>
-                        <li>Welcome User</li>
                     </ul>
                 </div>
-            </a>     
+            </a>   
         </div>
     </header>
     
@@ -165,8 +163,8 @@
             
                         <!-- Save, Submit & Close Button -->
                          <div>
-                            <button id="save-doc-button">Save</button>
-                            <button id="submit-doc-button" type="submit" >Submit</button>
+                            <button id="qi-save-doc-button">Save</button>
+                            <button id="qi-submit-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>
@@ -184,7 +182,7 @@
                         <fieldset class="radio-group">
                             <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
                                 
-                                <input type="radio" id="use-as-is" name="disposition">
+                                <input type="radio" id="use-as-is" name="disposition" required>
                                 <label for="use-as-is">Use As Is</label>
                                 
                                 <input type="radio" id="repair" name="disposition">
@@ -198,49 +196,52 @@
                         </fieldset>
 
                         <div>
-                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated"></textarea>
+                            <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
                         </div>
 
-                        <div class="grid-2">
+                        <div>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
                                 <div class="radio-group">
-                                    <input type="radio" id="notifYes" name="notification">
+                                    <input type="radio" id="notifYes" name="notification" required>
                                     <label for="notifYes">Yes</label>
                                     <input type="radio" id="notifNo"  name="notification">
                                     <label for="notifNo">No</label>
                                 </div>
                             </fieldset>
+                        </div>
+                        <div>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the drawing require updating?</legend>
                                 <div id="revision-radio" class="radio-group">
-                                    <input type="radio" id="updYes" name="update" value="yes" checked>
+                                    <input type="radio" id="updYes" name="update" value="yes" checked required>
                                     <label for="updYes">Yes</label>
                                     <input type="radio" id="updNo"  name="update" value="no">
                                     <label for="updNo">No</label>
                                 </div>
                             </fieldset>
-                        </div>
-                        <div class="grid-2">
-                                <label for="org-rev-num">Original Revision Number:</label>
-                                <input min="0" type="number" id="org-rev-num">
 
-                                <label for="upd-rev-num">Updated Revision Number:</label>
-                                <input min="0" type="number" id="upd-rev-num">
+                            <label for="org-rev-num">Original Revision Number:</label>
+                            <input min="0" type="number" id="org-rev-num">
+
+                            <label for="upd-rev-num">Updated Revision Number:</label>
+                            <input min="0" type="number" id="upd-rev-num">
                         </div>
                         <div class="grid-2">
                             <div>
+                                <div class="required-field"></div>
                                 <label for="engName">Name of Engineer</label>
                                 <input type="text" id="engName">
                             </div>
                             <div>
+                                <div class="required-field"></div>
                                 <label for="engDate">Date:</label>
                                 <input type="date" id="engDate" name="date">
                             </div>
                         </div>
                         <div>
-                            <button id="save-doc-button" type="submit" >Save</button>
-                            <button id="submit-doc-button" type="submit" >Submit</button>
+                            <button id="engineer-save-doc-button">Save</button>
+                            <button id="engineer-submit-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>

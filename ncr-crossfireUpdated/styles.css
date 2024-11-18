@@ -491,3 +491,7 @@ tr {
 #submit-doc-button, #save-doc-button{
     display: inline;
 }
+
+button {
+    display: inline;
+}

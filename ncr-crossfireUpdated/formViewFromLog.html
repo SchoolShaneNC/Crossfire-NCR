@@ -20,8 +20,6 @@
                 <div class="scrollbar">
                     <ul id="notification-list">
                         <li>Welcome User</li>
-                        <li>Welcome User</li>
-                        <li>Welcome User</li>
                     </ul>
                 </div>
             </a>   
@@ -196,7 +194,7 @@
                             <textarea id="engdisposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" disabled></textarea>
                         </div>
 
-                        <div class="grid-2">
+                        <div>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
                                 <div class="radio-group">
@@ -206,6 +204,9 @@
                                     <label for="notifNo">No</label>
                                 </div>
                             </fieldset>
+                        </div>
+                        
+                        <div>
                             <fieldset>
                                 <legend><span class="required-field"></span>Does the drawing require updating?</legend>
                                 <div class="radio-group">
@@ -215,14 +216,14 @@
                                     <label for="updNo">No</label>
                                 </div>
                             </fieldset>
-                        </div>
-                        <div class="grid-2">
+
                             <label for="orgrevnum">Original Revision Number</label>
                             <input type="number" id="org-rev-num" disabled>
 
                             <label for="updrevnum">Updated Revision Number</label>
                             <input type="number" id="upd-rev-num" disabled>
                         </div>
+                        
                         <div class="grid-2">
                             <label for="engName">Name of Engineer</label>
                             <input type="text" id="engName" disabled>
