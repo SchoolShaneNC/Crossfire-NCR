@@ -16,8 +16,7 @@ LogDataFile = {"logs":[
         ItemMarkedNC : "qi-yes",
         QualRepName : "Shane Milton",
         Dated : "2024-01-24",
-        Status : "Closed",
-        link : "formEdit.html"},
+        Status : "Closed"},
 
     //NEW LOG ENTRY
     //NCR Details
