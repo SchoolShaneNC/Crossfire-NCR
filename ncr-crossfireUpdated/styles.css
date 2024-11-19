@@ -500,3 +500,15 @@ tr {
     margin-right: 1.5em;
     padding: 0.25em 0.5em;
 }
+
+.pdfbutton{
+    background-color: #5897c9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: .2em;
+    padding: 0.2rem 0.2rem;
+    text-decoration: none;
+    width: 8em;
+}

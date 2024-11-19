@@ -37,7 +37,7 @@ async function generatePDF(event) {
     await doc.html(formfromlog, {
         callback: function (doc) {
             console.log("PDF generated"); 
-            doc.save(`NCR${NCRVAriable}.pdf`); 
+            doc.save(`NCR####.pdf`); 
         },
         x: 10, 
         y: 10, 
