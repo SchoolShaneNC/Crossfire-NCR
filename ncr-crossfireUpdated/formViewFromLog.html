@@ -27,6 +27,8 @@
     </header>
     
     <main>
+        <div id="testing-pdf"></div>
+        
         <div class="sidebar">
             <a href="index.html" title="Home Page">
                 <img src="Images/home-icon.png" alt="Home" height="512" width="512">
@@ -52,7 +54,7 @@
             <li>Viewing Existing Document</li>
         </ul>
 
-        <div class="form-class">
+        <div class="form-class" id="formViewFromLog">
             <h1 class="header-text">Non-Conformance Report View</h1>
 
             <div>
@@ -233,6 +235,11 @@
                         </div>
                     </form>
                 </details>
+                <form>
+                    <div>
+                        <button class="pdfbutton" id="pdf">Close & Create PDF</button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
@@ -244,6 +251,10 @@
     <script src="scripts/edit3.js"></script>
     <script src="scripts/LocalStorage_JSONlog.js"></script>
     <script src="scripts/revisionValidaton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./scripts/closeandcreatepdf.js"></script>
+    
 
 </body>
 </html>
