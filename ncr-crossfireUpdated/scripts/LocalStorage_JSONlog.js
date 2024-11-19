@@ -22,9 +22,9 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : null,
         EngDate : "2024-02-24"
     },
 
@@ -51,9 +51,9 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
+        OrgRevNum : 1,
+        UpdRevNum : null,
+        EngName : "Horatio",
         EngDate : "2024-02-24"
     },
 
@@ -81,9 +81,9 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
+        OrgRevNum : 2,
+        UpdRevNum : 10,
+        EngName : "Theodore Roosevelt",
         EngDate : "2024-02-24"
     },
 
@@ -111,9 +111,9 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
+        OrgRevNum : 3,
+        UpdRevNum : 5,
+        EngName : "Vasily Zaitsev",
         EngDate : "2024-02-24"
     },
 
@@ -140,10 +140,10 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
+        OrgRevNum : null,
+        UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-02-24"
+        EngDate : "2023-05-13"
     },
 
         
@@ -167,12 +167,12 @@ LogDataFile = {"logs":[
         //Engineer Section   
         DispositionRadio : "use-as-is",
         DispositionText : null,
-        CustomerNotification : "notifYes",
+        CustomerNotification : null,
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
-        EngDate : "2024-02-24"
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "Ichabod",
+        EngDate : "2024-08-23"
     },
 
 
@@ -198,8 +198,8 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
+        OrgRevNum : 70,
+        UpdRevNum : 1234,
         EngName : "",
         EngDate : "2024-02-24"
     },
@@ -225,9 +225,9 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "Dabrickashaw Ferguson",
         EngDate : "2024-02-24"
     },
 
@@ -253,9 +253,9 @@ LogDataFile = {"logs":[
         DispositionText : null,
         CustomerNotification : "notifYes",
         UpdateDrawing : "updYes",
-        OrgRevNum : "",
-        UpdRevNum : "",
-        EngName : "",
+        OrgRevNum : 1,
+        UpdRevNum : null,
+        EngName : "Demarvion",
         EngDate : "2024-02-24"
     }
 ]}
