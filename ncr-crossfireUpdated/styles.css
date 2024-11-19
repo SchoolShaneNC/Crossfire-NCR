@@ -214,7 +214,26 @@ textarea {
     100%{
         height:0px
     }
-    
+}
+
+@keyframes bell-rotate{
+    0%{
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.animate-bell{
+    animation-name: bell-rotate;
+    animation-duration: 500ms;
+    animation-iteration-count: 3;
 }
 
 .bell-anchor{
@@ -222,6 +241,7 @@ textarea {
     border: none;
     padding: 0;
     margin-right: 115px;
+    
 }
 
 .bell-anchor img{
