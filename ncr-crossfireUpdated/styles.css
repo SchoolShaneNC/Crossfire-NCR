@@ -384,7 +384,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 }
 
 .scrollbar{
-    height: 408px;
+    height: 570px;
     overflow-y:visible;
     overflow-x: hidden;
     overflow: scroll;
