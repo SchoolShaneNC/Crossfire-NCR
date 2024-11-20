@@ -1,9 +1,7 @@
 
 let qiForm = document.getElementById("qi-edit-form")
 
-qiForm.addEventListener('submit', function(event){
-    event.preventDefault()
-
+qiForm.addEventListener('click', function(){
     let ncrNumber = document.getElementById("ncrNo").value
 
     let test = document.createTextNode("NCR " + ncrNumber + " had changes made by Quality Inspector")
@@ -18,8 +16,6 @@ qiForm.addEventListener('submit', function(event){
     bell.classList.remove('animate-bell')
     void bell.offsetWidth;
     bell.classList.add('animate-bell')
-    
-
 })
 
 //Save notifications
