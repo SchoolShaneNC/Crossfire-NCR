@@ -1,4 +1,27 @@
 
+let qiForm = document.getElementById("qi-edit-form")
+
+qiForm.addEventListener('submit', function(event){
+    event.preventDefault()
+
+    let ncrNumber = document.getElementById("ncrNo").value
+
+    let test = document.createTextNode("NCR " + ncrNumber + " had changes made by Quality Inspector")
+    let ul = document.getElementById("notification-list")
+    let li = document.createElement("li")
+
+    li.appendChild(test)
+    ul.appendChild(li)
+
+    let bell=document.getElementById('bell-icon')
+
+    bell.classList.remove('animate-bell')
+    void bell.offsetWidth;
+    bell.classList.add('animate-bell')
+    
+
+})
+
 //Save notifications
 document.getElementById("qi-save-doc-button")
 .addEventListener("click", function(){
