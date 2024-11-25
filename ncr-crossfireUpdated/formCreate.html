@@ -28,13 +28,13 @@
     
     <main>
         <div class="sidebar">
-            <a href="index.html" title="Home Page">
-                <img src="Images/home-icon.png" alt="Home" height="512" width="512">
-                <p>Return Home</p>
+            <a href="index.html" title="Dashboard">
+                <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
+                <p>Dashboard</p>
             </a>       
             <a href="formCreate.html" title="Generate new NCR Document">
                 <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
-                <p>Create a form</p>
+                <p>Create NCR</p>
             </a> 
             <a href="formView.html" title="View list of open and closed NCR Documents">
                 <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
@@ -44,10 +44,18 @@
                 <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
                 <p>Archived Reports</p>
             </a>
+            <a href="fqa.html" title="Frequently asked questions">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>FAQ</p>
+            </a>
+            <a href="adminPanel.html" title="Admin Panel">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>Admin Panel</p>
+            </a>
         </div>
 
         <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Dashboard</a></li>
             <li>Create NCR</li>
         </ul>
 
@@ -55,23 +63,23 @@
             <h1 class="header-text">Non-Conformance Report</h1>
 
             <div>
-                <details>
+                <details id="details-inspector" open>
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
                     <form name="ncr-create" class="ncr-form filter-box">
 
-                        <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
+                        <div class="required-field"><b>*</b></div><p id="create-require-notice" class="left-align">The red star indicates <strong>required</strong> field.</p> 
 
                         <div id="form-big-overall" class="grid-4">
                             <div>
                                 <h2 class="left-align">NCR Details</h2>
                                 <!-- NCR No. -->
-                                <div class="required-field"></div>
+                                <div class="required-field"><b>*</b></div>
                                 <label for="ncrNo">NCR No.</label>
                                 <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">
                                 
                                 <fieldset>
-                                    <legend><span class="required-field"></span>Identity Process Applicable</legend>
+                                    <legend><span class="required-field"><b>*</b></span>Identity Process Applicable</legend>
                                     <div class="radio-group">
                                         <div>
                                             <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked required>
@@ -88,30 +96,30 @@
                                 <!-- Product Details -->
                                 <h2 class="left-align">Product Details</h2>
                                 
-                                <div class="required-field"></div>
+                                <div class="required-field"><b>*</b></div>
                                 <label for="supplierName">Supplier Name</label>
                                 <input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">
 
                                 <div class="grid-4">
                                     <div title="Product number">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><b>*</b></div>
                                         <label for="poProdNo">PO or Prod. No.</label>
-                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############" maxlength="12">
+                                        <input type="text" id="poProdNo" name="poProdNo" placeholder="############" maxlength="12">
                                     </div>
                                     <div title="Sales order number">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><b>*</b></div>
                                         <label for="salesOrderNo">Sales Order No.</label>
-                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" maxlength="4" required>
+                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" maxlength="4">
                                     </div>
                                     <div title="Number of products received from sale order">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><b>*</b></div>
                                         <label for="quantityReceived">Quantity Received</label>
-                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0">
+                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" min="0">
                                     </div>
                                     <div title="Number of defective products found in sale order">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><b>*</b></div>
                                         <label for="quantityDefective">Quantity Defective</label>
-                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0">
+                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" min="0">
                                     </div>
                                 </div>
                             </div>
@@ -120,13 +128,13 @@
                                 <!-- Item Details -->
                                 <h2 class="left-align">Item Details</h2>
                     
-                                <div class="required-field"></div>
+                                <div class="required-field"><b>*</b></div>
                                 <label for="itemDescription">Description of Item</label>
-                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required></textarea>
+                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..."></textarea>
                     
-                                <div class="required-field"></div>
+                                <div class="required-field"><b>*</b></div>
                                 <label for="itemDefect">Description of Defect</label>
-                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required></textarea>
+                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..."></textarea>
                             </div>
                         </div>
                         
@@ -135,7 +143,7 @@
                             <h2 class="left-align">Final Section</h2>
                     
                             <fieldset>
-                                <legend><span class="required-field"></span>Item marked Non-Conforming</legend>
+                                <legend><span class="required-field"><b>*</b></span>Item marked Non-Conforming</legend>
                                     <div class="radio-group">
                                         <div>
                                             <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
@@ -151,9 +159,9 @@
 
                             <div id="quality-rep" class="grid-2">
                                 <div >
-                                    <div class="required-field"></div>
+                                    <div class="required-field"><b>*</b></div>
                                     <label for="qualityRepName">Quality Representative's Name</label>
-                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required>
+                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe">
                                 </div>
                                 <div id ="date">
                                     
@@ -180,9 +188,9 @@
                         </div>                 
                         
                         <fieldset>
-                            <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
+                            <legend><span class="required-field"><b>*</b></span>Indicate disposition by checking one of the following:</legend>
                             <div id="disposition-radio" class="radio-group">
-                                <input type="radio" id="use-as-is" name="disposition" value="use" required>
+                                <input type="radio" id="use-as-is" name="disposition" value="use">
                                 <label for="use-as-is">Use As Is</label>
                                 
                                 <input type="radio" id="repair" name="disposition" value="repair">
@@ -203,9 +211,9 @@
                         </div>
 
                         <fieldset>
-                            <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
+                            <legend><span class="required-field"><b>*</b></span>Does the customer require a notification for the NCR?</legend>
                             <div class="radio-group">
-                                <input type="radio" id="notifYes" name="notification" required>
+                                <input type="radio" id="notifYes" name="notification">
                                 <label for="notifYes">Yes</label>
 
                                 <input type="radio" id="notifNo"  name="notification">
@@ -215,9 +223,9 @@
 
                         <div>
                             <fieldset>
-                                <legend><span class="required-field"></span>Does the drawing require updating?</legend>
+                                <legend><span class="required-field"><b>*</b></span>Does the drawing require updating?</legend>
                                 <div id="revision-radio" class="radio-group">
-                                    <input type="radio" id="updYes" name="update" value="yes" checked required>
+                                    <input type="radio" id="updYes" name="update" value="yes" checked>
                                     <label for="updYes">Yes</label>
                                     <input type="radio" id="updNo"  name="update" value="no">
                                     <label for="updNo">No</label>
@@ -232,12 +240,12 @@
                         </div>
                         <div class="grid-2">
                             <div>
-                                <div class="required-field"></div>
+                                <div class="required-field"><b>*</b></div>
                                 <label for="engName">Name of Engineer</label>
                                 <input type="text" id="engName" placeholder="i. e. Ellen Joe">
                             </div>
                             <div>
-                                <div class="required-field"></div>
+                                <div class="required-field"><b>*</b></div>
                                 <label for="engDate">Date:</label>
                                 <input type="date" id="engDate" name="date">
                             </div>

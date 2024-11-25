@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossfire Internal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="webpageSettings">
+    <!-- Navigation Bar -->
+    <header>
+        <div class="topbar">
+            <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
+
+            <a class="bell-anchor" title="Notifications">
+                <img src="images/notification.png" alt="notification bell" width="512" height="512">
+
+                <div class="scrollbar">
+                    <ul id="notification-list">
+                        <li>Welcome User</li>
+                    </ul>
+                </div>
+            </a>    
+        </div>
+    </header>
+
+    <main>
+        <!--Sidebar Navigation-->
+        <div class="sidebar">
+            <a href="index.html" title="Dashboard">
+                <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
+                <p>Dashboard</p>
+            </a>       
+            <a href="formCreate.html" title="Generate new NCR Document">
+                <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
+                <p>Create NCR</p>
+            </a> 
+            <a href="formView.html" title="View list of open and closed NCR Documents">
+                <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
+                <p>Select form to edit</p>
+            </a>
+            <a href="archivedReports.html" title="List of all closed NCR documents">
+                <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
+                <p>Archived Reports</p>
+            </a>
+            <a href="fqa.html" title="Frequently asked questions">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>FAQ</p>
+            </a>
+            <a href="adminPanel.html" title="Admin Panel">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>Admin Panel</p>
+            </a>
+        </div>
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Dashboard</a></li>
+            <li>NCR Form - FQA</li>
+        </ul>
+        
+        <!-- Main Content -->
+        <div class="form-class">
+            <h1 class="header-text">NCR Form - FQA</h1>
+
+            <div class="fqa-questions">
+                <div class="faq-section">
+                    <div class="faq-question"><b>1. What is an NCR form?</b></div>
+                    <div class="faq-answer">An NCR form, or Non-Conformance Report, is a document used to report and address instances where a product, process, or service does not meet specified requirements.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>2. When should an NCR form be used?</b></div>
+                    <div class="faq-answer">NCR forms should be used whenever a non-conformance is identified, such as defects in products, deviations from processes, or any issue that impacts quality or compliance.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>3. What details are included in an NCR form?</b></div>
+                    <div class="faq-answer">An NCR form typically includes NCR number, description of the non-conformance, product or process details, corrective actions, root cause analysis, and relevant dates.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>4. Who is responsible for filling out an NCR form?</b></div>
+                    <div class="faq-answer">The person identifying the non-conformance, such as a quality inspector or team member, is usually responsible for initiating the NCR form.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>5. Can NCR forms be submitted electronically?</b></div>
+                    <div class="faq-answer">Yes, many organizations use electronic systems for submitting and managing NCR forms to streamline the process and maintain records.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>6. How is an NCR number assigned?</b></div>
+                    <div class="faq-answer">An NCR number is typically assigned sequentially by the system or team managing the NCR process to ensure traceability.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>7. What are the corrective actions in an NCR?</b></div>
+                    <div class="faq-answer">Corrective actions are steps taken to fix the non-conformance and prevent recurrence. They may include process adjustments, training, or changes to procedures.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>8. How long does it take to resolve an NCR?</b></div>
+                    <div class="faq-answer">The time to resolve an NCR varies depending on its complexity. Some can be resolved quickly, while others may require extensive investigation and corrective actions.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>9. How are NCRs tracked and monitored?</b></div>
+                    <div class="faq-answer">NCRs are tracked and monitored using logs, databases, or quality management software to ensure timely resolution and compliance.</div>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-question"><b>10. Why is documenting non-conformances important?</b></div>
+                    <div class="faq-answer">Documenting non-conformances is crucial for identifying trends, ensuring accountability, improving processes, and meeting compliance standards.</div>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/HomeRecentLogs.js"></script>
+    <script src="scripts/LocalStorage_JSONlog.js"></script>
+</body>
+</html>

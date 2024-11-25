@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Crossfire Internal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-
-
 <body class="webpageSettings">
+    <!-- Navigation Bar -->
     <header>
         <div class="topbar">
             <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
@@ -24,11 +23,12 @@
                         <li>Welcome User</li>
                     </ul>
                 </div>
-            </a>      
+            </a>    
         </div>
     </header>
-    
+
     <main>
+        <!--Sidebar Navigation-->
         <div class="sidebar">
             <a href="index.html" title="Dashboard">
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
@@ -55,57 +55,26 @@
                 <p>Admin Panel</p>
             </a>
         </div>
-    
+
         <ul class="breadcrumb">
             <li><a href="index.html">Dashboard</a></li>
-            <li>View Archive</li>
+            <li>NCR Form - FQA</li>
         </ul>
-
+        
+        <!-- Main Content -->
         <div class="form-class">
-            <h1 id="view-forms-h1" class="header-text">NCR Archived Reports</h1>
-            
-            <div id="grid-form-view">
-                <div class="filter-box">
-                <h2>Filter Options</h2>
-                <label for="filter1">NCR Number:</label>
-                <input type="text" id="filter1" name="filter1" placeholder="Enter NCR Number..."><br><br>
+            <h1 class="header-text">NCR Admin Panel</h1>
 
-                <label for="fromDate">Start Date:</label>
-                <input type="date" id="fromDate" name="fromDate">
-                <label for="endDate">End Date:</label>
-                <input type="date" id="endDate" name="endDate"><br><br>
-               <!-- <input type="text" id="filter2" name="filter2" placeholder="Enter Name..."><br><br>-->
-            
-                <label for="filter3">Supplier:</label>
-                <input type="text" id="filter3" name="filter3" placeholder="Enter Supplier..."><br><br>
+            <div>
                 
-                <button id="resetButton" class="button">Reset Filters</button>
-                </div>
-            
-                <div id="scrollbar">
-                    <table id="ncrTable" class="styled-table">
-                        <thead>
-                            <tr>
-                                <th>NCR No.</th>
-                                <th>Date</th>
-                                <th>Supplier Name</th>
-                                <th></th>
-    
-                            </tr>
-                        </thead>
-                        <tbody id="archiveTable">
-
-                        </tbody>
-                    </table>
-                </div>
             </div>
+
             
-            <!--<a id="return-button" class="button" href="index.html">Back to home page</a>-->
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/FilterReset.js"></script>
-    <script src="Scripts/LocalStorage_formView.js"></script>
-    <script src="Scripts/archiveLog.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/HomeRecentLogs.js"></script>
+    <script src="scripts/LocalStorage_JSONlog.js"></script>
 </body>
 </html>
