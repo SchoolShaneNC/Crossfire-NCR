@@ -220,26 +220,25 @@
                                 <label for="notifNo">No</label>
                             </div>
                         </fieldset>
-
-                        <div>
-                            <fieldset>
-                                <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
+                        <fieldset>
+                            <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
                                 <div id="revision-radio" class="radio-group">
                                     <input type="radio" id="updYes" name="update" value="yes" checked required>
                                     <label for="updYes">Yes</label>
                                     <input type="radio" id="updNo"  name="update" value="no">
                                     <label for="updNo">No</label>
                                 </div>
-                            </fieldset>
-
-                            <label for="org-rev-num">Original Revision Number:</label>
-                            <input min="0" type="number" id="org-rev-num">
+                        </fieldset>
+                        <div class="grid-2">
+                            <div>
+                                <label for="org-rev-num">Original Revision Number:</label>
+                                <input min="0" type="number" id="org-rev-num">
+                            </div>
+                            <div>
+                                <label for="upd-rev-num">Updated Revision Number:</label>
+                                <input min="0" type="number" id="upd-rev-num">
+                            </div>    
                         </div>
-                        <div>
-                            <label for="upd-rev-num">Updated Revision Number:</label>
-                            <input min="0" type="number" id="upd-rev-num">
-                        </div>    
-                    </div>
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
