@@ -13,10 +13,10 @@ $.each(LogData.logs, function(i, logs) {
                     "</td><td>" + logs.Status;
                     if (logs.Status == "Open"){
                         tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formEdit.html'" + " value=" + logs.NcrNo +">Edit</button>"
-                        tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">View</button>"
+                        tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Details</button>"
                         }else{
                             tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editError();" +  " value=" + logs.NcrNo +">Edit</button>"
-                            tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">View</button>"
+                            tblRow += "</td><td><button class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Details</button>"
                         }
                         tblRow +="</td></tr>" 
                         literalString += tblRow;
