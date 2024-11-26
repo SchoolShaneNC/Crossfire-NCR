@@ -65,8 +65,18 @@
         <div class="form-class">
             <h1 class="header-text">NCR Admin Panel</h1>
 
-            <div>
-                
+            <div class="content-nav">
+                <div id="comboBoxSection">
+                    <label for="comboBox">Current Items:</label>
+                    <select id="comboBox" size="5" style="width: 200px;">
+
+                    </select>
+                    <br><br>
+                    <label for="itemInput">Item:</label>
+                    <input type="text" id="itemInput" placeholder="Enter item here" />
+                    <button id="addButton">Add</button>
+                    <button id="removeButton">Remove</button>
+                </div>
             </div>
 
             
@@ -76,5 +86,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/HomeRecentLogs.js"></script>
     <script src="scripts/LocalStorage_JSONlog.js"></script>
+
+    <script src="scripts/companyList.js"></script>
 </body>
 </html>
