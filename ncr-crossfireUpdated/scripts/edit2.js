@@ -22,6 +22,12 @@ for(var i = 0; i < LogData.logs.length; i++){
             document.getElementById("qi-yes").checked = false;
             document.getElementById("qi-no").checked = false;
         }
+        let html = `<div class="required-field"></div>
+        <label for="dateString">Date:</label>
+        <p id="dateString">${LogData.logs[i].Dated}</p>`
+        document.getElementById("date").innerHTML = html;
+        
+        document.getElementById("date")
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         break;
