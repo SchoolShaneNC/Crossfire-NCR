@@ -28,13 +28,13 @@
     
     <main>
         <div class="sidebar">
-            <a href="index.html" title="Home Page">
-                <img src="Images/home-icon.png" alt="Home" height="512" width="512">
-                <p>Return Home</p>
+            <a href="index.html" title="Dashboard">
+                <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
+                <p>Dashboard</p>
             </a>       
             <a href="formCreate.html" title="Generate new NCR Document">
                 <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
-                <p>Create a form</p>
+                <p>Create NCR</p>
             </a> 
             <a href="formView.html" title="View list of open and closed NCR Documents">
                 <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
@@ -44,10 +44,18 @@
                 <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
                 <p>Archived Reports</p>
             </a>
+            <a href="fqa.html" title="Frequently asked questions">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>FAQ</p>
+            </a>
+            <a href="adminPanel.html" title="Admin Panel">
+                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <p>Admin Panel</p>
+            </a>
         </div>
 
         <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Dashboard</a></li>
             <li><a href="formView.html">NCR Log</a></li>
             <li>Edit</li>
         </ul>
@@ -72,7 +80,7 @@
                                 <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">                          
 
                                 <fieldset>
-                                    <legend><span class="required-field"></span>Identity Process Applicable</legend>
+                                    <label><span class="required-field"><b>*</b></span>Identity Process Applicable</label>
                                     <div class="radio-group">
                                         <div>
                                             <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked required>
@@ -136,7 +144,7 @@
                             <h2 class="left-align">Final Section</h2>
                     
                             <fieldset>
-                                <legend><span class="required-field"></span>Item marked Non-Conforming</legend>
+                                <label><span class="required-field"><b>*</b></span>Item marked Non-Conforming</label>
                                     <div class="radio-group">
                                         <div>
                                             <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
@@ -164,7 +172,7 @@
             
                         <!-- Save, Submit & Close Button -->
                          <div>
-                            <button id="qi-change-doc-button" type="submit" >Submit Changes</button>
+                            <button id="qi-change-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>
@@ -180,7 +188,7 @@
                         </div>
                         
                         <fieldset>
-                            <legend><span class="required-field"></span>Indicate disposition by checking one of the following:</legend>
+                            <label><span class="required-field"><b>*</b></span>Indicate disposition by checking one of the following:</label>
                             <div id="disposition-radio" class="radio-group">
                                 <input type="radio" id="use-as-is" name="disposition" value="use" required>
                                 <label for="use-as-is">Use As Is</label>
@@ -202,19 +210,17 @@
 
                         <div>
                             <fieldset>
-                                <legend><span class="required-field"></span>Does the customer require a notification for the NCR?</legend>
+                                <label><span class="required-field"><b>*</b></span>Does the customer require a notification for the NCR?</label>
                                 <div class="radio-group">
                                     <input type="radio" id="notifYes" name="notification">
                                     <label for="notifYes">Yes</label>
                                     <input type="radio" id="notifNo"  name="notification">
                                     <label for="notifNo">No</label>
                                 </div>
-                            </fieldset>
-                            
+                            </fieldset>    
                         </div>
-                        <div>
                             <fieldset>
-                                <legend><span class="required-field"></span>Does the drawing require updating?</legend>
+                                <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
                                 <div id="revision-radio" class="radio-group">
                                     <input type="radio" id="updYes" name="update" value="yes" checked>
                                     <label for="updYes">Yes</label>
@@ -222,11 +228,15 @@
                                     <label for="updNo">No</label>
                                 </div>
                             </fieldset>
-
-                            <label for="org-rev-num">Original Revision Number:</label>
-                            <input min="0" type="number" id="org-rev-num">
-                            <label for="upd-rev-num">Updated Revision Number:</label>
-                            <input min="0" type="number" id="upd-rev-num">
+                        <div class="grid-2">
+                            <div>
+                                <label for="org-rev-num">Original Revision Number:</label>
+                                <input min="0" type="number" id="org-rev-num">
+                            </div>
+                            <div>
+                                <label for="upd-rev-num">Updated Revision Number:</label>
+                                <input min="0" type="number" id="upd-rev-num">
+                            </div>    
                         </div>
                         <div class="grid-2">
                             <div>
@@ -240,10 +250,9 @@
                                 <label for="engDate">Date:</label>
                                 <input type="date" id="engDate" name="date"> 
                             </div>
-                            
                         </div>
                         <div>
-                            <button id="engineer-change-doc-button" type="submit" >Submit Changes</button>
+                            <button id="engineer-change-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>
