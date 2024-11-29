@@ -1,9 +1,8 @@
 //tracking down the html page for the if, without it gives errors on edit page
+let LogData = getData();
+console.log('Data on Page 1:', LogData);
 htmlPage = window.location.pathname
-const data1 = localStorage.getItem('LoggedData');
-const data2 = JSON.parse(data1);
-let LogData = [];
-LogData = data2;
+
 if (htmlPage == "/ncr-crossfireUpdated/formView.html"){
 let literalString = ""; //empty out of scope needed, if u just use tblrow will only display the last entry
 $.each(LogData.logs, function(i, logs) {

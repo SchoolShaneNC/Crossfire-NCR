@@ -1,33 +1,24 @@
+const supplierData = localStorage.getItem('LoggedData');
+const supplier = JSON.parse(supplierData);
+let LogData = [];
+LogData = supplier;
 const comboBox = document.getElementById("comboBox");
-
-    const companies = [
-    "Jim's Warehouse",
-    "Parts Unlimited",
-    "Acme Components",
-    "TechParts Co.",
-    "Precision Supplies",
-    "Allied Assemblies",
-    "Bolt & Gear Depot",
-    "National PartSource",
-    "Vertex Supplies Inc.",
-    "Quantum Components",
-    "BuildWare Solutions",
-    "NextGen Supply Co.",
-    "Reliable Parts Hub",
-    "SteelWorks Distribution",
-    "Core Components LLC"
-    ];
-
+const companies = [];
 
     function populateComboBox() {
-        companies.forEach(companie => {
-            const option = document.createElement("option");
-            option.value = companie.toLowerCase();
-            option.textContent = companie;
-            comboBox.appendChild(option);
-        });
+        for(z of LogData.logs){
+          console.log(z.SupplierName);
+          const option = document.createElement("option");
+          option.value = z.SupplierName.toLowerCase();
+          option.textContent = z.SupplierName;
+          x = companies.find(({ supName }) => supName === z.SupplierName);
+            if (x == undefined){
+                companies.push({'supName':option.textContent});
+                comboBox.appendChild(option);
+            }
+        }
+        localStorage.setItem('SupplierData', companies);
     }
-
     populateComboBox();
 
 

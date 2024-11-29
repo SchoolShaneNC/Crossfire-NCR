@@ -259,5 +259,25 @@ LogDataFile = {"logs":[
         EngDate : "2024-02-24"
     }
 ]}
-x = JSON.stringify(LogDataFile);
-localStorage.setItem('LoggedData', x);
+
+function initializeData() {
+        // If the data doesn't exist in localStorage, set it to the hardcoded array
+        if (!localStorage.getItem("LoggedData")) {
+            localStorage.setItem("LoggedData", JSON.stringify(LogDataFile));
+        }
+    }
+
+function getData() {
+        console.log("this is getting fr");
+        return JSON.parse(localStorage.getItem("LoggedData"));
+    }
+
+    function addItemToData(item) {
+        let xdata = getData();
+
+        xdata.push(item);
+        updateData(xdata);
+    }
+
+//x = JSON.stringify(LogDataFile);
+//localStorage.setItem('LoggedData', x);
