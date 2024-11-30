@@ -1,23 +1,24 @@
-const supplierData = localStorage.getItem('LoggedData');
-const supplier = JSON.parse(supplierData);
-let LogData = [];
-LogData = supplier;
+let LogData = getData();
+console.log('Data on Page 1:', LogData);
+
+let Supplier = getData2();
+console.log('Data on Page 1:', Supplier);
+
 const comboBox = document.getElementById("comboBox");
-const companies = [];
+const companies1 = [];
 
     function populateComboBox() {
-        for(z of LogData.logs){
-          console.log(z.SupplierName);
+        for(z of Supplier){
+          console.log(z.supName);
           const option = document.createElement("option");
-          option.value = z.SupplierName.toLowerCase();
-          option.textContent = z.SupplierName;
-          x = companies.find(({ supName }) => supName === z.SupplierName);
+          option.value = z.supName.toLowerCase();
+          option.textContent = z.supName;
+          x = companies1.find(({ supName }) => supName === z.supName);
             if (x == undefined){
-                companies.push({'supName':option.textContent});
+                companies1.push({'supName':option.textContent});
                 comboBox.appendChild(option);
             }
         }
-        localStorage.setItem('SupplierData', companies);
     }
     populateComboBox();
 
@@ -47,7 +48,11 @@ const companies = [];
                 const option = document.createElement("option");
                 option.textContent = newItem;
                 comboBox.appendChild(option);
+                companies1.push({'supName':option.textContent});
+                localStorage.setItem('SupplierData', JSON.stringify(companies1));
                 alert(`"${newItem}" has been added.`);
+                console.log(companies1);
+
             }
             itemInput.value = ""; // Clear the input field
         }

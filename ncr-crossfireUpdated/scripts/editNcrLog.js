@@ -1,4 +1,6 @@
 //tracking down the html page for the if, without it gives errors on edit page
+
+
 let LogData = getData();
 console.log('Data on Page 1:', LogData);
 htmlPage = window.location.pathname
