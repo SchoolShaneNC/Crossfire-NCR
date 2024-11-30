@@ -259,5 +259,51 @@ LogDataFile = {"logs":[
         EngDate : "2024-02-24"
     }
 ]}
-x = JSON.stringify(LogDataFile);
-localStorage.setItem('LoggedData', x);
+
+function initializeData() {
+        // If the data doesn't exist in localStorage, set it to the hardcoded array
+        if (!localStorage.getItem("LoggedData")) {
+            localStorage.setItem("LoggedData", JSON.stringify(LogDataFile));
+        }
+    }
+   //localStorage.clear();
+
+function initializeData2() {
+        // If the data doesn't exist in localStorage, set it to the hardcoded array
+        if (!localStorage.getItem("SupplierData")) {
+                const companies = [];
+                for(z of LogDataFile.logs){
+                        console.log(z.SupplierName);
+                        y = z.SupplierName;
+                        x = companies.find(({ supName }) => supName === z.SupplierName);
+                          if (x == undefined){
+                              companies.push({'supName':y});
+                          }
+                      }
+                      console.log(companies);
+                      localStorage.setItem('SupplierData', JSON.stringify(companies));
+        }
+    }
+
+function getData() {
+        console.log("this is getting fr");
+        return JSON.parse(localStorage.getItem("LoggedData"));
+    }
+
+function getData2() {
+        console.log("this is getting fr AGAIN");
+        return JSON.parse(localStorage.getItem("SupplierData"));
+    }
+
+    function addItemToData(item) {
+        let xdata = getData();
+
+        xdata.push(item);
+        updateData(xdata);
+    }
+
+initializeData2() 
+initializeData() 
+
+//x = JSON.stringify(LogDataFile);
+//localStorage.setItem('LoggedData', x);

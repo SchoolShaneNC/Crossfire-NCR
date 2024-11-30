@@ -1,33 +1,25 @@
+let LogData = getData();
+console.log('Data on Page 1:', LogData);
+
+let Supplier = getData2();
+console.log('Data on Page 1:', Supplier);
+
 const comboBox = document.getElementById("comboBox");
-
-    const companies = [
-    "Jim's Warehouse",
-    "Parts Unlimited",
-    "Acme Components",
-    "TechParts Co.",
-    "Precision Supplies",
-    "Allied Assemblies",
-    "Bolt & Gear Depot",
-    "National PartSource",
-    "Vertex Supplies Inc.",
-    "Quantum Components",
-    "BuildWare Solutions",
-    "NextGen Supply Co.",
-    "Reliable Parts Hub",
-    "SteelWorks Distribution",
-    "Core Components LLC"
-    ];
-
+const companies1 = [];
 
     function populateComboBox() {
-        companies.forEach(companie => {
-            const option = document.createElement("option");
-            option.value = companie.toLowerCase();
-            option.textContent = companie;
-            comboBox.appendChild(option);
-        });
+        for(z of Supplier){
+          console.log(z.supName);
+          const option = document.createElement("option");
+          option.value = z.supName.toLowerCase();
+          option.textContent = z.supName;
+          x = companies1.find(({ supName }) => supName === z.supName);
+            if (x == undefined){
+                companies1.push({'supName':option.textContent});
+                comboBox.appendChild(option);
+            }
+        }
     }
-
     populateComboBox();
 
 
@@ -56,7 +48,11 @@ const comboBox = document.getElementById("comboBox");
                 const option = document.createElement("option");
                 option.textContent = newItem;
                 comboBox.appendChild(option);
+                companies1.push({'supName':option.textContent});
+                localStorage.setItem('SupplierData', JSON.stringify(companies1));
                 alert(`"${newItem}" has been added.`);
+                console.log(companies1);
+
             }
             itemInput.value = ""; // Clear the input field
         }

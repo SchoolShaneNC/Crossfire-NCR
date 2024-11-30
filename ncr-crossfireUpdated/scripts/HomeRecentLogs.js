@@ -1,10 +1,8 @@
-//getting the json data same old same old
-const data1 = localStorage.getItem('LoggedData');
-const data2 = JSON.parse(data1);
-let LogData = [];
-LogData = data2;
+
+let LogData = getData();
+console.log('Data on Page 1:', LogData);
 let newData = [];
-console.log(LogData);
+
 //parsing ncr num so i can .sort() it then pushing to new array to slice bottom sorted 5 
 for(z of LogData.logs){
     x = (parseInt(z.NcrNo.substring(0,4) + parseInt(z.NcrNo.substring(5))));
