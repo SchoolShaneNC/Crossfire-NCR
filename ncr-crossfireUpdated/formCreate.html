@@ -28,34 +28,34 @@
     
     <main>
         <div class="sidebar">
-            <a href="index.html" title="Dashboard">
+            <a href="index.html" title="Return to dashboard">
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
                 <p>Dashboard</p>
             </a>       
             <a href="formCreate.html" title="Generate new NCR Document">
-                <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
+                <img src="Images/add-file-icon.png" alt="Create NCR" height="512" width="512">
                 <p>Create NCR</p>
             </a> 
             <a href="formView.html" title="View list of open and closed NCR Documents">
-                <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
-                <p>Select form to edit</p>
+                <img src="Images/lookup-icon.png" alt="NCR Log" height="512" width="512">
+                <p>NCR Log</p>
             </a>
-            <a href="archivedReports.html" title="List of all closed NCR documents">
-                <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
-                <p>Archived Reports</p>
+            <a href="archivedReports.html" title="View archived and closed NCR documents">
+                <img src="Images/archive-dif.png" alt="NCR Archive" height="512" width="512">
+                <p>NCR Archive</p>
             </a>
             <a href="fqa.html" title="Frequently asked questions">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <img src="Images/iconTesting.png" alt="FAQ" height="512" width="512">
                 <p>FAQ</p>
             </a>
-            <a href="adminPanel.html" title="Admin Panel">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+            <a href="adminPanel.html" title="Administrator rights">
+                <img src="Images/iconTesting.png" alt="Admin" height="512" width="512">
                 <p>Admin Panel</p>
             </a>
         </div>
 
         <ul class="breadcrumb">
-            <li><a href="index.html">Dashboard</a></li>
+            <li><a title="Return to dashboard" href="index.html">Dashboard</a></li>
             <li>Create NCR</li>
         </ul>
 
@@ -68,7 +68,7 @@
 
                     <form name="ncr-create" class="ncr-form filter-box">
 
-                        <div class="required-field"><b>*</b></div><p id="create-require-notice" class="left-align">The red star indicates <strong>required</strong> field.</p> 
+                        <div class="required-field"><b>*</b></div><p id="create-require-notice" class="left-align">The blue star indicates <strong>required</strong> field.</p> 
 
                         <div id="form-big-overall" class="grid-4">
                             <div>
@@ -141,7 +141,7 @@
                         
                         <div id="form-final-section">
                             <!-- Final Section -->
-                            <h2 class="left-align">Final Section</h2>
+                            <h2 class="left-align">Quality Inspector Details</h2>
                     
                             <fieldset>
                                 <label><span class="required-field"><b>*</b></span>Item marked Non-Conforming</label>
@@ -172,8 +172,8 @@
             
                         <!-- Save, Submit & Close Button -->
                          <div>
-                            <button id="qi-save-doc-button">Save</button>
-                            <button id="qi-submit-doc-button" type="submit" >Submit</button>
+                            <button title="Save changes of current document section" id="qi-save-doc-button">Save</button>
+                            <button title="Submit all changes" id="qi-submit-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>
@@ -253,8 +253,8 @@
                             </div>
                         </div>
                         <div>
-                            <button id="engineer-save-doc-button">Save</button>
-                            <button id="engineer-submit-doc-button" type="submit" >Submit</button>
+                            <button  title="Save changes of current document section" id="engineer-save-doc-button">Save</button>
+                            <button  title="Submit all changes" id="engineer-submit-doc-button" type="submit" >Submit</button>
                         </div>
                     </form>
                 </details>

@@ -30,71 +30,70 @@
     
     <main>
         <div class="sidebar">
-            <a href="index.html" title="Dashboard">
+            <a href="index.html" title="Return to dashboard">
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
                 <p>Dashboard</p>
             </a>       
             <a href="formCreate.html" title="Generate new NCR Document">
-                <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
+                <img src="Images/add-file-icon.png" alt="Create NCR" height="512" width="512">
                 <p>Create NCR</p>
             </a> 
             <a href="formView.html" title="View list of open and closed NCR Documents">
-                <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
-                <p>Select form to edit</p>
+                <img src="Images/lookup-icon.png" alt="NCR Log" height="512" width="512">
+                <p>NCR Log</p>
             </a>
-            <a href="archivedReports.html" title="List of all closed NCR documents">
-                <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
-                <p>Archived Reports</p>
+            <a href="archivedReports.html" title="View archived and closed NCR documents">
+                <img src="Images/archive-dif.png" alt="NCR Archive" height="512" width="512">
+                <p>NCR Archive</p>
             </a>
             <a href="fqa.html" title="Frequently asked questions">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <img src="Images/iconTesting.png" alt="FAQ" height="512" width="512">
                 <p>FAQ</p>
             </a>
-            <a href="adminPanel.html" title="Admin Panel">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+            <a href="adminPanel.html" title="Administrator rights">
+                <img src="Images/iconTesting.png" alt="Admin" height="512" width="512">
                 <p>Admin Panel</p>
             </a>
         </div>
     
         <ul class="breadcrumb">
-            <li><a href="index.html">Dashboard</a></li>
-            <li>View & Edit</li>
+            <li><a title="Return to dashboard" href="index.html">Dashboard</a></li>
+            <li>NCR Log</li>
         </ul>
 
         <div class="form-class">
-            <h1 id="view-forms-h1" class="header-text">NCR Report List</h1>
+            <h1 id="view-forms-h1" class="header-text">NCR Log</h1>
             
             <div id="grid-form-view">
                 <div class="filter-box">
-                <h2>Filter Options</h2>
-                <label for="filter1">NCR Number:</label>
-                <input type="text" id="filter1" name="filter1" placeholder="Enter NCR Number..."><br><br>
+                    <h2>Filter Options</h2>
+                    <label for="filter1">NCR Number</label>
+                    <input title="Filter by NCR number" type="text" id="filter1" name="filter1" placeholder="Enter NCR Number...">
 
-                <label for="fromDate">Start Date:</label>
-                <input type="date" id="fromDate" name="fromDate">
-                <label for="endDate">End Date:</label>
-                <input type="date" id="endDate" name="endDate"><br><br>
-               <!-- <input type="text" id="filter2" name="filter2" placeholder="Enter Name..."><br><br>-->
-            
-                <label for="filter3">Supplier:</label>
-                <input type="text" id="filter3" name="filter3" placeholder="Enter Supplier..."><br><br>
-                
-                <fieldset>
-                    <legend>Status:</legend>
-                    <div>
-                        <div class="radio-log">
-                            <label for="Open">Open</label>
-                            <input type="radio" id="Open" name="filter4" value="Open">
-                        </div>
-                        
-                        <div class="radio-log">
-                            <label for="Closed">Closed</label>
-                            <input type="radio" id="Closed" name="filter4" value="Closed">
-                        </div>
-                    </div>
+                    <label for="fromDate">Start Date</label>
+                    <input title="Filter by earliest date" type="date" id="fromDate" name="fromDate">
+                    <label for="endDate">End Date</label>
+                    <input title="Filter by latest date" type="date" id="endDate" name="endDate">
+                   <!-- <input type="text" id="filter2" name="filter2" placeholder="Enter Name..."><br><br>-->
                     
-                </fieldset>
-                <button id="resetButton" class="button">Reset</button>
+                    <label for="filter3">Supplier</label>
+                    <input title="Filter by supplier name" type="text" id="filter3" name="filter3" placeholder="Enter Supplier...">
+                    
+                    <fieldset title="Filter by open or closed NCR documents">
+                        <legend>Status</legend>
+                        <div>
+                            <div class="radio-log">
+                                <label for="Open">Open</label>
+                                <input type="radio" id="Open" name="filter4" value="Open">
+                            </div>
+
+                            <div class="radio-log">
+                                <label for="Closed">Closed</label>
+                                <input type="radio" id="Closed" name="filter4" value="Closed">
+                            </div>
+                        </div>   
+                    </fieldset>
+                    <button title="Reset all currently applied filters" id="resetButton" class="button">Reset</button>
                 </div>
             
                 <div id="scrollbar">

@@ -30,35 +30,35 @@
         <div id="testing-pdf"></div>
         
         <div class="sidebar">
-            <a href="index.html" title="Dashboard">
+            <a href="index.html" title="Return to dashboard">
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
                 <p>Dashboard</p>
             </a>       
             <a href="formCreate.html" title="Generate new NCR Document">
-                <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
+                <img src="Images/add-file-icon.png" alt="Create NCR" height="512" width="512">
                 <p>Create NCR</p>
             </a> 
             <a href="formView.html" title="View list of open and closed NCR Documents">
-                <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
-                <p>Select form to edit</p>
+                <img src="Images/lookup-icon.png" alt="NCR Log" height="512" width="512">
+                <p>NCR Log</p>
             </a>
-            <a href="archivedReports.html" title="List of all closed NCR documents">
-                <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
-                <p>Archived Reports</p>
+            <a href="archivedReports.html" title="View archived and closed NCR documents">
+                <img src="Images/archive-dif.png" alt="NCR Archive" height="512" width="512">
+                <p>NCR Archive</p>
             </a>
             <a href="fqa.html" title="Frequently asked questions">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <img src="Images/iconTesting.png" alt="FAQ" height="512" width="512">
                 <p>FAQ</p>
             </a>
-            <a href="adminPanel.html" title="Admin Panel">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+            <a href="adminPanel.html" title="Administrator rights">
+                <img src="Images/iconTesting.png" alt="Admin" height="512" width="512">
                 <p>Admin Panel</p>
             </a>
         </div>
 
         <ul class="breadcrumb">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="formView.html">NCR Log</a></li>
+            <li><a title="Return to dashboard" href="index.html">Dashboard</a></li>
+            <li><a title="Return to NCR Log" href="formView.html">NCR Log</a></li>
             <li>Viewing Existing Document</li>
         </ul>
 
@@ -187,30 +187,30 @@
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Indicate disposition by checking one of the following:</label>
                             <div id="disposition-radio" class="radio-group">
-                                <input type="radio" id="use-as-is" name="disposition" value="use" required>
+                                <input type="radio" id="use-as-is" name="disposition" value="use" required disabled>
                                 <label for="use-as-is">Use As Is</label>
                                 
-                                <input type="radio" id="repair" name="disposition" value="repair">
+                                <input type="radio" id="repair" name="disposition" value="repair" disabled>
                                 <label for="repair">Repair</label>
 
-                                <input type="radio" id="rework" name="disposition" value="rework">
+                                <input type="radio" id="rework" name="disposition" value="rework" disabled>
                                 <label for="rework">Rework</label>
 
-                                <input type="radio" id="scrap" name="disposition" value="scrap">
+                                <input type="radio" id="scrap" name="disposition" value="scrap" disabled>
                                 <label for="scrap">Scrap</label>
                             </div>
                         </fieldset>
 
                         <div>
-                            <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
+                            <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required disabled></textarea>
                         </div>
 
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Does the customer require a notification for the NCR?</label>
                             <div class="radio-group">
-                                <input type="radio" id="notifYes" name="notification">
+                                <input type="radio" id="notifYes" name="notification" disabled>
                                 <label for="notifYes">Yes</label>
-                                <input type="radio" id="notifNo"  name="notification">
+                                <input type="radio" id="notifNo"  name="notification" disabled>
                                 <label for="notifNo">No</label>
                             </div>
                         </fieldset>   
@@ -218,9 +218,9 @@
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
                             <div id="revision-radio" class="radio-group">
-                                <input type="radio" id="updYes" name="update" value="yes" checked>
+                                <input type="radio" id="updYes" name="update" value="yes" checked disabled>
                                 <label for="updYes">Yes</label>
-                                <input type="radio" id="updNo"  name="update" value="no">
+                                <input type="radio" id="updNo"  name="update" value="no" disabled>
                                 <label for="updNo">No</label>
                             </div>
                         </fieldset>
@@ -228,29 +228,29 @@
                         <div class="grid-2">
                             <div>
                                 <label for="org-rev-num">Original Revision Number:</label>
-                                <input min="0" type="number" id="org-rev-num">
+                                <input min="0" type="number" id="org-rev-num" disabled>
                             </div>
                             <div>
                                 <label for="upd-rev-num">Updated Revision Number:</label>
-                                <input min="0" type="number" id="upd-rev-num">
+                                <input min="0" type="number" id="upd-rev-num" disabled>
                             </div>    
                         </div>
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"></div>
                                 <label for="engName">Name of Engineer</label>
-                                <input type="text" id="engName" placeholder="i. e. Ellen Joe">
+                                <input type="text" id="engName" placeholder="i. e. Ellen Joe" disabled>
                             </div>
                             
                             <div>
                                <div class="required-field"></div>
                                 <label for="engDate">Date:</label>
-                                <input type="date" id="engDate" name="date"> 
+                                <input type="date" id="engDate" name="date" disabled> 
                             </div>
                         </div>
                     </form>
                     <div>
-                        <button class="pdfbutton" id="pdf">Close & Create PDF</button>
+                        <button title="Export NCR" class="pdfbutton" id="pdf">Close & Create PDF</button>
                     </div>
                 </form>
             </div>

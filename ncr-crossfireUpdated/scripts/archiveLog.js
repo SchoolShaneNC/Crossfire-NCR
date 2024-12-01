@@ -15,7 +15,7 @@ $.each(filteredLog, function(i, ncr){
                     "</td><td>" + ncr.SupplierName;
     
                     
-                    tblRow += "</td><td><button class=" +'button' + " id=" +ncr.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + ncr.NcrNo +">Details</button>"
+                    tblRow += "</td><td><button title='View NCR Details' class=" +'button' + " id=" +ncr.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + ncr.NcrNo +">Details</button>"
                         
                     tblRow +="</td></tr>" 
                     literalString += tblRow;                 

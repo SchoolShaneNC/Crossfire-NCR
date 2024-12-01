@@ -6,6 +6,18 @@
     font-family: 'Roboto';
 }
 
+label{
+    font-size: 1.075em;
+}
+
+.radio-group label{
+    font-size: 1em;
+}
+
+input:focus{
+    background-color: rgba(88, 150, 201, 0.3);
+}
+
 .grid-section, .grid-section h2, .grid-section a,
 #scrollbar, .filter-box, .styled-table, .ncr-form, img {
     margin: 0 auto;
@@ -58,7 +70,7 @@ table button{
 }
 
 fieldset {
-    padding: 20px;
+    padding-bottom: 20px;
     /* border: 1px solid #ccc; */
     border: none;
     border-radius: 5px;
@@ -196,7 +208,7 @@ textarea {
 .sidebar a:hover{
 
     outline-offset: -2px;
-    outline: 2px solid #173541;
+    outline: 4px solid #173541;
 }
 
 /* Navbar */
@@ -315,7 +327,7 @@ textarea {
 
 #grid-form-view{
     display: grid;
-    grid-template-columns: 1.25fr 2fr;
+    grid-template-columns: 1fr 2.75fr;
     gap: 50px;
     margin: 0 175px;
 }
@@ -383,7 +395,7 @@ textarea {
 /* General input styling */
 input[type="text"], input[type="number"], textarea, input[type="date"] {
     padding: .75em;
-    margin: 0.5em 0;
+    margin: 0.5em 0 1.5em;
     box-sizing: border-box;
     border-style: solid;
 }
@@ -393,6 +405,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    row-gap: 0;
 }
 
 /* Grid layout for the Final Section with two fields beside each other */
@@ -453,10 +466,6 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     margin-top: 10px;
 }
 
-#quality-rep{
-    margin-top: 20px;
-}
-
 /**************Breadcrumb trail**************/
 .breadcrumb {
     margin-top: 100px;
@@ -481,7 +490,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 .required-field{
     height: 10px;
     width: 10px;
-    color: #ff1919;
+    color: #5897c9;
     font-size: 18px;
     border-radius: 50%;
     display: inline-block;

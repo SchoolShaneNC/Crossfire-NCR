@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossfire Internal</title>
+    <title>Crossfire Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,28 +30,28 @@
     <main>
         <!--Sidebar Navigation-->
         <div class="sidebar">
-            <a href="index.html" title="Dashboard">
+            <a href="index.html" title="Return to dashboard">
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
                 <p>Dashboard</p>
             </a>       
             <a href="formCreate.html" title="Generate new NCR Document">
-                <img src="Images/add-file-icon.png" alt="Create New NCR" height="512" width="512">
+                <img src="Images/add-file-icon.png" alt="Create NCR" height="512" width="512">
                 <p>Create NCR</p>
             </a> 
             <a href="formView.html" title="View list of open and closed NCR Documents">
-                <img src="Images/lookup-icon.png" alt="View NCR Log" height="512" width="512">
-                <p>Select form to edit</p>
+                <img src="Images/lookup-icon.png" alt="NCR Log" height="512" width="512">
+                <p>NCR Log</p>
             </a>
-            <a href="archivedReports.html" title="List of all closed NCR documents">
-                <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
-                <p>Archived Reports</p>
+            <a href="archivedReports.html" title="View archived and closed NCR documents">
+                <img src="Images/archive-dif.png" alt="NCR Archive" height="512" width="512">
+                <p>NCR Archive</p>
             </a>
             <a href="fqa.html" title="Frequently asked questions">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+                <img src="Images/iconTesting.png" alt="FAQ" height="512" width="512">
                 <p>FAQ</p>
             </a>
-            <a href="adminPanel.html" title="Admin Panel">
-                <img src="Images/iconTesting.png" alt="Archived" height="512" width="512">
+            <a href="adminPanel.html" title="Administrator rights">
+                <img src="Images/iconTesting.png" alt="Admin" height="512" width="512">
                 <p>Admin Panel</p>
             </a>
         </div>
@@ -68,7 +68,7 @@
                 <div class="grid-section">
                     <!--Icon to represent file creation required-->
                     <img src="Images/add-file-icon.png" alt="Create forms" height="512" width="512">
-                    <a href="formCreate.html">
+                    <a href="formCreate.html" title="Generate new NCR Document">
                         <h2>Create</h2>
                         <p>Generate and save a new document</p>
                     </a>
@@ -76,17 +76,17 @@
                 <div class="grid-section">
                     <!--Icon to represent file view required-->
                     <img src="Images/lookup-icon.png" alt="View and edit forms" height="512" width="512">
-                    <a href="formView.html">
-                        <h2>Select and Edit</h2>
+                    <a href="formView.html" title="View list of open and closed NCR Documents">
+                        <h2>NCR Log</h2>
                         <p>Choose an open document to edit</p>
                     </a>
                 </div>
                 <div class="grid-section">
                     <!--Icon to represent file view required-->
                     <img src="Images/archive-dif.png" alt="Archived" height="512" width="512">
-                    <a href="archivedReports.html">
-                        <h2>View Archived Forms</h2>
-                        <p>View deleted and finished Non-Conformance Report documents</p>
+                    <a href="archivedReports.html"  title="View archived and closed NCR documents">
+                        <h2>NCR Archive</h2>
+                        <p>View stored and closed NCR documents</p>
                     </a>
                 </div>
             </div>
