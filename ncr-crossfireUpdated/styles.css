@@ -586,20 +586,20 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 
 details {
     width: 90%;
-    border: #173541 0.25em solid; /* Ensures the border is styled properly */
-    border-radius: 10px; /* Adds rounded corners to the entire <details> element */
-    overflow: hidden; /* Ensures content inside respects the rounded corners */
+    border: #173541 0.25em solid; 
+    border-radius: 10px; 
+    overflow: hidden; 
     box-shadow: 2px 2px 5px #173541;
 }
 
 details > summary {
-    width: 100%; /* Ensures summary spans the full width of <details> */
+    width: 100%; 
     background-color: #5897c9;
     height: 3em;
     padding: 1em;
-    border-radius: 10px; /* Adds rounded corners to the summary */
-    border-bottom-left-radius: 0; /* Removes rounding from the bottom corners */
-    border-bottom-right-radius: 0; /* Removes rounding from the bottom corners */
+    border-radius: 10px; 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     cursor: pointer;
