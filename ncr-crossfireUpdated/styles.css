@@ -449,6 +449,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 
 /* Form styling */
 .ncr-form {
+    margin-top: 1em;
     width: 80%;
     padding-bottom: 50px;
 }
@@ -580,4 +581,27 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     padding: 0 5px;
     font-size: 16px;
     margin-bottom: 15px;
+}
+
+
+details {
+    width: 90%;
+    border: #173541 0.25em solid; /* Ensures the border is styled properly */
+    border-radius: 10px; /* Adds rounded corners to the entire <details> element */
+    overflow: hidden; /* Ensures content inside respects the rounded corners */
+    box-shadow: 2px 2px 5px #173541;
+}
+
+details > summary {
+    width: 100%; /* Ensures summary spans the full width of <details> */
+    background-color: #5897c9;
+    height: 3em;
+    padding: 1em;
+    border-radius: 10px; /* Adds rounded corners to the summary */
+    border-bottom-left-radius: 0; /* Removes rounding from the bottom corners */
+    border-bottom-right-radius: 0; /* Removes rounding from the bottom corners */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    
 }
