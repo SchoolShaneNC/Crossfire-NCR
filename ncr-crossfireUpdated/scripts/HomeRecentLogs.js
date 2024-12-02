@@ -24,8 +24,8 @@ literalString = "";
                         tblRow += "</td><td><button title='Edit NCR Fields'"  + "class=button" + ' id="' +LogData.logs[x].NcrNo + '" type="button"' + ' onclick = "editNCR(this.value)";' + 'location.href='+'"formEdit.html"' + ' value=' + LogData.logs[x].NcrNo +'>Edit</button>'
                         tblRow += "</td><td><button "+ "title='View NCR Details'" + " class=" +'button' + " id=" +LogData.logs[x].NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + LogData.logs[x].NcrNo +">Details</button>"
                         }else{
-                            tblRow += "</td><td><button title='Edit NCR Fields'" + "class=button" + " id=" +LogData.logs[x].NcrNo+" type=button" + " onclick = editError();" +  " value=" + LogData.logs[x].NcrNo +">Edit</button>"
-                            tblRow += "</td><td><button title='View NCR Details' class=button" + " id=" +LogData.logs[x].NcrNo+" type=button" + " onclick = editNCR(this.value);" + "location.href=formViewFromLog.html" + " value=" + LogData.logs[x].NcrNo +">Details</button>"
+                            tblRow += "</td><td><button title='Edit NCR Fields'"  + "class=button" + ' id="' +LogData.logs[x].NcrNo + '" type="button"' + "onclick = " + "editError()" + ";" + "value=" + LogData.logs[x].NcrNo +'>Edit</button>'
+                            tblRow += "</td><td><button "+ "title='View NCR Details'" + " class=" +'button' + " id=" +LogData.logs[x].NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + LogData.logs[x].NcrNo +">Details</button>"
                         }
                         tblRow +="</td></tr>" 
                         literalString += tblRow;
