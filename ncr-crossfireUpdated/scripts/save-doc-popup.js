@@ -28,28 +28,31 @@ window.onload = (e) => {
         
             li.appendChild(test)
             ul.appendChild(li)
-        
-            console.log('help')
 
             let message = "Email sent to Engineer"
         
             QIEmail(message, ncrNumber, name)
         })
+
+        document.getElementById("engineer-save-doc-button")
+        .addEventListener("click", function(event){
+            event.preventDefault();
+            let ncrNumber = document.getElementById("ncrNo").value
+            let name = document.getElementById("engName").value
+    
+            let test = document.createTextNode("Engineer saved NCR " + ncrNumber)
+            let ul = document.getElementById("notification-list")
+            let li = document.createElement("li")
+    
+            li.appendChild(test)
+            ul.appendChild(li)
+
+            let message = "Email sent to procurement"
+        
+            QIEmail(message, ncrNumber, name)
+     })
     }
 
-// document.addEventListener('DOMContentLoaded', function() {
-// document.getElementById("engineer-save-doc-button")
-// .addEventListener("click", function(){
-//     let ncrNumber = document.getElementById("ncrNo").value
-
-//     let test = document.createTextNode("Engineer saved NCR " + ncrNumber)
-//     let ul = document.getElementById("notification-list")
-//     let li = document.createElement("li")
-
-//     li.appendChild(test)
-//     ul.appendChild(li)
-// })
-// });
 
 
 // //Submit notifications
