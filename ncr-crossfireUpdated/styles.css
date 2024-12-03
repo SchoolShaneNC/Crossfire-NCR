@@ -505,7 +505,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 .required-field{
     height: 10px;
     width: 10px;
-    color: #5897c9;
+    color: red;
     font-size: 18px;
     border-radius: 50%;
     display: inline-block;
