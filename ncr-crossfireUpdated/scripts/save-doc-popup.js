@@ -1,77 +1,115 @@
+import { QIEmail } from "./autoEmail.js"
 
 //Save notifications
-document.getElementById("qi-save-doc-button")
-.addEventListener("click", function(){
-    let ncrNumber = document.getElementById("ncrNo").value
+window.onload = (e) => {
+    if(document.getElementById("qi-save-doc-button") === null){
+            
+           return
+    } else if(document.getElementById("engineer-save-doc-button") === null)
+        {
+            
+    }
+    else {
+        console.log("element found")
+        eventListener()
+            
+            };
+    }
 
-    let test = document.createTextNode("Quality inspector saved NCR " + ncrNumber)
-    let ul = document.getElementById("notification-list")
-    let li = document.createElement("li")
+    function eventListener() {
+        document.getElementById("qi-save-doc-button")
+        .addEventListener("click", function(event){
+            event.preventDefault();
+            let ncrNumber = document.getElementById("ncrNo").value
+            let name = document.getElementById("qualityRepName").value
 
-    li.appendChild(test)
-    ul.appendChild(li)
-})
+            let test = document.createTextNode("Quality inspector saved NCR " + ncrNumber)
+            let ul = document.getElementById("notification-list")
+            let li = document.createElement("li")
+        
+            li.appendChild(test)
+            ul.appendChild(li)
+        
+            console.log('help')
 
-document.getElementById("engineer-save-doc-button")
-.addEventListener("click", function(){
-    let ncrNumber = document.getElementById("ncrNo").value
+            let message = "Email sent to Engineer"
+        
+            QIEmail(message, ncrNumber, name)
+        })
+    }
 
-    let test = document.createTextNode("Engineer saved NCR " + ncrNumber)
-    let ul = document.getElementById("notification-list")
-    let li = document.createElement("li")
+// document.addEventListener('DOMContentLoaded', function() {
+// document.getElementById("engineer-save-doc-button")
+// .addEventListener("click", function(){
+//     let ncrNumber = document.getElementById("ncrNo").value
 
-    li.appendChild(test)
-    ul.appendChild(li)
-})
+//     let test = document.createTextNode("Engineer saved NCR " + ncrNumber)
+//     let ul = document.getElementById("notification-list")
+//     let li = document.createElement("li")
 
-
-//Submit notifications
-document.getElementById("qi-submit-doc-button")
-.addEventListener("click", function(){
-    let ncrNumber = document.getElementById("ncrNo").value
-
-    let test = document.createTextNode("NCR " + ncrNumber + "Quality Inspector Section completed")
-    let ul = document.getElementById("notification-list")
-    let li = document.createElement("li")
-
-    li.appendChild(test)
-    ul.appendChild(li)
-})
-
-document.getElementById("engineer-submit-doc-button")
-.addEventListener("click", function(){
-    let ncrNumber = document.getElementById("ncrNo").value
-
-    let test = document.createTextNode("NCR " + ncrNumber + "Engineer Section completed")
-    let ul = document.getElementById("notification-list")
-    let li = document.createElement("li")
-
-    li.appendChild(test)
-    ul.appendChild(li)
-})
+//     li.appendChild(test)
+//     ul.appendChild(li)
+// })
+// });
 
 
-//Edit notifications
-document.getElementById("engineer-change-doc-button")
-.addEventListener("click", function(){
-    let ncrNumber = document.getElementById("ncrNo").value
+// //Submit notifications
+// document.addEventListener('DOMContentLoaded', function() {
+// document.getElementById("qi-submit-doc-button")
+// .addEventListener("click", function(){
+//     console.log("hit save QI button")
+//     let ncrNumber = document.getElementById("ncrNo").value
 
-    let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Engineer")
-    let ul = document.getElementById("notification-list")
-    let li = document.createElement("li")
+//     let test = document.createTextNode("NCR " + ncrNumber + "Quality Inspector Section completed")
+//     let ul = document.getElementById("notification-list")
+//     let li = document.createElement("li")
 
-    li.appendChild(test)
-    ul.appendChild(li)
-})
+//     li.appendChild(test)
+//     ul.appendChild(li)
 
-document.getElementById("qi-change-doc-button")
-.addEventListener("click", function(){
-    let ncrNumber = document.getElementById("ncrNo").value
+// })
+// });
 
-    let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Quality Inspector")
-    let ul = document.getElementById("notification-list")
-    let li = document.createElement("li")
+// document.addEventListener('DOMContentLoaded', function() {
+// document.getElementById("engineer-submit-doc-button")
+// .addEventListener("click", function(){
+//     let ncrNumber = document.getElementById("ncrNo").value
 
-    li.appendChild(test)
-    ul.appendChild(li)
-})
+//     let test = document.createTextNode("NCR " + ncrNumber + "Engineer Section completed")
+//     let ul = document.getElementById("notification-list")
+//     let li = document.createElement("li")
+
+//     li.appendChild(test)
+//     ul.appendChild(li)
+// })
+// });
+
+
+// //Edit notifications
+// document.addEventListener('DOMContentLoaded', function() {
+// document.getElementById("engineer-change-doc-button")
+// .addEventListener("click", function(){
+//     let ncrNumber = document.getElementById("ncrNo").value
+
+//     let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Engineer")
+//     let ul = document.getElementById("notification-list")
+//     let li = document.createElement("li")
+
+//     li.appendChild(test)
+//     ul.appendChild(li)
+// })
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+// document.getElementById("qi-change-doc-button")
+// .addEventListener("click", function(){
+//     let ncrNumber = document.getElementById("ncrNo").value
+
+//     let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Quality Inspector")
+//     let ul = document.getElementById("notification-list")
+//     let li = document.createElement("li")
+
+//     li.appendChild(test)
+//     ul.appendChild(li)
+// })
+// });
