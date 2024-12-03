@@ -5,9 +5,8 @@ window.onload = (e) => {
     if(document.getElementById("qi-save-doc-button") === null){
             
            return
-    } else if(document.getElementById("engineer-save-doc-button") === null)
-        {
-            
+    } else if(document.getElementById("engineer-save-doc-button") === null){
+            return
     }
     else {
         console.log("element found")
