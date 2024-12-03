@@ -67,21 +67,28 @@
         
         <!-- Main Content -->
         <div class="form-class">
-            <h1 class="header-text">NCR Admin Panel</h1>
+            <h1 class="header-text">NCR Administrator Panel</h1>
 
             <div class="content-nav">
                 <div id="comboBoxSection">
-                    <label for="comboBox">Current Items</label>
-                    <select id="comboBox" size="5" style="width: 200px;">
+                    <div>
+                        <label for="comboBox">Current Supplier Log</label>
+                        <select id="comboBox" size="5" style="width: 200px;" title="Current list of suppliers">
+                        </select>
+    
+                    </div>
 
-                    </select>
-                    <label for="itemInput">Item</label>
-                    <input type="text" id="itemInput" placeholder="Enter item here" />
-                    <button title="Add a selected supplier to current list" id="addButton">Add</button>
-                    <button title="Remove a selected supplier to current list" id="removeButton">Remove</button>
+                    <div>
+                        <label for="itemInput">Add Supplier</label>
+                        <input type="text" id="itemInput" placeholder="Enter item here" title="Put the name of a new supplier you want to add here"/>
+                    </div>
+                    <div>
+                        <button title="Add a selected supplier to current list" id="addButton">Add</button>
+                        <button title="Remove a selected supplier to current list" id="removeButton">Remove</button>
+                    </div>
+                    
                 </div>
             </div>
-
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
