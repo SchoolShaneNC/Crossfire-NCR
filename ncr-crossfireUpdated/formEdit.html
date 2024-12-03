@@ -261,6 +261,153 @@
                         </div>
                     </form>
                 </details>
+                <details id="details-purchasing" class="accordion">
+                    <summary class="summary"><strong>Purchasing</strong></summary>
+                    
+                    <form id="eng-form" class="ncr-form filter-box">
+                        <h2 class="left-align">Purchasing Preliminary Decision</h2>               
+                        
+                        <fieldset>
+                            <label><span class="required-field"><b>*</b></span>Indicate decision by checking one of the following:</label>
+                            <div id="disposition-radio" class="radio-group">
+                                <input type="radio" id="return-to-supplier" name="decision" value="return">
+                                <label for="return-to-supplier">Return to Supplier</label>
+
+                                <input type="radio" id="rework" name="decision" value="rework">
+                                <label for="rework">Rework "In-House"</label>
+                                
+                                <input type="radio" id="scrap" name="decision" value="scrap">
+                                <label for="scrap">Scrap In-House</label>
+
+                                <input type="radio" id="defer" name="decision" value="defer">
+                                <label for="defer">Defer for HBC Engineering Review</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <div>
+                                <label><span class="required-field"><b>*</b></span>Was a CAR Raised</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="CARYes" name="notification">
+                                    <label for="notifYes">Yes</label>
+
+                                    <input type="radio" id="CARNo"  name="notification">
+                                    <label for="notifNo">No</label>
+                                </div>
+                        </fieldset>
+                        <fieldset>    
+                                <div>
+                                    <label for="CARnum">If yes, indicate CAR #</label>
+                                    <input min="0" type="number" id="car-num">
+                                </div> 
+                        </fieldset>
+                        
+
+                        <fieldset>
+                            <label><span class="required-field"><b>*</b></span>Follow-up Required?</label>
+                                <div id="required-radio" class="radio-group">
+                                    <input type="radio" id="reqYes" name="required" value="yes" checked required>
+                                    <label for="reqYes">Yes</label>
+                                    
+                                    <input type="radio" id="reqNo"  name="required" value="no">
+                                    <label for="reqNo">No</label>
+                                </div>
+                        </fieldset>
+                        <fieldset>
+                            <Label>If yes, indicate type and expected date</Label>
+                        </fieldset>
+                        <fieldset>
+                            <div class="grid-2">
+                                <div>
+                                    <label for="engName">Type:</label>
+                                    <input type="text" id="type" placeholder="Indicate Type">
+                                </div>
+                                <div>
+                                    <label for="engDate">Date:</label>
+                                    <input type="date" id="engDate" name="date">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="grid-2">
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="OpName">Operations Manager:</label>
+                                <input type="text" id="OpName" placeholder="i. e. Ellen Joe">
+                            </div>
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="engDate">Date:</label>
+                                <input type="date" id="engDate" name="date">
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <label><span class="required-field"><b>*</b></span>Reinspected Acceptable?</label>
+                                <div id="reinspected-radio" class="radio-group">
+                                    <input type="radio" id="reinspectYes" name="reinspected" value="yes">
+                                    <label for="reinspectYes">Yes</label>
+                                    
+                                    <input type="radio" id="reinspectNo"  name="reinspected" value="no">
+                                    <label for="reinspectNo">No</label>
+                                </div>
+                        </fieldset>
+                        <fieldset>
+                            <div>
+                                <Label>If no, record a new NCR number </Label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="newncrNo">New NCR No.</label>
+                                <input type="text" id="newncrNo" name="newncrNo" disabled title="New NCR Document number">
+                            </div>
+                        </fieldset>
+
+                        <div class="grid-2">
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="inspectorName">Inspectors Name:</label>
+                                <input type="text" id="inspectorName" placeholder="i. e. Ellen Joe">
+                            </div>
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="inspectDate">Date:</label>
+                                <input type="date" id="inspectDate" name="inspectDate">
+                            </div>
+                        </div>
+                        <div class="grid-2">
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="inspectorName">Quality Department:</label>
+                                <input type="text" id="inspectorName" placeholder="i. e. Ellen Joe">
+                            </div>
+                            <div>
+                                <div class="required-field"><b>*</b></div>
+                                <label for="qualityDate">Date:</label>
+                                <input type="date" id="qualityDate" name="qualityDate">
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <label><span class="required-field"><b>*</b></span>NCR Closed?</label>
+                                <div id="ncr-radio" class="radio-group">
+                                    <input type="radio" id="ncrYes" name="ncr" value="yes">
+                                    <label for="ncrYes">Yes</label>
+                                    
+                                    <input type="radio" id="ncrNo"  name="ncr" value="no">
+                                    <label for="ncrNo">No</label>
+                                </div>
+                        </fieldset>
+
+
+                        <div>
+                            <button  title="Save changes of current document section" id="engineer-save-doc-button">Save</button>
+                            <button  title="Submit all changes" id="engineer-submit-doc-button" type="submit" >Submit</button>
+                        </div>
+                    </form>
+                </details>
             </div>
         </div>
     </main>
