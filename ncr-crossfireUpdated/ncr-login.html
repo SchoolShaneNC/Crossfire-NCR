@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossfire Internal</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body class="webpageSettings">
-    <!-- Navigation Bar -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NCR Login</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+<body>
     <header>
         <div class="topbar">
             <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
@@ -30,9 +29,7 @@
             </a>    
         </div>
     </header>
-
     <main>
-        <!--Sidebar Navigation-->
         <div class="sidebar">
             <a href="index.html" title="Return to dashboard">
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
@@ -60,35 +57,28 @@
             </a>
         </div>
 
+        
         <ul class="breadcrumb">
             <li><a title="Return to dashboard" href="index.html">Dashboard</a></li>
-            <li>NCR Form - FQA</li>
+            <li>NCR Login</li>
         </ul>
-        
-        <!-- Main Content -->
         <div class="form-class">
-            <h1 class="header-text">NCR Admin Panel</h1>
+            <h1>Login</h1>
 
-            <div class="content-nav">
-                <div id="comboBoxSection">
-                    <label for="comboBox">Current Items</label>
-                    <select id="comboBox" size="5" style="width: 200px;">
+            <select class="comboBox" id="role-select">
+                <option value="N/A">None</option>
+                <option value="QI">Quality Inspector</option>
+                <option value="EN">Engineer</option>
+                <option value="PA">Purchasing Agent</option>
+                <option value="AD">Admin</option>
+            </select>
 
-                    </select>
-                    <label for="itemInput">Item</label>
-                    <input type="text" id="itemInput" placeholder="Enter item here" />
-                    <button title="Add a selected supplier to current list" id="addButton">Add</button>
-                    <button title="Remove a selected supplier to current list" id="removeButton">Remove</button>
-                </div>
-            </div>
-
+            <button type="button" id="batoom">
+                Login
+            </button>
         </div>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="scripts/LocalStorage_JSONlog.js"></script>
-    <script src="scripts/companyList.js"></script>
-    <script src="scripts/login-on-load.js"></script>
-    <script src="scripts/redirect-login.js"></script>
 </body>
+<script src="scripts/login-value.js"></script>
+<script src="scripts/login-on-load.js"></script>
 </html>

@@ -14,6 +14,10 @@
         <div class="topbar">
             <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
 
+            <a href="ncr-login.html" id="currentRole">
+                Login
+            </a>
+
             <a class="bell-anchor" title="Notifications">
                 <img src="images/notification.png" alt="notification bell" width="512" height="512">
 
@@ -22,7 +26,7 @@
                         <li>Welcome User</li>
                     </ul>
                 </div>
-            </a>     
+            </a>    
         </div>
     </header>
     
@@ -48,7 +52,7 @@
                 <img src="Images/iconTesting.png" alt="FAQ" height="512" width="512">
                 <p>FAQ</p>
             </a>
-            <a href="adminPanel.html" title="Administrator rights">
+            <a href="adminPanel.html" title="Administrator rights" id="admin-panel">
                 <img src="Images/iconTesting.png" alt="Admin" height="512" width="512">
                 <p>Admin Panel</p>
             </a>
@@ -67,7 +71,7 @@
                 <details open>
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
-                    <form class="ncr-form filter-box">
+                    <form id="qi-form" class="ncr-form filter-box">
 
                         <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
 
@@ -99,7 +103,8 @@
                                 
                                 <div class="required-field"></div>
                                 <label for="supplierName">Supplier Name</label>
-                                <input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">
+                                <select id="comboBox"></select>
+                            <!--<input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">-->
 
                                 <div class="grid-4">
                                     <div title="Product number">
@@ -141,7 +146,7 @@
                         
                         <div id="form-final-section">
                             <!-- Final Section -->
-                            <h2 class="left-align">Final Section</h2>
+                            <h2 class="left-align">Quality Inspector Details</h2>
                     
                             <fieldset>
                                 <label><span class="required-field"><b>*</b></span>Item marked Non-Conforming</label>
@@ -180,7 +185,7 @@
                 <details open>
                     <summary class="summary"><strong>Engineering</strong></summary>
                     
-                    <form class="ncr-form filter-box">
+                    <form id="eng-form" class="ncr-form filter-box">
                         <h2 class="left-align">Review by CF Engineering</h2>
                         
                         <div>
@@ -268,5 +273,9 @@
     <script src="scripts/editNcrLog.js"></script>
     <script src="scripts/edit2.js"></script>
     <script src="scripts/revisionValidaton.js"></script>
+    <script src="scripts/login-on-load.js"></script>
+    <script src="scripts/companyList.js"></script>
+    <script src="scripts/login-form-restrictions.js"></script>
+    <script src="scripts/redirect-login.js"></script>
 </body>
 </html>

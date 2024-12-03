@@ -16,6 +16,10 @@
         <div class="topbar">
             <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
 
+            <a href="ncr-login.html" id="currentRole">
+                Login
+            </a>
+
             <a class="bell-anchor" title="Notifications">
                 <img src="images/notification.png" alt="notification bell" width="512" height="512">
 
@@ -24,7 +28,7 @@
                         <li>Welcome User</li>
                     </ul>
                 </div>
-            </a>      
+            </a>    
         </div>
     </header>
     
@@ -50,7 +54,7 @@
                 <img src="Images/iconTesting.png" alt="FAQ" height="512" width="512">
                 <p>FAQ</p>
             </a>
-            <a href="adminPanel.html" title="Administrator rights">
+            <a href="adminPanel.html" title="Administrator rights" id="admin-panel">
                 <img src="Images/iconTesting.png" alt="Admin" height="512" width="512">
                 <p>Admin Panel</p>
             </a>
@@ -106,5 +110,7 @@
     <script src="scripts/FilterReset.js"></script>
     <script src="Scripts/LocalStorage_formView.js"></script>
     <script src="Scripts/archiveLog.js"></script>
+    <script src="scripts/login-on-load.js"></script>
+    <script src="scripts/redirect-login.js"></script>
 </body>
 </html>

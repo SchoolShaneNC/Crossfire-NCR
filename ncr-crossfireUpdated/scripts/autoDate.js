@@ -1,5 +1,5 @@
 
-window.onload = function() {
+window.addEventListener("load", function() {
     const todayDate = new Date();
 
     const day = todayDate.getDate();
@@ -17,4 +17,4 @@ console.log(html)
   
     document.getElementById("date").innerHTML = html;
     
-};
+})

@@ -6,6 +6,14 @@
     font-family: 'Roboto';
 }
 
+button:disabled{
+    background-color: gray;
+}
+
+a{
+    color: #fff;
+}
+
 label{
     font-size: 1.075em;
 }
