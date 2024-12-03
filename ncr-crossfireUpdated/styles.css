@@ -19,10 +19,10 @@ label{
 }
 
 .radio-group label{
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
-input:focus{
+input:focus, textarea:focus{
     background-color: rgba(88, 150, 201, 0.3);
 }
 
@@ -228,11 +228,10 @@ textarea {
     height: 60px;
     display: flex;
     justify-content: space-between; 
-    padding: 10px;
 }
 
 .crossfire-logo{
-    margin-left: 0;
+    margin: 10px 0 0 10px;
 }
 
 .topbar img{
@@ -264,11 +263,20 @@ textarea {
     
 }
 
+#currentRole, .bell-anchor ul, .bell-anchor div{
+    position: absolute;
+}
+
+#currentRole{
+    left: 85%;
+    top: 35%;
+}
+
 .bell-anchor{
     background-color: rgba(0, 0, 0, 0.0);
     border: none;
     padding: 0;
-    margin-right: 115px;
+    margin:  10px 115px 0 0;
 }
 
 .bell-anchor img{
@@ -277,7 +285,6 @@ textarea {
 
 .bell-anchor ul{
     display: inline-block;
-    position:absolute;
     width: 200px;
     right: 0;
     visibility: hidden;
@@ -306,7 +313,6 @@ textarea {
 .bell-anchor div{
     background-color: #d9d9d9;
     display: inline-block;
-    position: absolute;
     width: 215px;
     height: 200px;
     right: 35px;
@@ -571,7 +577,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 
 #comboBox {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
     padding-top: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -591,13 +597,14 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     margin-bottom: 15px;
 }
 
-
 details {
-    width: 90%;
+    width: 80%;
     border: #173541 0.25em solid; 
     border-radius: 10px; 
     overflow: hidden; 
     box-shadow: 2px 2px 5px #173541;
+    margin: 0 auto;
+    margin-top: 1em;
 }
 
 details > summary {
@@ -611,5 +618,5 @@ details > summary {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     cursor: pointer;
-    
+    font-size: 1.3em;
 }

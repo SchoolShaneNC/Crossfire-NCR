@@ -28,19 +28,59 @@ function ncrNumGenertator()
 document.getElementById("revision-radio").addEventListener("change", function(e){
     let target = e.target
 
+    const orgRevNum = document.getElementById("org-rev-num")
+    const orgRevName = document.getElementById("org-rev-name")
+    const orgRevDate = document.getElementById("org-rev-date")
+
+    const updRevNum = document.getElementById("upd-rev-num")
+    const updRevName = document.getElementById("upd-rev-name")
+    const updRevDate = document.getElementById("upd-rev-date")
+
     if(target.value == "no"){
-        document.getElementById("org-rev-num").disabled=true
-        document.getElementById("upd-rev-num").disabled=true
-        document.getElementById("org-rev-num").required=false
-        document.getElementById("upd-rev-num").required=false
-        document.getElementById("org-rev-num").value = ""
-        document.getElementById("upd-rev-num").value = ""
+        //org Rev group
+        orgRevNum.disabled=true
+        orgRevName.disabled=true
+        orgRevDate.disabled=true
+
+        orgRevNum.required=false
+        orgRevName.required=false
+        orgRevDate.required=false
+
+        orgRevNum.value = ""
+        orgRevName.value = ""
+        orgRevDate.value = ""
+
+        //upd Rev group
+        updRevNum.disabled = true
+        updRevName.disabled = true
+        updRevDate.disabled = true
+
+        updRevNum.required=false
+        updRevName.required=false
+        updRevDate.required=false
+
+        updRevNum.value = ""
+        updRevName.value = ""
+        updRevDate.value = ""
     }
     if(target.value == "yes"){
-        document.getElementById("org-rev-num").disabled=false
-        document.getElementById("upd-rev-num").disabled=false
-        document.getElementById("eng-disposition").required = true
-        document.getElementById("eng-disposition").required = true
+        //org Rev group
+        orgRevNum.disabled=false
+        orgRevName.disabled=false
+        orgRevDate.disabled=false
+
+        orgRevNum.required=true
+        orgRevName.required=true
+        orgRevDate.required=true
+
+        //upd Rev group
+        updRevNum.disabled =  false
+        updRevName.disabled = false
+        updRevDate.disabled = false
+
+        updRevNum.required= true
+        updRevName.required=true
+        updRevDate.required=true
     }  
 })
 

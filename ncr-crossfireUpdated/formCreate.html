@@ -103,7 +103,7 @@
                                 <div class="required-field"><b>*</b></div>
                                 <label for="supplierName">Supplier Name</label>
                                 <select id="comboBox"></select>
-                            <!--<input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">-->
+                                <!--<input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">-->
 
                                 <div class="grid-4">
                                     <div title="Product number">
@@ -134,12 +134,14 @@
                                 <h2 class="left-align">Item Details</h2>
                     
                                 <div class="required-field"><b>*</b></div>
-                                <label for="itemDescription">Description of Item</label>
-                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..."></textarea>
+                                <label for="itemDescription" title="description of the item from the order">Description of Item</label>
+                                <textarea title="input item description here" id="itemDescription" 
+                                name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..."></textarea>
                     
                                 <div class="required-field"><b>*</b></div>
-                                <label for="itemDefect">Description of Defect</label>
-                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..."></textarea>
+                                <label for="itemDefect" title="description of the defect found in the order">Description of Defect</label>
+                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  
+                                placeholder="Describe the details of the defect..." title="input defect description here"></textarea>
                             </div>
                         </div>
                         
@@ -147,7 +149,7 @@
                             <!-- Final Section -->
                             <h2 class="left-align">Quality Inspector Details</h2>
                     
-                            <fieldset>
+                            <fieldset title="Mark whether the items from this order are non-conforming">
                                 <label><span class="required-field"><b>*</b></span>Item marked Non-Conforming</label>
                                     <div class="radio-group">
                                         <div>
@@ -163,7 +165,7 @@
                             </fieldset>
 
                             <div id="quality-rep" class="grid-2">
-                                <div >
+                                <div title="Quality Inspector's Name">
                                     <div class="required-field"><b>*</b></div>
                                     <label for="qualityRepName">Quality Representative's Name</label>
                                     <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe">
@@ -175,12 +177,13 @@
                         </div>
             
                         <!-- Save, Submit & Close Button -->
-                         <div>
-                            <button title="Save changes of current document section" id="qi-save-doc-button">Save</button>
-                            <button title="Submit all changes" id="qi-submit-doc-button" type="submit" >Submit</button>
+                        <div>
+                            <button title="Save changes of current document section" id="qi-save-doc-button" type="button">Save</button>
+                            <button title="Submit all changes" id="qi-submit-doc-button" type="button">Submit</button>
                         </div>
                     </form>
                 </details>
+                
                 <!--Engineer Section-->
                 <details id="details-engineer" class="accordion">
                     <summary class="summary"><strong>Engineering</strong></summary>
@@ -236,10 +239,24 @@
                         </fieldset>
                         <div class="grid-2">
                             <div>
+                                <label for="org-rev-name">Original Revision Engineer Name</label>
+                                <input id="org-rev-name" type="text">
+
+                                <label for="org-rev-date">Original Revision Date</label>
+                                <input id="org-rev-date" type="date">
+
                                 <label for="org-rev-num">Original Revision Number:</label>
                                 <input min="0" type="number" id="org-rev-num">
+
+
                             </div>
                             <div>
+                                <label for="upd-rev-name">Updated Revision Engineer Name</label>
+                                <input id="upd-rev-name" type="text">
+
+                                <label for="upd-rev-date">Updated Revision Date</label>
+                                <input id="upd-rev-date" type="date">
+
                                 <label for="upd-rev-num">Updated Revision Number:</label>
                                 <input min="0" type="number" id="upd-rev-num">
                             </div>    
