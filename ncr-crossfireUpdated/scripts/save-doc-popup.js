@@ -1,4 +1,4 @@
-import { QIEmail } from "./autoEmail.js"
+//import { QIEmail } from "./autoEmail.js"
 
 
 window.onload = (e) => {
