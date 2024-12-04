@@ -1,4 +1,4 @@
-var currentRole = localStorage.getItem("role")
+var currentRole = sessionStorage.getItem("role")
 
 window.addEventListener("load", function(){
     const display = document.getElementById("currentRole")

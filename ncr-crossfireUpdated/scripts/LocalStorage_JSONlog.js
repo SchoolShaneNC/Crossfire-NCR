@@ -1,3 +1,7 @@
+
+//localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
+
+
 LogDataFile = {"logs":[
     //NEW LOG ENTRY
     //NCR Details
@@ -260,13 +264,42 @@ LogDataFile = {"logs":[
     }
 ]}
 
+loginData = {"emp":[
+        {
+                User : "Shane Milton",
+                Pass : "shane",
+                Role: "QI"
+        },
+        {
+                User : "Mikhail Marsh",
+                Pass : "mikhail",
+                Role : "QI"
+        },
+        {
+                User : "Connor Foy",
+                Pass : "connor",
+                Role : "EN"
+        },
+        {
+                User : "Zach Milton",
+                Pass : "zach",
+                Role : "PA"
+        },
+        {
+                User : "Lucas Peacock",
+                Pass : "lucas",
+                Role : "AD"
+        }
+
+
+]}
+
 function initializeData() {
         // If the data doesn't exist in localStorage, set it to the hardcoded array
         if (!localStorage.getItem("LoggedData")) {
             localStorage.setItem("LoggedData", JSON.stringify(LogDataFile));
         }
     }
-   //localStorage.clear();
 
 function initializeData2() {
         // If the data doesn't exist in localStorage, set it to the hardcoded array
@@ -285,6 +318,13 @@ function initializeData2() {
         }
     }
 
+function initializeData3() {
+        // If the data doesn't exist in localStorage, set it to the hardcoded array
+        if (!localStorage.getItem("UserInfo")) {
+            localStorage.setItem("UserInfo", JSON.stringify(loginData));
+        }
+    }
+
 function getData() {
         console.log("this is getting fr");
         return JSON.parse(localStorage.getItem("LoggedData"));
@@ -295,6 +335,11 @@ function getData2() {
         return JSON.parse(localStorage.getItem("SupplierData"));
     }
 
+function getData3() {
+        console.log("this is getting fr login");
+        return JSON.parse(localStorage.getItem("UserInfo"));
+    }
+
     function addItemToData(item) {
         let xdata = getData();
 
@@ -302,8 +347,13 @@ function getData2() {
         updateData(xdata);
     }
 
-initializeData2() 
+
+
+
+
 initializeData() 
+initializeData2() 
+initializeData3() 
 
 //x = JSON.stringify(LogDataFile);
 //localStorage.setItem('LoggedData', x);
