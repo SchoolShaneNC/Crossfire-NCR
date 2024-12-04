@@ -1,12 +1,35 @@
-const input = document.getElementById("role-select").value
+let login = getData3();
+console.log(login);
 
 document.getElementById("batoom").addEventListener("click", function(){
-    const input = document.getElementById("role-select").value
+    let ncounter = 0;
 
-    localStorage.setItem("role", input)
-    
-    alert(input)
+  let name =  document.getElementById("loginName").value;
+  let password = document.getElementById("loginPass").value;
+  for(i = 0;  i < login.emp.length; i++){
 
-    window.location.href="index.html";
+    if (login.emp[i].User == name){
+
+        if (login.emp[i].Pass == password){
+            sessionStorage.setItem("role", login.emp[i].Role)
+            alert(login.emp[i].Role);
+            match = true;
+            window.location.href="index.html";
+            break;
+        }
+        else{
+            console.log("password is wrong");
+            alert("Password is incorrect");
+        }
+    } 
+    else if (login.emp[i].User != name){
+        console.log("username is wrong");
+        ncounter = ncounter + 1;
+    }
+   
+  }
+  if (ncounter == 5){
+    alert("Username is wrong");
+  }
 })
 
