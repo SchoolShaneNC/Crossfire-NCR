@@ -261,7 +261,91 @@ LogDataFile = {"logs":[
         UpdRevNum : null,
         EngName : "Demarvion",
         EngDate : "2024-02-24"
-    }
+    },
+
+    {
+        NcrNo : "2023-005",
+        IPA : "supplier-rec-insp",
+         //Product Details
+        SupplierName : "Tech Manufacturing",
+        ProductNum : 832343577364,
+        SalesOrderNum : 1340,
+        QuantRec : 75,
+        QuantDef : 33,
+        //Item Details
+        DescriptionItem : "8 inch by 2.4 inch smartphone",
+        DescriptionDefect : "wiring at the back s faulty and stops the phone from turning on",
+        //final section
+        ItemMarkedNC : "qi-yes",
+        QualRepName : "Shane Milton",
+        Dated : "2023-08-14",
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : 1,
+        UpdRevNum : null,
+        EngName : "Demarvion",
+        EngDate : "2024-02-24"
+        },
+
+        {
+                NcrNo : "2023-006",
+                IPA : "supplier-rec-insp",
+                //Product Details
+                SupplierName : "Canadian Lumber",
+                ProductNum : 394756440364,
+                SalesOrderNum : 1600,
+                QuantRec : 200,
+                QuantDef : 200,
+                //Item Details
+                DescriptionItem : "big long 20 foot logs",
+                DescriptionDefect : "wood has mites and has no integrity",
+                //final section
+                ItemMarkedNC : "qi-yes",
+                QualRepName : "Mikhail Marsh",
+                Dated : "2023-08-018",
+                Status : "Closed",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : 1,
+                UpdRevNum : null,
+                EngName : "Demarvion",
+                EngDate : "2024-02-24"
+        },
+
+        {
+                NcrNo : "2023-007",
+        IPA : "supplier-rec-insp",
+         //Product Details
+        SupplierName : "Welland Trading Inc",
+        ProductNum : 104827593957,
+        SalesOrderNum : 1956,
+        QuantRec : 700,
+        QuantDef : 189,
+        //Item Details
+        DescriptionItem : "4 inch screws",
+        DescriptionDefect : "coated in rust changing the thread",
+        //final section
+        ItemMarkedNC : "qi-yes",
+        QualRepName : "Zach Milton",
+        Dated : "2023-08-022",
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : 1,
+        UpdRevNum : null,
+        EngName : "Demarvion",
+        EngDate : "2024-02-24"
+        }
 ]}
 
 loginData = {"emp":[
