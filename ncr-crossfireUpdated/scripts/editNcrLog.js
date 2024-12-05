@@ -1,7 +1,6 @@
 //tracking down the html page for the if, without it gives errors on edit page
 
-
-let LogData = getData();
+LogData = getData();
 console.log('Data on Page 1:', LogData);
 htmlPage = window.location.pathname
 
@@ -23,7 +22,7 @@ $.each(LogData.logs, function(i, logs) {
                         literalString += tblRow;
                         document.getElementById("NcrLogTable").innerHTML = literalString;
 });
-}
+
 
 //this gets triggered by the onclick in literalstring and takes the value of what log its on
 //the value is the ncr num to tie the button to the corrosponding log in the table row
@@ -63,4 +62,4 @@ document.getElementById("disposition-radio").addEventListener("change", function
         document.getElementById("eng-disposition").disabled=false
         document.getElementById("eng-disposition").required = true
     }
-})
+})}

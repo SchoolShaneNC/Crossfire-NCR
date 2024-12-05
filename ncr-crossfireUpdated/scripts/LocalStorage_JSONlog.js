@@ -345,7 +345,89 @@ LogDataFile = {"logs":[
         UpdRevNum : null,
         EngName : "Demarvion",
         EngDate : "2024-02-24"
-        }
+        },
+
+        {NcrNo : "2024-006",
+                IPA : "supplier-rec-insp",
+                //Product Details
+                SupplierName : "EcoMotive Technologies",
+                ProductNum : null,
+                SalesOrderNum : null,
+                QuantRec : null,
+                QuantDef : null,
+                //Item Details
+                DescriptionItem : "",
+                DescriptionDefect : null,
+                //final section
+                ItemMarkedNC : null,
+                QualRepName : "",
+                Dated : "2024-04-09",
+                Status : "Open",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : null,
+                UpdRevNum : null,
+                EngName : "",
+                EngDate : "2024-05-13"
+        },
+
+        {NcrNo : "2024-007",
+                IPA : "supplier-rec-insp",
+                //Product Details
+                SupplierName : "NextGen Motors",
+                ProductNum : null,
+                SalesOrderNum : null,
+                QuantRec : null,
+                QuantDef : null,
+                //Item Details
+                DescriptionItem : "",
+                DescriptionDefect : null,
+                //final section
+                ItemMarkedNC : null,
+                QualRepName : "",
+                Dated : "2024-05-14",
+                Status : "Open",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : null,
+                UpdRevNum : null,
+                EngName : "",
+                EngDate : "2024-05-16"
+        },
+
+        {NcrNo : "2024-008",
+                IPA : "supplier-rec-insp",
+                //Product Details
+                SupplierName : "General Electric",
+                ProductNum : 892048362713,
+                SalesOrderNum : 2183,
+                QuantRec : 150,
+                QuantDef : 27,
+                //Item Details
+                DescriptionItem : "",
+                DescriptionDefect : null,
+                //final section
+                ItemMarkedNC : null,
+                QualRepName : "",
+                Dated : "2024-05-25",
+                Status : "Open",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : null,
+                UpdRevNum : null,
+                EngName : "",
+                EngDate : "2024-05-28"
+        },
+        
 ]}
 
 loginData = {"emp":[
