@@ -12,8 +12,6 @@ window.addEventListener("load", function() {
     let html = `<div class="required-field"></div>
     <label for="dateString">Date:</label>
     <p id="dateString">${dateString}</p>`
-
-console.log(html)
   
     document.getElementById("date").innerHTML = html;
     

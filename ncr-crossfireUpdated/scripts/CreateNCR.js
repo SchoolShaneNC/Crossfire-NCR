@@ -1,6 +1,7 @@
 //once verything is loaded and js reconizes then it runs the function
 document.addEventListener("DOMContentLoaded", function() {
     ncrNumGenertator();
+    QIname();
 });
 
 function ncrNumGenertator()
@@ -22,6 +23,12 @@ function ncrNumGenertator()
     newNum = parseInt(ncrNumArry.sort().at(ncrNumArry.length - 1).substring(5)) + 1;//parse the filtered new array, sorts so the biggest num is always at the botton if new logs get added
     newNum = (theYear + "-" + newNum.toString().padStart(3,'0'));     //takes last 3 digits of last item adds 1 then puts that into the final string, padstart makes sure it fills the 3 end digits with 0s if needed
     document.getElementById("ncrNo").value = newNum;
+}
+
+function QIname(){
+    if (currentRole == "QI"){
+        document.getElementById("qualityRepName").value = currentUser;
+    }
 }
 
 //Radio button interactions

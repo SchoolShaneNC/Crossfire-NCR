@@ -2,13 +2,25 @@
 //gets the button value loops through to find the matching ncr num
 //displays all log data from the log matched to the button
 //second if is needed since i had null in a log data, looking back on the create page it auto goes to yes (non conforming) so might not be needed
-let ncrButton = localStorage.getItem('editSelect');
+let ncrButton = sessionStorage.getItem('editSelect');
 
 for(var i = 0; i < LogData.logs.length; i++){
     if (LogData.logs[i].NcrNo == ncrButton){
+
+        if (currentRole == "QI"){
+            document.getElementById("qualityRepName").value = currentUser;
+        }
+        if (currentRole == "EN"){
+
+            document.getElementById("engName").value = currentUser;
+            var today = new Date().toISOString().substr(0, 10);
+            document.getElementById("engDate").value = today;
+        }
+
+
         document.getElementById("ncrNo").value = LogData.logs[i].NcrNo;
         document.getElementById(LogData.logs[i].IPA).checked = true;
-        document.getElementById("supplierName").value = LogData.logs[i].SupplierName;
+       // document.getElementById("supplierName").value = LogData.logs[i].SupplierName;
         document.getElementById("poProdNo").value = LogData.logs[i].ProductNum;
         document.getElementById("salesOrderNo").value = LogData.logs[i].SalesOrderNum;
         document.getElementById("quantityReceived").value = LogData.logs[i].QuantRec;
