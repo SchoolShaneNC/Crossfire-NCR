@@ -20,6 +20,7 @@ document.getElementById("batoom").addEventListener("click", function(){
         else{
             console.log("password is wrong");
             alert("Password is incorrect");
+            document.getElementById("loginPass").value = "";
         }
     } 
     else if (login.emp[i].User != name){
@@ -30,6 +31,7 @@ document.getElementById("batoom").addEventListener("click", function(){
   }
   if (ncounter == 5){
     alert("Username is wrong");
+    document.getElementById("loginName").value = "";
   }
 })
 
