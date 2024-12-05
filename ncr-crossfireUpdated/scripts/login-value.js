@@ -12,8 +12,8 @@ document.getElementById("batoom").addEventListener("click", function(){
 
         if (login.emp[i].Pass == password){
             sessionStorage.setItem("role", login.emp[i].Role)
+            sessionStorage.setItem("Name", login.emp[i].User)
             alert(login.emp[i].Role);
-            match = true;
             window.location.href="index.html";
             break;
         }

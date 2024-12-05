@@ -28,7 +28,7 @@ $.each(LogData.logs, function(i, logs) {
 //this gets triggered by the onclick in literalstring and takes the value of what log its on
 //the value is the ncr num to tie the button to the corrosponding log in the table row
 function editNCR(value){
-    localStorage.setItem('editSelect', value);    
+    sessionStorage.setItem('editSelect', value);    
 }
 //pop up if you try to edit closed log
 function editError(){
