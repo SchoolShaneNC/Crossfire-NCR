@@ -7,11 +7,11 @@ let ncrButton = sessionStorage.getItem('editSelect');
 for(var i = 0; i < LogData.logs.length; i++){
     if (LogData.logs[i].NcrNo == ncrButton){
 
+        //this will change when i add if qi was finished so it doesnt switch finished qi part to a new name
         if (currentRole == "QI"){
             document.getElementById("qualityRepName").value = currentUser;
         }
         if (currentRole == "EN"){
-
             document.getElementById("engName").value = currentUser;
             var today = new Date().toISOString().substr(0, 10);
             document.getElementById("engDate").value = today;
