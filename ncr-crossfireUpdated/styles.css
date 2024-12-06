@@ -621,3 +621,10 @@ details > summary {
     cursor: pointer;
     font-size: 1.3em;
 }
+
+/***** AA+ Standards ******/
+
+/*** Admin Panel ***/
+#addButton,#removeButton,#batoom{
+    height: 42px;
+   }
