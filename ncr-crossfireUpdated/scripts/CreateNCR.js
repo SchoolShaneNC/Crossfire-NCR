@@ -94,7 +94,7 @@ document.getElementById("revision-radio").addEventListener("change", function(e)
 document.getElementById("disposition-radio").addEventListener("change", function(e){
     let target = e.target
 
-    if(target.value == "repair" || target.value == "rework"){
+    if(target.value == "scrap" || target.value == "use"){
         document.getElementById("eng-disposition").disabled=true
         document.getElementById("eng-disposition").value = ""
         document.getElementById("eng-disposition").required = false

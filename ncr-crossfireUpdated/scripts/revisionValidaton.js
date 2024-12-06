@@ -1,5 +1,5 @@
-const originalRev = document.getElementById("orgrevnum");
-const updatedRev = document.getElementById("updrevnum");
+const originalRev = document.getElementById("org-rev-num");
+const updatedRev = document.getElementById("upd-rev-num");
 
 function validateInputs() {
   const originalValue = parseFloat(originalRev.value);

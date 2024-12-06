@@ -2,7 +2,7 @@ let login = getData3();
 console.log(login);
 
 document.getElementById("batoom").addEventListener("click", function(){
-    let ncounter = 0;
+  let ncounter = 0;
 
   let name =  document.getElementById("loginName").value;
   let password = document.getElementById("loginPass").value;
@@ -27,7 +27,7 @@ document.getElementById("batoom").addEventListener("click", function(){
         console.log("username is wrong");
         ncounter = ncounter + 1;
     }
-   
+  
   }
   if (ncounter == 5){
     alert("Username is wrong");
