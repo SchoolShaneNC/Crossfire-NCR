@@ -113,7 +113,7 @@
                                     <div title="Product number">
                                         <div class="required-field"><span><b>*</b></span></div>
                                         <label for="poProdNo">PO or Prod. No.</label>
-                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############">
+                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############" maxlength="12">
                                         <p id="danger-prod-num" class="danger-text">Error</p>
                                     </div>
                                     <div title="Sales order number">
@@ -205,64 +205,89 @@
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Indicate disposition by checking one of the following:</label>
                             <div id="disposition-radio" class="radio-group" >
-                                <input type="radio" id="use-as-is" name="disposition" value="use" required >
-                                <label for="use-as-is">Use As Is</label>
-                                
-                                <input type="radio" id="repair" name="disposition" value="repair" checked>
-                                <label for="repair">Repair</label>
-
-                                <input type="radio" id="rework" name="disposition" value="rework">
-                                <label for="rework">Rework</label>
-
-                                <input type="radio" id="scrap" name="disposition" value="scrap">
-                                <label for="scrap">Scrap</label>
+                                <div>
+                                    <input type="radio" id="use-as-is" name="disposition" value="use" required >
+                                    <label for="use-as-is">Use As Is</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="repair" name="disposition" value="repair" checked>
+                                    <label for="repair">Repair</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="rework" name="disposition" value="rework">
+                                    <label for="rework">Rework</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="scrap" name="disposition" value="scrap">
+                                    <label for="scrap">Scrap</label>
+                                </div>
                             </div>
                         </fieldset>
 
                         <div>
                             <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
+                            <p id="danger-eng-disposition" class="danger-text">Error</p>
                         </div>
 
+                        <!--Radio buttons-->
                         <div>
                             <fieldset>
                                 <label><span class="required-field"><b>*</b></span>Does the customer require a notification for the NCR?</label>
                                 <div class="radio-group">
-                                    <input type="radio" id="notifYes" name="notification">
-                                    <label for="notifYes">Yes</label>
-                                    <input type="radio" id="notifNo"  name="notification">
-                                    <label for="notifNo">No</label>
+                                    <div>
+                                        <input type="radio" id="notifYes" name="notification" checked>
+                                        <label for="notifYes">Yes</label>
+                                    </div>
+                                    
+                                    <div>
+                                        <input type="radio" id="notifNo"  name="notification">
+                                        <label for="notifNo">No</label>
+                                    </div>
                                 </div>
                             </fieldset>    
                         </div>
-                            <fieldset>
-                                <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
-                                <div id="revision-radio" class="radio-group">
+                        
+                        <fieldset>
+                            <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
+                            <div id="revision-radio" class="radio-group">
+                                <div>
                                     <input type="radio" id="updYes" name="update" value="yes" checked>
                                     <label for="updYes">Yes</label>
+                                </div>
+                                <div>
                                     <input type="radio" id="updNo"  name="update" value="no">
                                     <label for="updNo">No</label>
                                 </div>
-                            </fieldset>
+                            </div>
+                        </fieldset>
+
+                        <!--Engineer revision-->
                         <div class="grid-2">
                             <div>
                                 <label for="org-rev-name">Original Revision Engineer Name</label>
                                 <input id="org-rev-name" type="text">
+                                <p id="danger-org-rev-name" class="danger-text">Error</p>
 
                                 <label for="org-rev-date">Original Revision Date</label>
                                 <input id="org-rev-date" type="date">
+                                <p id="danger-org-rev-date" class="danger-text">Error</p>
 
                                 <label for="org-rev-num">Original Revision Number:</label>
                                 <input min="0" type="number" id="org-rev-num">
+                                <p id="danger-org-rev-num" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <label for="upd-rev-name">Updated Revision Engineer Name</label>
                                 <input id="upd-rev-name" type="text">
+                                <p id="danger-upd-rev-name" class="danger-text">Error</p>
 
                                 <label for="upd-rev-date">Updated Revision Date</label>
                                 <input id="upd-rev-date" type="date">
+                                <p id="danger-upd-rev-date" class="danger-text">Error</p>
 
                                 <label for="upd-rev-num">Updated Revision Number:</label>
                                 <input min="0" type="number" id="upd-rev-num">
+                                <p id="danger-upd-rev-num" class="danger-text">Error</p>
                             </div>  
                         </div>
                         <div class="grid-2">
@@ -280,7 +305,7 @@
                         </div>
                         <div>
                             <button  title="Save changes of current document section" id="engineer-save-doc-button">Save</button>
-                            <button title="Submit all changes" id="engineer-change-doc-button" type="submit" >Submit</button>
+                            <button title="Submit all changes" id="engineer-change-doc-button" type="button" >Submit</button>
                         </div>
                     </form>
                 </details>

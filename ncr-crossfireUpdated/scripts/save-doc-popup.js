@@ -22,7 +22,7 @@ window.addEventListener("load", function(e){
     };
 })
 
-//Quality inspector submit functions
+//Quality inspector submit validation
 document.getElementById("qi-change-doc-button").addEventListener("click", function(){
     let poProdNum = document.getElementById("poProdNo").value
     let dangerProdNum = document.getElementById("danger-prod-num")
@@ -50,7 +50,7 @@ document.getElementById("qi-change-doc-button").addEventListener("click", functi
     let dangerSalesOrdNum = document.getElementById("danger-sales-ord-num")
 
     if(salesOrdNum != ""){
-        if(!salesOrdNum.match(/^[0-9]*$/g) == true){
+        if(!salesOrdNum.match(/^[0-9]*$/g)){
             dangerSalesOrdNum.innerText = "Input only numbers"
             dangerSalesOrdNum.style.visibility = "visible"
         }
@@ -113,6 +113,119 @@ document.getElementById("qi-change-doc-button").addEventListener("click", functi
     else{
         dangerDefectDescription.innerText = "Input a description"
         dangerDefectDescription.style.visibility = "visible"
+    }
+})
+
+
+//Engineer submit validation
+document.getElementById("engineer-change-doc-button").addEventListener("click", function(){
+    
+    //Engineer Disposition
+    let dispositionTextarea = document.getElementById("eng-disposition")
+    let dangerDisposition = document.getElementById("danger-eng-disposition")
+
+    if(dispositionTextarea.disabled != true){
+        if(dispositionTextarea.value == ""){
+            dangerDisposition.innerText = "Missing description of steps required"
+            dangerDisposition.style.visibility = "visible"
+        }
+        else{
+            dangerDisposition.style.visibility = "hidden"
+        }
+    }
+    else{
+        dangerDisposition.style.visibility = "hidden"
+    }
+
+    let revisionRadio = document.querySelector('input[name=update]:checked').value
+
+    //Original Revision Engineer Name
+    let orgRevName= document.getElementById("org-rev-name")
+    let dangerOrgRevName = document.getElementById("danger-org-rev-name")
+
+    //Original Revision Engineer Date
+    let orgRevDate= document.getElementById("org-rev-date")
+    let dangerOrgRevDate = document.getElementById("danger-org-rev-date")
+
+    //Original Revision Engineer Number
+    let orgRevNum= document.getElementById("org-rev-num")
+    let dangerOrgRevNum = document.getElementById("danger-org-rev-num")
+
+    //Updates Revision Engineer Name
+    let updRevName= document.getElementById("upd-rev-name")
+    let dangerUpdRevName = document.getElementById("danger-upd-rev-name")
+
+    //Updated Revision Engineer Date
+    let updRevDate= document.getElementById("upd-rev-date")
+    let dangerUpdRevDate = document.getElementById("danger-upd-rev-date")
+
+    //Updated Revision Engineer Number
+    let updRevNum= document.getElementById("upd-rev-num")
+    let dangerUpdRevNum = document.getElementById("danger-upd-rev-num")
+
+    if(revisionRadio == "yes"){
+        //Original validation
+        if(orgRevName.value == ""){
+            dangerOrgRevName.innerText = "Input Engineer Name"
+            dangerOrgRevName.style.visibility = "visible"
+        }
+        else{
+            dangerOrgRevName.style.visibility = "hidden"
+        }
+
+        if(orgRevDate.value == ""){
+            dangerOrgRevDate.innerText = "Input Date"
+            dangerOrgRevDate.style.visibility = "visible"
+        }
+        else{
+            dangerOrgRevDate.style.visibility = "hidden"
+        }
+
+        if(orgRevNum.value == ""){
+            
+            dangerOrgRevNum.innerText = "Input original revision number"
+            dangerOrgRevNum.style.visibility = "visible"
+        }
+        else{
+            dangerOrgRevNum.style.visibility = "hidden"     
+        }
+
+        //Updated validation
+        if(updRevName.value == ""){
+            dangerUpdRevName.innerText = "Input Engineer Name"
+            dangerUpdRevName.style.visibility = "visible"
+        }
+        else{
+            dangerUpdRevName.style.visibility = "hidden"
+        }
+
+        if(updRevDate.value == ""){
+            dangerUpdRevDate.innerText = "Input Date"
+            dangerUpdRevDate.style.visibility = "visible"
+        }
+        else{
+            dangerUpdRevDate.style.visibility = "hidden"
+        }
+
+        if(updRevNum.value == ""){
+            dangerUpdRevNum.innerText = "Input updated revision number"
+            dangerUpdRevNum.style.visibility = "visible"        
+            
+        }
+        else{
+            dangerUpdRevNum.style.visibility = "hidden"
+        }
+    }
+    else{
+        //original
+        dangerOrgRevName.style.visibility = "hidden"       
+        dangerOrgRevDate.style.visibility = "hidden"
+        dangerOrgRevNum.style.visibility = "hidden"
+
+        //update
+        dangerUpdRevName.style.visibility = "hidden"
+        dangerUpdRevDate.style.visibility = "hidden"
+        dangerUpdRevNum.style.visibility = "hidden"
     }
 })
 
