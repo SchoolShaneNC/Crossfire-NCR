@@ -29,6 +29,8 @@ document.getElementById("qi-change-doc-button").addEventListener("click", functi
     QiValidation()
 
     if(SubmitBoolQI()){
+        EngNotificationAdd()
+
         alert("Submission Complete.  Sending Notification to Engineer.")
 
         //window.location.href ="formView.html"
@@ -43,6 +45,8 @@ document.getElementById("engineer-change-doc-button").addEventListener("click", 
     EnValidation()
     
     if(SubmitBoolEN()){
+        PaNotificationAdd()
+
         alert("Submission Complete.  Sending Notification to Purchasing Agent.")
     }
     else{

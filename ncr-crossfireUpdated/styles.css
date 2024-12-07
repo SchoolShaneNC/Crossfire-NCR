@@ -265,13 +265,8 @@ textarea {
     
 }
 
-#currentRole, .bell-anchor ul, .bell-anchor div{
+#logout, .userName, .bell-anchor ul, .bell-anchor div{
     position: absolute;
-}
-
-#currentRole{
-    left: 85%;
-    top: 35%;
 }
 
 .bell-anchor{
@@ -287,9 +282,10 @@ textarea {
 
 .bell-anchor ul{
     display: inline-block;
-    width: 200px;
+    width:265px;
     right: 0;
     visibility: hidden;
+    margin: auto 0;
 }
 
 .bell-anchor:hover ul, .bell-anchor:hover div{
@@ -306,10 +302,15 @@ textarea {
 .bell-anchor li{
     padding: 5px 10px;
     background-color: #fff;
-    color: #173541;
     text-decoration: none;
     list-style-type: none;
-    border-bottom: 1px solid #1735413a;
+    border-bottom: 2px solid #2a63927e;
+}
+
+li a{
+    color: #173541;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .bell-anchor div{
@@ -445,7 +446,6 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     overflow-y:visible;
     overflow-x: hidden;
     overflow: scroll;
-    border-radius: 10px;
 }
 
 #recent-scroll{
@@ -455,6 +455,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 
 #notif-scroll{
     height: 200px;
+    width: 283px;
 }
 
 #return-button {
@@ -652,4 +653,40 @@ details summary:focus{
 /*** Admin Panel ***/
 #addButton,#removeButton,#batoom{
     height: 42px;
-   }
+}
+
+ul a{
+    color: #173541;
+}
+
+ul a:focus li, li:hover{
+    outline: none;
+    background-color: #2a6392;
+    color: #fff;
+}
+
+
+#logout{
+    left: 80%;
+    top: 15%;
+    padding: 12px 30px;
+    background-color: #2a6392;
+    border-radius: 5px;
+}
+
+#logout:hover, #logout:focus{
+    background-color: #fff;
+    color: black;
+}
+
+.userName{
+    text-align: right;
+    color: #fff;
+    font-size: 1.25em;
+    left: 70.5%;
+    top: 30%;
+}
+
+#li-storage{
+    visibility: none;
+}

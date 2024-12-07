@@ -8,13 +8,22 @@ var currentUser = sessionStorage.getItem("Name")
 
 
 window.addEventListener("load", function(){
-    const display = document.getElementById("currentRole")
-    display.innerText = currentRole
+    const display = document.getElementById("logout")
+    display.innerText = "Logout"
 
-    if(display.innerText == "EN"){
-        let enNotif = this.localStorage.getItem("en-notif")
+    const userDisplay = document.getElementById("user")
+    userDisplay.innerText = currentUser
 
-        
+    let ul = document.getElementById("notification-list")
+
+    if(currentRole == "EN"){
+        let enNotif = localStorage.getItem("en-notif")
+        ul.innerHTML = enNotif
+    }
+    if(currentRole == "PA"){
+        let paNotif = localStorage.getItem("pa-notif")
+
+        ul.innerHTML = paNotif
     }
 })
 

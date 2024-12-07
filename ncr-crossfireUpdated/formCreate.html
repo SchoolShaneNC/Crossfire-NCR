@@ -14,19 +14,21 @@
         <div class="topbar">
             <img class="crossfire-logo" src="Images/crossfire-logo-no-bkgd.png" alt="Logo" height="189" width="867">
 
-            <a href="ncr-login.html" id="currentRole">
+            <p id="user" class="userName">Hello</p>
+
+            <a href="ncr-login.html" id="logout">
                 Login
             </a>
 
             <a class="bell-anchor" title="Notifications">
                 <img src="images/notification.png" alt="notification bell" width="512" height="512">
 
-                <div class="scrollbar">
+                <div id="notif-scroll" class="scrollbar">
                     <ul id="notification-list">
                         <li>Welcome User</li>
                     </ul>
                 </div>
-            </a>    
+            </a>     
         </div>
     </header>
     
@@ -69,6 +71,8 @@
             <div>
                 <details open>
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
+
+                    <button id="qi-auto-fill">Auto-fill</button>
 
                     <form id="qi-form" class="ncr-form filter-box">
 
@@ -414,8 +418,11 @@
             -->
             </div>
         </div>
+
+        <ul id="li-storage"></ul>
     </main>
 
+    <script src="scripts/auto-fill.js"></script>
     <script src="scripts/submit-bool.js"></script>
     <script src="scripts/submit-validation-functions.js"></script>
     <script src="scripts/notifications-for-roles.js"></script>
