@@ -10,6 +10,12 @@ var currentUser = sessionStorage.getItem("Name")
 window.addEventListener("load", function(){
     const display = document.getElementById("currentRole")
     display.innerText = currentRole
+
+    if(display.innerText == "EN"){
+        let enNotif = this.localStorage.getItem("en-notif")
+
+        
+    }
 })
 
 var adminSidebarBtn = document.getElementById("admin-panel")
