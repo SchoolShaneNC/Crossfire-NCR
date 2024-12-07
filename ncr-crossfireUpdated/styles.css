@@ -399,7 +399,7 @@ textarea {
 /* Center the h1 title */
 .header-text {
     font-size: 2em;
-    margin: 20px 0 20px 90px;
+    margin: 20px 0 20px 200px;
 }
 
 /* Align h2 to the left */
@@ -495,7 +495,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 /**************Breadcrumb trail**************/
 .breadcrumb {
     margin-top: 100px;
-    margin-left: 10%;
+    margin-left: 18%;
     display: block;
 }
 
@@ -511,6 +511,9 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 .breadcrumb li a:visited, .breadcrumb li a{
     color: #2a6392;
     text-decoration: none;
+}
+.breadcrumb li a:focus{
+    color: #fff;
 }
 
 .required-field{
@@ -604,7 +607,7 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
 }
 
 details {
-    width: 80%;
+    width: 72.2%;
     border: #173541 0.25em solid; 
     border-radius: 10px; 
     overflow: hidden; 
@@ -613,7 +616,7 @@ details {
     margin-top: 1em;
 }
 
-details > summary {
+details summary {
     width: 100%; 
     background-color: #2a6392;
     height: 3em;
@@ -628,6 +631,10 @@ details > summary {
     color: #fff;
 }
 
+details summary:focus{
+    background-color: #173541;
+}
+
 .danger-text{
     color: rgb(179, 0, 0);
     font-size: 0.75em;
@@ -636,6 +643,9 @@ details > summary {
     visibility: hidden;
 }
 
+#pdf{
+    margin-left: 14%;
+}
 
 /***** AA+ Standards ******/
 

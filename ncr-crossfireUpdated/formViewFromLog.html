@@ -69,11 +69,13 @@
         <div class="form-class" id="formViewFromLog">
             <h1 class="header-text">Non-Conformance Report View</h1>
 
+            <button class="pdfbutton" id="pdf" title="Export document as PDF">Export</button>
+
             <div>
-                <details open>
+                <details>
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
-                    <form class="ncr-form filter-box">
+                    <form id="qi-form" class="ncr-form filter-box">
 
                         <div class="required-field"></div><p id="create-require-notice" class="left-align">The orange dot indicates <strong>required</strong> field.</p> 
 
@@ -82,52 +84,59 @@
                                 <h2 class="left-align">NCR Details</h2>
                                 <!-- NCR No. -->
                                 <div class="required-field"></div>
-                                <label for="ncrNo">NCR No.</label>
-                                <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">
-                                
+                                <label for="ncrNo">NCR No.</label>                                
+                                <input type="text" id="ncrNo" name="ncrNo" disabled title="NCR Document number">                          
+
                                 <fieldset>
                                     <label><span class="required-field"><b>*</b></span>Identity Process Applicable</label>
                                     <div class="radio-group">
                                         <div>
-                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" disabled checked>
+                                            <input type="radio" id="supplier-rec-insp" name="identity-process" value="supplier" checked required>
                                             <label for="supplier-rec-insp">Supplier or Rec-Insp</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" id="wip" name="identity-process" value="wip" disabled>
+                                            <input type="radio" id="wip" name="identity-process" value="wip">
                                             <label for="wip">WIP (Production Order)</label>
                                         </div>
                                     </div>
                                 </fieldset>
-                                
 
                                 <!-- Product Details -->
                                 <h2 class="left-align">Product Details</h2>
                                 
-                                <div class="required-field"></div>
-                                <label for="supplierName">Supplier Name</label>
-                                <input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">
+                                <div title="Current log of Suppliers">
+                                    <div class="required-field"><span><b>*</b></span></div>
+                                    <label for="comboBox">Supplier Name</label>
+                                    <select id="comboBox"></select>
+                                </div>
+                                
+                                <!--<input type="text" id="supplierName" name="supplierName" placeholder="Company name" title="Insert company name">-->
 
                                 <div class="grid-4">
                                     <div title="Product number">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><span><b>*</b></span></div>
                                         <label for="poProdNo">PO or Prod. No.</label>
-                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############" disabled>
+                                        <input type="text" id="poProdNo" name="poProdNo" required placeholder="############" maxlength="12">
+                                        <p id="danger-prod-num" class="danger-text">Error</p>
                                     </div>
                                     <div title="Sales order number">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><span><b>*</b></span></div>
                                         <label for="salesOrderNo">Sales Order No.</label>
-                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required disabled>
+                                        <input type="text" id="salesOrderNo" name="salesOrderNo" placeholder="####" required>
+                                        <p class="danger-text" id="danger-sales-ord-num">Error</p>
                                     </div>
                                     <div title="Number of products received from sale order">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><span><b>*</b></span></div>
                                         <label for="quantityReceived">Quantity Received</label>
-                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0" disabled>
+                                        <input type="number" id="quantityReceived" name="quantityReceived"  placeholder="i. e. 175" required min="0">
+                                        <p class="danger-text" id="danger-qty-receive">Error</p>
                                     </div>
                                     <div title="Number of defective products found in sale order">
-                                        <div class="required-field"></div>
+                                        <div class="required-field"><span><b>*</b></span></div>
                                         <label for="quantityDefective">Quantity Defective</label>
-                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0" disabled>
+                                        <input type="number" id="quantityDefective" name="quantityDefective" placeholder="i. e. 30" required min="0">
+                                        <p class="danger-text" id="danger-qty-defective">Error</p>
                                     </div>
                                 </div>
                             </div>
@@ -136,13 +145,15 @@
                                 <!-- Item Details -->
                                 <h2 class="left-align">Item Details</h2>
                     
-                                <div class="required-field"></div>
+                                <div class="required-field"><span><b>*</b></span></div>
                                 <label for="itemDescription">Description of Item</label>
-                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required disabled></textarea>
+                                <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"  placeholder="Describe the product..." required></textarea>
+                                <p class="danger-text" id="danger-item-description">Error</p>
                     
-                                <div class="required-field"></div>
+                                <div class="required-field"><span><b>*</b></span></div>
                                 <label for="itemDefect">Description of Defect</label>
-                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required disabled></textarea>
+                                <textarea id="itemDefect" name="itemDefect" rows="4" cols="50"  placeholder="Describe the details of the defect..." required></textarea>
+                                <p class="danger-text" id="danger-defect-description">Error</p>
                             </div>
                         </div>
                         
@@ -154,12 +165,12 @@
                                 <label><span class="required-field"><b>*</b></span>Item marked Non-Conforming</label>
                                     <div class="radio-group">
                                         <div>
-                                            <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked disabled>
+                                            <input type="radio" id="qi-yes" name="nonConforming" value="yes" checked>
                                             <label for="qi-yes">Yes</label>
                                         </div>
                                 
                                         <div>
-                                            <input type="radio" id="qi-no" name="nonConforming" value="no" disabled>
+                                            <input type="radio" id="qi-no" name="nonConforming" value="no">
                                             <label for="qi-no">No</label>
                                         </div>
                                     </div>
@@ -169,75 +180,115 @@
                                 <div >
                                     <div class="required-field"></div>
                                     <label for="qualityRepName">Quality Representative's Name</label>
-                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required disabled>
+                                    <input type="text" id="qualityRepName" name="qualityRepName"  placeholder="i. e. Ellen Joe" required>
                                 </div>
                                 <div id ="date">
+                                    
                                 </div>
                             </div>
                         </div>
                     </form>
                 </details>
 
-                <details open>
+                <details>
                     <summary class="summary"><strong>Engineering</strong></summary>
                     
-                    <form class="ncr-form filter-box">
-                        <h2 class="left-align">Review by CF Engineering</h2>
-                        
+                    <form id="eng-form" class="ncr-form filter-box">
                         <div>
                             <h2 class="left-align">Disposition</h2>
                         </div>
                         
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Indicate disposition by checking one of the following:</label>
-                            <div id="disposition-radio" class="radio-group">
-                                <input type="radio" id="use-as-is" name="disposition" value="use" required disabled>
-                                <label for="use-as-is">Use As Is</label>
-                                
-                                <input type="radio" id="repair" name="disposition" value="repair" disabled>
-                                <label for="repair">Repair</label>
-
-                                <input type="radio" id="rework" name="disposition" value="rework" disabled>
-                                <label for="rework">Rework</label>
-
-                                <input type="radio" id="scrap" name="disposition" value="scrap" disabled>
-                                <label for="scrap">Scrap</label>
+                            <div id="disposition-radio" class="radio-group" >
+                                <div>
+                                    <input type="radio" id="use-as-is" name="disposition" value="use" required >
+                                    <label for="use-as-is">Use As Is</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="repair" name="disposition" value="repair" checked>
+                                    <label for="repair">Repair</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="rework" name="disposition" value="rework">
+                                    <label for="rework">Rework</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="scrap" name="disposition" value="scrap">
+                                    <label for="scrap">Scrap</label>
+                                </div>
                             </div>
                         </fieldset>
 
                         <div>
-                            <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required disabled></textarea>
+                            <textarea id="eng-disposition" rows="12" cols="50" placeholder="Sequence of work steps required when repair or rework indicated" required></textarea>
+                            <p id="danger-eng-disposition" class="danger-text">Error</p>
                         </div>
 
-                        <fieldset>
-                            <label><span class="required-field"><b>*</b></span>Does the customer require a notification for the NCR?</label>
-                            <div class="radio-group">
-                                <input type="radio" id="notifYes" name="notification" disabled>
-                                <label for="notifYes">Yes</label>
-                                <input type="radio" id="notifNo"  name="notification" disabled>
-                                <label for="notifNo">No</label>
-                            </div>
-                        </fieldset>   
-
+                        <!--Radio buttons-->
+                        <div>
+                            <fieldset>
+                                <label><span class="required-field"><b>*</b></span>Does the customer require a notification for the NCR?</label>
+                                <div class="radio-group">
+                                    <div>
+                                        <input type="radio" id="notifYes" name="notification" checked>
+                                        <label for="notifYes">Yes</label>
+                                    </div>
+                                    
+                                    <div>
+                                        <input type="radio" id="notifNo"  name="notification">
+                                        <label for="notifNo">No</label>
+                                    </div>
+                                </div>
+                            </fieldset>    
+                        </div>
+                        
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Does the drawing require updating?</label>
                             <div id="revision-radio" class="radio-group">
-                                <input type="radio" id="updYes" name="update" value="yes" checked disabled>
-                                <label for="updYes">Yes</label>
-                                <input type="radio" id="updNo"  name="update" value="no" disabled>
-                                <label for="updNo">No</label>
+                                <div>
+                                    <input type="radio" id="updYes" name="update" value="yes" checked>
+                                    <label for="updYes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="updNo"  name="update" value="no">
+                                    <label for="updNo">No</label>
+                                </div>
                             </div>
                         </fieldset>
 
+                        <label for="org-rev-name">Revision Engineer Name</label>
+                        <input id="org-rev-name" type="text">
+                        <p id="danger-org-rev-name" class="danger-text">Error</p>
+
+                        <!--Engineer revision-->
                         <div class="grid-2">
                             <div>
+                                
+
+                                <label for="org-rev-date">Original Revision Date</label>
+                                <input id="org-rev-date" type="date">
+                                <p id="danger-org-rev-date" class="danger-text">Error</p>
+
                                 <label for="org-rev-num">Original Revision Number:</label>
-                                <input min="0" type="number" id="org-rev-num" disabled>
+                                <input min="0" type="number" id="org-rev-num">
+                                <p id="danger-org-rev-num" class="danger-text">Error</p>
                             </div>
                             <div>
+                                <!--
+                                <label for="upd-rev-name">Updated Revision Engineer Name</label>
+                                <input id="upd-rev-name" type="text">
+                                <p id="danger-upd-rev-name" class="danger-text">Error</p>
+                                -->
+
+                                <label for="upd-rev-date">Updated Revision Date</label>
+                                <input id="upd-rev-date" type="date">
+                                <p id="danger-upd-rev-date" class="danger-text">Error</p>
+
                                 <label for="upd-rev-num">Updated Revision Number:</label>
-                                <input min="0" type="number" id="upd-rev-num" disabled>
-                            </div>    
+                                <input min="0" type="number" id="upd-rev-num">
+                                <p id="danger-upd-rev-num" class="danger-text">Error</p>
+                            </div>  
                         </div>
                         <div class="grid-2">
                             <div>
@@ -253,134 +304,154 @@
                             </div>
                         </div>
                     </form>
-                    <div>
-                        <button title="Export NCR" class="pdfbutton" id="pdf">Close & Create PDF</button>
-                    </div>
-                </form>
                 </details>
 
-                <details id="details-purchasing" class="accordion" open>
+                <details>
                     <summary class="summary"><strong>Purchasing</strong></summary>
                     
-                    <form id="eng-form" class="ncr-form filter-box">
-                        <h2 class="left-align">Purchasing Preliminary Decision</h2>               
+                    <form id="pur-form" class="ncr-form filter-box">
+                        <h2 class="left-align">Purchasing Preliminary Decision</h2>
                         
                         <fieldset>
-                            <label><span class="required-field"><b>*</b></span>Indicate decision by checking one of the following:</label>
-                            <div id="disposition-radio" class="radio-group">
-                                <input type="radio" id="return-to-supplier" name="decision" value="return">
-                                <label for="return-to-supplier">Return to Supplier</label>
+                            <label><span class="required-field"><b>*</b></span>Indicate decision by checking one of the following</label>
+                            <div id="decision-radio" class="radio-group">
+                                <div>
+                                    <input type="radio" id="return-to-supplier" name="decision" value="return" checked>
+                                    <label for="return-to-supplier">Return to Supplier</label>
+                                </div>
 
-                                <input type="radio" id="rework" name="decision" value="rework">
-                                <label for="rework">Rework "In-House"</label>
-                                
-                                <input type="radio" id="scrap" name="decision" value="scrap">
-                                <label for="scrap">Scrap In-House</label>
+                                <div>
+                                    <input type="radio" id="rework-house" name="decision" value="rework">
+                                    <label for="rework-house">Rework "In-House"</label>
+                                </div>
 
-                                <input type="radio" id="defer" name="decision" value="defer">
-                                <label for="defer">Defer for HBC Engineering Review</label>
+                                <div>
+                                    <input type="radio" id="scrap-house" name="decision" value="scrap">
+                                    <label for="scrap-house">Scrap "In-House"</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="defer" name="decision" value="defer">
+                                    <label for="defer">Defer for HBC Engineering Review</label>
+                                </div>
                             </div>
                         </fieldset>
 
                         <fieldset>
                             <div>
-                                <label><span class="required-field"><b>*</b></span>Was a CAR Raised</label>
-                                <div class="radio-group">
-                                    <input type="radio" id="CARYes" name="notification">
-                                    <label for="notifYes">Yes</label>
-
-                                    <input type="radio" id="CARNo"  name="notification">
-                                    <label for="notifNo">No</label>
+                                <label><span class="required-field"><b>*</b></span>Was a CAR raised?</label>
+                                
+                                <div class="radio-group" id="raised-radio">
+                                    <div>
+                                        <input type="radio" id="CARYes" value="car-yes" name="car-raised" checked required>
+                                        <label for="CARYes">Yes</label>
+                                    </div>
+                                    
+                                    <div>
+                                        <input type="radio" id="CARNo" value="car-no" name="car-raised">
+                                        <label for="CARNo">No</label>
+                                    </div>
                                 </div>
+                            </div>
                         </fieldset>
-                        <fieldset>    
-                                <div>
-                                    <label for="CARnum">If yes, indicate CAR #</label>
-                                    <input min="0" type="number" id="car-num">
-                                </div> 
-                        </fieldset>
-                        
+
+                        <div>
+                            <label for="car-num">If yes, indicate CAR Number</label>
+                            <input min="0" type="number" id="car-num">
+                            <p id="danger-car-num" class="danger-text">Error</p>
+                        </div> 
 
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Follow-up Required?</label>
-                                <div id="required-radio" class="radio-group">
-                                    <input type="radio" id="reqYes" name="required" value="yes" checked required>
-                                    <label for="reqYes">Yes</label>
-                                    
-                                    <input type="radio" id="reqNo"  name="required" value="no">
-                                    <label for="reqNo">No</label>
-                                </div>
-                        </fieldset>
-                        <fieldset>
-                            <Label>If yes, indicate type and expected date</Label>
-                        </fieldset>
-                        <fieldset>
-                            <div class="grid-2">
+                            
+                            <div id="follow-up-radio" class="radio-group">
                                 <div>
-                                    <label for="engName">Type:</label>
-                                    <input type="text" id="type" placeholder="Indicate Type">
+                                    <input type="radio" id="follow-yes" name="follow-up" value="yes" checked required>
+                                    <label for="follow-yes">Yes</label>
                                 </div>
+                                
                                 <div>
-                                    <label for="engDate">Date:</label>
-                                    <input type="date" id="engDate" name="date">
-                                </div>
+                                    <input type="radio" id="follow-no"  name="follow-up" value="no">
+                                    <label for="follow-no">No</label>
+                                </div>                                    
                             </div>
                         </fieldset>
+
+                        <Label>If yes, indicate type and expected date</Label>
+
+                        <div class="grid-2">
+                            <div>
+                                <label for="car-type">Type</label>
+                                <input type="text" id="car-type" placeholder="Indicate Type">
+                                <p id="danger-car-type" class="danger-text">Error</p>
+                            </div>
+                            <div>
+                                <label for="car-date">Date</label>
+                                <input type="date" id="car-date" name="date">
+                                <p id="danger-car-date" class="danger-text">Error</p>
+                            </div>
+                        </div>
+
+                        <h2 class="left-align">Departments and Qualifying Names</h2>
 
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="OpName">Operations Manager:</label>
-                                <input type="text" id="OpName" placeholder="i. e. Ellen Joe">
+                                <label for="op-name">Operations Manager</label>
+                                <input type="text" id="op-name" placeholder="i. e. Ellen Joe">
+                                <p id="danger-op-name" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="engDate">Date:</label>
-                                <input type="date" id="engDate" name="date">
+                                <label for="op-date">Date</label>
+                                <input type="date" id="op-date" name="date">
+                                <p id="danger-op-date" class="danger-text">Error</p>
                             </div>
                         </div>
 
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="inspectorName">Inspectors Name:</label>
-                                <input type="text" id="inspectorName" placeholder="i. e. Ellen Joe">
+                                <label for="inspector-name">Inspector's Name</label>
+                                <input type="text" id="inspector-name" placeholder="i. e. Ellen Joe">
+                                <p id="danger-inspector-name" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="inspectDate">Date:</label>
-                                <input type="date" id="inspectDate" name="inspectDate">
+                                <label for="inspect-date">Date</label>
+                                <input type="date" id="inspect-date" name="inspectDate">
+                                <p id="danger-inspect-date" class="danger-text">Error</p>
                             </div>
                         </div>
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="inspectorName">Quality Department:</label>
-                                <input type="text" id="inspectorName" placeholder="i. e. Ellen Joe">
+                                <label for="quality-name">Quality Department</label>
+                                <input type="text" id="quality-name" placeholder="i. e. Ellen Joe">
+                                <p id="danger-quality-name" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="qualityDate">Date:</label>
-                                <input type="date" id="qualityDate" name="qualityDate">
+                                <label for="quality-date">Date</label>
+                                <input type="date" id="quality-date" name="qualityDate">
+                                <p id="danger-quality-date" class="danger-text">Error</p>
                             </div>
                         </div>
 
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>NCR Closed?</label>
-                                <div id="ncr-radio" class="radio-group">
-                                    <input type="radio" id="ncrYes" name="ncr" value="yes">
-                                    <label for="ncrYes">Yes</label>
+                                <div id="closed-radio" class="radio-group">
+                                    <div>
+                                        <input type="radio" id="closed-yes" name="ncr" value="yes" checked>
+                                        <label for="closed-yes">Yes</label>
+                                    </div>
                                     
-                                    <input type="radio" id="ncrNo"  name="ncr" value="no">
-                                    <label for="ncrNo">No</label>
+                                    <div>
+                                        <input type="radio" id="closed-no"  name="ncr" value="no">
+                                        <label for="closed-no">No</label>
+                                    </div>                                   
                                 </div>
                         </fieldset>
-
-
-                        <div>
-                            <button  title="Save changes of current document section" id="engineer-save-doc-button">Save</button>
-                            <button  title="Submit all changes" id="engineer-submit-doc-button" type="submit" >Submit</button>
-                        </div>
                     </form>
                 </details>
             </div>

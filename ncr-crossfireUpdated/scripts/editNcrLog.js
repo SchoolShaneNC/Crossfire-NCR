@@ -43,7 +43,7 @@ document.getElementById("revision-radio").addEventListener("change", function(e)
     const orgRevDate = document.getElementById("org-rev-date")
 
     const updRevNum = document.getElementById("upd-rev-num")
-    const updRevName = document.getElementById("upd-rev-name")
+    //const updRevName = document.getElementById("upd-rev-name")
     const updRevDate = document.getElementById("upd-rev-date")
 
     if(target.value == "no"){
@@ -62,15 +62,15 @@ document.getElementById("revision-radio").addEventListener("change", function(e)
 
         //upd Rev group
         updRevNum.disabled = true
-        updRevName.disabled = true
+        //updRevName.disabled = true
         updRevDate.disabled = true
 
         updRevNum.required=false
-        updRevName.required=false
+        //updRevName.required=false
         updRevDate.required=false
 
         updRevNum.value = ""
-        updRevName.value = ""
+        //updRevName.value = ""
         updRevDate.value = ""
     }
     if(target.value == "yes"){
@@ -85,11 +85,11 @@ document.getElementById("revision-radio").addEventListener("change", function(e)
 
         //upd Rev group
         updRevNum.disabled =  false
-        updRevName.disabled = false
+        //updRevName.disabled = false
         updRevDate.disabled = false
 
         updRevNum.required= true
-        updRevName.required=true
+        //updRevName.required=true
         updRevDate.required=true
     }  
 })
@@ -97,13 +97,87 @@ document.getElementById("revision-radio").addEventListener("change", function(e)
 document.getElementById("disposition-radio").addEventListener("change", function(e){
     let target = e.target
 
+    let engDisposition = document.getElementById("eng-disposition")
+
     if(target.value == "use" || target.value == "scrap"){
-        document.getElementById("eng-disposition").disabled=true
-        document.getElementById("eng-disposition").value = ""
-        document.getElementById("eng-disposition").required = false
+        engDisposition.disabled=true
+        engDisposition.value = ""
+        engDisposition.required = false
     }
     else{
-        document.getElementById("eng-disposition").disabled=false
-        document.getElementById("eng-disposition").required = true
+        engDisposition.disabled=false
+        engDisposition.required = true
+    }
+})
+
+document.getElementById("raised-radio").addEventListener("change", function(e){
+    let target = e.target
+
+    let carNum= document.getElementById("car-num")
+
+    let radYes= document.getElementById("follow-yes")
+    let radNo= document.getElementById("follow-no")
+
+    let carType = document.getElementById("car-type")
+    let carDate = document.getElementById("car-date")
+
+    if(target.value == "car-no"){
+        carNum.disabled=true
+        carNum.value = ""
+        carNum.required = false
+
+        radYes.checked = false
+        radYes.disabled=true
+
+        radNo.checked = true
+        radNo.disabled=true
+
+        carType.disabled=true
+        carType.value = ""
+        carType.required = false
+
+        carDate.disabled=true
+        carDate.value = ""
+        carDate.required = false
+    }
+    else{
+        carNum.disabled=false
+        carNum.required = false
+
+        radYes.checked = true
+        radYes.disabled= false
+
+        radNo.checked = false
+        radNo.disabled= false
+
+        carType.disabled=  false
+        carType.required = true
+
+        carDate.disabled=  false
+        carDate.required = true
+    }
+})
+
+document.getElementById("follow-up-radio").addEventListener("change", function(e){
+    let target = e.target
+
+    let carType = document.getElementById("car-type")
+    let carDate = document.getElementById("car-date")
+
+    if(target.value == "no"){
+        carType.disabled=true
+        carType.value = ""
+        carType.required = false
+
+        carDate.disabled=true
+        carDate.value = ""
+        carDate.required = false
+    }
+    else{
+        carType.disabled=  false
+        carType.required = true
+
+        carDate.disabled=  false
+        carDate.required = true
     }
 })

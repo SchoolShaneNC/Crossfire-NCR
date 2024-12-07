@@ -229,6 +229,139 @@ document.getElementById("engineer-change-doc-button").addEventListener("click", 
     }
 })
 
+//Puchasing submit validation
+document.getElementById("purchasing-change-doc-button").addEventListener("click", function(){
+    
+    //car section
+
+    //car num
+    let carNum= document.getElementById("car-num")
+    let dangerCarNum = document.getElementById("danger-car-num")
+
+    //car type
+    let carType = document.getElementById("car-type")
+    let dangerCarType = document.getElementById("danger-car-type")
+
+    //car date
+    let carDate = document.getElementById("car-date")
+    let dangerCarDate = document.getElementById("danger-car-date")
+
+
+    
+    //car num
+    if(carNum.disabled){
+        dangerCarNum.style.visibility = "hidden"
+    }
+    else{
+        if(carNum.value == ""){
+            dangerCarNum.innerText = "Input car number"
+            dangerCarNum.style.visibility = "visible"
+        }
+        else{
+            dangerCarNum.style.visibility = "hidden"
+        }
+    }
+
+    //car type
+    if(carType.disabled){
+        dangerCarType.style.visibility = "hidden"
+    }
+    else{
+        if(carType.value == ""){
+            dangerCarType.innerText = "Input car type"
+            dangerCarType.style.visibility = "visible"
+        }
+        else{
+            dangerCarType.style.visibility = "hidden"
+        }
+    }
+
+    //car type
+    if(carDate.disabled){
+        dangerCarDate.style.visibility = "hidden"
+    }
+    else{
+        if(carDate.value == ""){
+            dangerCarDate.innerText = "Input car date"
+            dangerCarDate.style.visibility = "visible"
+        }
+        else{
+            dangerCarDate.style.visibility = "hidden"
+        }
+    }
+
+    //names section
+    let opName= document.getElementById("op-name")
+    let dangerOpName = document.getElementById("danger-op-name")
+
+    let opDate= document.getElementById("op-date")
+    let dangerOpDate = document.getElementById("danger-op-date")
+
+    let inpsName= document.getElementById("inspector-name")
+    let dangerinpsName = document.getElementById("danger-inspector-name")
+
+    let inspDate= document.getElementById("inspect-date")
+    let dangerinspDate = document.getElementById("danger-inspect-date")
+
+    let qualName= document.getElementById("quality-name")
+    let dangerQualName = document.getElementById("danger-quality-name")
+
+    let qualDate= document.getElementById("quality-date")
+    let dangerQualDate = document.getElementById("danger-quality-date")
+
+
+    //operations manager
+    if(opName.value == ""){
+        dangerOpName.innerText = "Input operations manager name"
+        dangerOpName.style.visibility = "visible"
+    }
+    else{
+        dangerOpName.style.visibility = "hidden"
+    }
+    
+    if(opDate.value == ""){
+        dangerOpDate.innerText = "Input date"
+        dangerOpDate.style.visibility = "visible"
+    }
+    else{
+        dangerOpDate.style.visibility = "hidden"
+    }
+
+    //inpsector's name
+    if(inpsName.value == ""){
+        dangerinpsName.innerText = "Input inpsector's name"
+        dangerinpsName.style.visibility = "visible"
+    }
+    else{
+        dangerinpsName.style.visibility = "hidden"
+    }
+
+    if(inspDate.value == ""){
+        dangerinspDate.innerText = "Input date"
+        dangerinspDate.style.visibility = "visible"
+    }
+    else{
+        dangerinspDate.style.visibility = "hidden"
+    }
+
+    //quality department
+    if(qualName.value == ""){
+        dangerQualName.innerText = "Input quality department name"
+        dangerQualName.style.visibility = "visible"
+    }
+    else{
+        dangerQualName.style.visibility = "hidden"
+    }
+
+    if(qualDate.value == ""){
+        dangerQualDate.innerText = "Input date"
+        dangerQualDate.style.visibility = "visible"
+    }
+    else{
+        dangerQualDate.style.visibility = "hidden"
+    }
+})
+
 
 //Save notifications
 function eventListener() {

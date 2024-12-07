@@ -68,7 +68,7 @@
             <h1 class="header-text">Non-Conformance Report Edit</h1>
 
             <div>
-                <details open>
+                <details>
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
                     <form id="qi-form" class="ncr-form filter-box">
@@ -103,7 +103,7 @@
                                 
                                 <div title="Current log of Suppliers">
                                     <div class="required-field"><span><b>*</b></span></div>
-                                    <label for="supplierName">Supplier Name</label>
+                                    <label for="comboBox">Supplier Name</label>
                                     <select id="comboBox"></select>
                                 </div>
                                 
@@ -192,12 +192,10 @@
                     </form>
                 </details>
 
-                <details open>
+                <details>
                     <summary class="summary"><strong>Engineering</strong></summary>
                     
                     <form id="eng-form" class="ncr-form filter-box">
-                        <h2 class="left-align">Review by CF Engineering</h2>
-                        
                         <div>
                             <h2 class="left-align">Disposition</h2>
                         </div>
@@ -261,12 +259,14 @@
                             </div>
                         </fieldset>
 
+                        <label for="org-rev-name">Revision Engineer Name</label>
+                        <input id="org-rev-name" type="text">
+                        <p id="danger-org-rev-name" class="danger-text">Error</p>
+
                         <!--Engineer revision-->
                         <div class="grid-2">
                             <div>
-                                <label for="org-rev-name">Original Revision Engineer Name</label>
-                                <input id="org-rev-name" type="text">
-                                <p id="danger-org-rev-name" class="danger-text">Error</p>
+                                
 
                                 <label for="org-rev-date">Original Revision Date</label>
                                 <input id="org-rev-date" type="date">
@@ -277,9 +277,11 @@
                                 <p id="danger-org-rev-num" class="danger-text">Error</p>
                             </div>
                             <div>
+                                <!--
                                 <label for="upd-rev-name">Updated Revision Engineer Name</label>
                                 <input id="upd-rev-name" type="text">
                                 <p id="danger-upd-rev-name" class="danger-text">Error</p>
+                                -->
 
                                 <label for="upd-rev-date">Updated Revision Date</label>
                                 <input id="upd-rev-date" type="date">
@@ -294,13 +296,13 @@
                             <div>
                                 <div class="required-field"></div>
                                 <label for="engName">Name of Engineer</label>
-                                <input type="text" id="engName" placeholder="i. e. Ellen Joe">
+                                <input type="text" id="engName" placeholder="i. e. Ellen Joe" disabled>
                             </div>
                             
                             <div>
                                <div class="required-field"></div>
                                 <label for="engDate">Date:</label>
-                                <input type="date" id="engDate" name="date"> 
+                                <input type="date" id="engDate" name="date" disabled> 
                             </div>
                         </div>
                         <div>
@@ -310,17 +312,17 @@
                     </form>
                 </details>
 
-                <details id="details-purchasing" class="accordion">
+                <details>
                     <summary class="summary"><strong>Purchasing</strong></summary>
                     
                     <form id="pur-form" class="ncr-form filter-box">
                         <h2 class="left-align">Purchasing Preliminary Decision</h2>
                         
                         <fieldset>
-                            <label><span class="required-field"><b>*</b></span>Indicate decision by checking one of the following:</label>
+                            <label><span class="required-field"><b>*</b></span>Indicate decision by checking one of the following</label>
                             <div id="decision-radio" class="radio-group">
                                 <div>
-                                    <input type="radio" id="return-to-supplier" name="decision" value="return">
+                                    <input type="radio" id="return-to-supplier" name="decision" value="return" checked>
                                     <label for="return-to-supplier">Return to Supplier</label>
                                 </div>
 
@@ -331,7 +333,7 @@
 
                                 <div>
                                     <input type="radio" id="scrap-house" name="decision" value="scrap">
-                                    <label for="scrap-house">Scrap In-House</label>
+                                    <label for="scrap-house">Scrap "In-House"</label>
                                 </div>
 
                                 <div>
@@ -343,114 +345,123 @@
 
                         <fieldset>
                             <div>
-                                <label><span class="required-field"><b>*</b></span>Was a CAR Raised</label>
-                                <div class="radio-group">
+                                <label><span class="required-field"><b>*</b></span>Was a CAR raised?</label>
+                                
+                                <div class="radio-group" id="raised-radio">
                                     <div>
-                                        <input type="radio" id="CARYes" name="notification">
-                                        <label for="notifYes">Yes</label>
+                                        <input type="radio" id="CARYes" value="car-yes" name="car-raised" checked required>
+                                        <label for="CARYes">Yes</label>
                                     </div>
                                     
                                     <div>
-                                        <input type="radio" id="CARNo"  name="notification">
-                                        <label for="notifNo">No</label>
+                                        <input type="radio" id="CARNo" value="car-no" name="car-raised">
+                                        <label for="CARNo">No</label>
                                     </div>
                                 </div>
+                            </div>
                         </fieldset>
-                        <fieldset>    
-                                <div>
-                                    <label for="CARnum">If yes, indicate CAR #</label>
-                                    <input min="0" type="number" id="car-num">
-                                </div> 
-                        </fieldset>
-                        
+
+                        <div>
+                            <label for="car-num">If yes, indicate CAR Number</label>
+                            <input min="0" type="number" id="car-num">
+                            <p id="danger-car-num" class="danger-text">Error</p>
+                        </div> 
 
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>Follow-up Required?</label>
-                                <div id="required-radio" class="radio-group">
-                                    <div>
-                                        <input type="radio" id="reqYes" name="required" value="yes" checked required>
-                                        <label for="reqYes">Yes</label>
-                                    </div>
-                                    
-                                    <div>
-                                        <input type="radio" id="reqNo"  name="required" value="no">
-                                        <label for="reqNo">No</label>
-                                    </div>                                    
-                                </div>
-                        </fieldset>
-                        <fieldset>
-                            <Label>If yes, indicate type and expected date</Label>
-                        </fieldset>
-                        <fieldset>
-                            <div class="grid-2">
+                            
+                            <div id="follow-up-radio" class="radio-group">
                                 <div>
-                                    <label for="engName">Type:</label>
-                                    <input type="text" id="type" placeholder="Indicate Type">
+                                    <input type="radio" id="follow-yes" name="follow-up" value="yes" checked required>
+                                    <label for="follow-yes">Yes</label>
                                 </div>
+                                
                                 <div>
-                                    <label for="engDate">Date:</label>
-                                    <input type="date" id="engDate" name="date">
-                                </div>
+                                    <input type="radio" id="follow-no"  name="follow-up" value="no">
+                                    <label for="follow-no">No</label>
+                                </div>                                    
                             </div>
                         </fieldset>
+
+                        <Label>If yes, indicate type and expected date</Label>
+
+                        <div class="grid-2">
+                            <div>
+                                <label for="car-type">Type</label>
+                                <input type="text" id="car-type" placeholder="Indicate Type">
+                                <p id="danger-car-type" class="danger-text">Error</p>
+                            </div>
+                            <div>
+                                <label for="car-date">Date</label>
+                                <input type="date" id="car-date" name="date">
+                                <p id="danger-car-date" class="danger-text">Error</p>
+                            </div>
+                        </div>
+
+                        <h2 class="left-align">Departments and Qualifying Names</h2>
 
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="OpName">Operations Manager:</label>
-                                <input type="text" id="OpName" placeholder="i. e. Ellen Joe">
+                                <label for="op-name">Operations Manager</label>
+                                <input type="text" id="op-name" placeholder="i. e. Ellen Joe">
+                                <p id="danger-op-name" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="engDate">Date:</label>
-                                <input type="date" id="engDate" name="date">
+                                <label for="op-date">Date</label>
+                                <input type="date" id="op-date" name="date">
+                                <p id="danger-op-date" class="danger-text">Error</p>
                             </div>
                         </div>
 
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="inspectorName">Inspectors Name:</label>
-                                <input type="text" id="inspectorName" placeholder="i. e. Ellen Joe">
+                                <label for="inspector-name">Inspector's Name</label>
+                                <input type="text" id="inspector-name" placeholder="i. e. Ellen Joe">
+                                <p id="danger-inspector-name" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="inspectDate">Date:</label>
-                                <input type="date" id="inspectDate" name="inspectDate">
+                                <label for="inspect-date">Date</label>
+                                <input type="date" id="inspect-date" name="inspectDate">
+                                <p id="danger-inspect-date" class="danger-text">Error</p>
                             </div>
                         </div>
                         <div class="grid-2">
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="inspectorName">Quality Department:</label>
-                                <input type="text" id="inspectorName" placeholder="i. e. Ellen Joe">
+                                <label for="quality-name">Quality Department</label>
+                                <input type="text" id="quality-name" placeholder="i. e. Ellen Joe">
+                                <p id="danger-quality-name" class="danger-text">Error</p>
                             </div>
                             <div>
                                 <div class="required-field"><b>*</b></div>
-                                <label for="qualityDate">Date:</label>
-                                <input type="date" id="qualityDate" name="qualityDate">
+                                <label for="quality-date">Date</label>
+                                <input type="date" id="quality-date" name="qualityDate">
+                                <p id="danger-quality-date" class="danger-text">Error</p>
                             </div>
                         </div>
 
                         <fieldset>
                             <label><span class="required-field"><b>*</b></span>NCR Closed?</label>
-                                <div id="ncr-radio" class="radio-group">
+                                <div id="closed-radio" class="radio-group">
                                     <div>
-                                        <input type="radio" id="ncrYes" name="ncr" value="yes">
-                                        <label for="ncrYes">Yes</label>
+                                        <input type="radio" id="closed-yes" name="ncr" value="yes" checked>
+                                        <label for="closed-yes">Yes</label>
                                     </div>
                                     
                                     <div>
-                                        <input type="radio" id="ncrNo"  name="ncr" value="no">
-                                        <label for="ncrNo">No</label>
+                                        <input type="radio" id="closed-no"  name="ncr" value="no">
+                                        <label for="closed-no">No</label>
                                     </div>                                   
                                 </div>
                         </fieldset>
 
-
                         <div>
                             <button  title="Save changes of current document section" id="purchasing-save-doc-button">Save</button>
-                            <button  title="Submit all changes" id="purchasing-submit-doc-button" type="submit" >Submit</button>
+                            <button  title="Submit all changes" id="purchasing-change-doc-button" type="button">Submit</button>
                         </div>
                     </form>
                 </details>
