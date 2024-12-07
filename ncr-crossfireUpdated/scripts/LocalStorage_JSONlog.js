@@ -1,5 +1,5 @@
 
-//localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
+localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
 
 
 LogDataFile = {"logs":[
@@ -28,8 +28,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : null,
         UpdRevNum : null,
-        EngName : null,
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2024-01-24"
     },
 
     //NEW LOG ENTRY
@@ -57,8 +57,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 1,
         UpdRevNum : null,
-        EngName : "Horatio",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2024-03-19"
     },
 
 
@@ -87,8 +87,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 2,
         UpdRevNum : 10,
-        EngName : "Theodore Roosevelt",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2024-04-05"
     },
 
 
@@ -117,8 +117,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 3,
         UpdRevNum : 5,
-        EngName : "Vasily Zaitsev",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2024-04-12"
     },
 
 
@@ -146,8 +146,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : null,
         UpdRevNum : null,
-        EngName : "",
-        EngDate : "2023-05-13"
+        EngName : "Connor Foy",
+        EngDate : "2024-04-13"
     },
 
         
@@ -175,14 +175,14 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : null,
         UpdRevNum : null,
-        EngName : "Ichabod",
-        EngDate : "2024-08-23"
+        EngName : "Connor Foy",
+        EngDate : "2023-02-05"
     },
 
 
     //NCR Details
     {NcrNo : "2023-002",
-        IPA : "supplier-rec-insp",
+        IPA : "wip",
         //Product Details
         SupplierName : "Doofenshmirtz Evil Inc",
         ProductNum : 355965000364,
@@ -204,8 +204,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 70,
         UpdRevNum : 1234,
-        EngName : "",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2023-05-19"
     },
 
     {NcrNo : "2023-003",
@@ -231,8 +231,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : null,
         UpdRevNum : null,
-        EngName : "Dabrickashaw Ferguson",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2023-07-02"
     },
 
 
@@ -259,8 +259,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 1,
         UpdRevNum : null,
-        EngName : "Demarvion",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2023-08-08"
     },
 
     {
@@ -287,13 +287,13 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 1,
         UpdRevNum : null,
-        EngName : "Demarvion",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2023-08-15"
         },
 
         {
                 NcrNo : "2023-006",
-                IPA : "supplier-rec-insp",
+                IPA : "wip",
                 //Product Details
                 SupplierName : "Canadian Lumber",
                 ProductNum : 394756440364,
@@ -306,7 +306,7 @@ LogDataFile = {"logs":[
                 //final section
                 ItemMarkedNC : "qi-yes",
                 QualRepName : "Mikhail Marsh",
-                Dated : "2023-08-018",
+                Dated : "2023-08-18",
                 Status : "Closed",
                 //Engineer Section   
                 DispositionRadio : "use-as-is",
@@ -315,8 +315,8 @@ LogDataFile = {"logs":[
                 UpdateDrawing : "updYes",
                 OrgRevNum : 1,
                 UpdRevNum : null,
-                EngName : "Demarvion",
-                EngDate : "2024-02-24"
+                EngName : "Connor Foy",
+                EngDate : "2023-08-18"
         },
 
         {
@@ -333,7 +333,35 @@ LogDataFile = {"logs":[
         DescriptionDefect : "coated in rust changing the thread",
         //final section
         ItemMarkedNC : "qi-yes",
-        QualRepName : "Zach Milton",
+        QualRepName : "Shane Milton",
+        Dated : "2023-08-22",
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : 1,
+        UpdRevNum : null,
+        EngName : "Connor Foy",
+        EngDate : "2023-08-24"
+        },
+
+        {
+                NcrNo : "2023-008",
+        IPA : "supplier-rec-insp",
+         //Product Details
+        SupplierName : "Welland Trading Inc",
+        ProductNum : 777394829957,
+        SalesOrderNum : 2222,
+        QuantRec : 450,
+        QuantDef : 366,
+        //Item Details
+        DescriptionItem : "3 inch nails ",
+        DescriptionDefect : "coated in rust making the nails not up to par",
+        //final section
+        ItemMarkedNC : "qi-yes",
+        QualRepName : "Shane Milton",
         Dated : "2023-08-022",
         Status : "Closed",
         //Engineer Section   
@@ -343,8 +371,8 @@ LogDataFile = {"logs":[
         UpdateDrawing : "updYes",
         OrgRevNum : 1,
         UpdRevNum : null,
-        EngName : "Demarvion",
-        EngDate : "2024-02-24"
+        EngName : "Connor Foy",
+        EngDate : "2023-08-24"
         },
 
         {NcrNo : "2024-006",
@@ -375,7 +403,7 @@ LogDataFile = {"logs":[
         },
 
         {NcrNo : "2024-007",
-                IPA : "supplier-rec-insp",
+                IPA : "wip",
                 //Product Details
                 SupplierName : "NextGen Motors",
                 ProductNum : null,
@@ -426,6 +454,87 @@ LogDataFile = {"logs":[
                 UpdRevNum : null,
                 EngName : "",
                 EngDate : "2024-05-28"
+        },
+
+        {NcrNo : "2024-009",
+                IPA : "supplier-rec-insp",
+                //Product Details
+                SupplierName : "Quantum Components Ltd.",
+                ProductNum : 274837428418,
+                SalesOrderNum : 2190,
+                QuantRec : 150,
+                QuantDef : 27,
+                //Item Details
+                DescriptionItem : "",
+                DescriptionDefect : null,
+                //final section
+                ItemMarkedNC : null,
+                QualRepName : "",
+                Dated : "2024-05-30",
+                Status : "Open",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : null,
+                UpdRevNum : null,
+                EngName : "",
+                EngDate : "2024-06-02"
+        },
+
+        {NcrNo : "2024-010",
+                IPA : "wip",
+                //Product Details
+                SupplierName : "Horizon Manufacturing",
+                ProductNum : 274837428418,
+                SalesOrderNum : 2190,
+                QuantRec : 150,
+                QuantDef : 27,
+                //Item Details
+                DescriptionItem : "",
+                DescriptionDefect : null,
+                //final section
+                ItemMarkedNC : null,
+                QualRepName : "",
+                Dated : "2024-05-30",
+                Status : "Open",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : null,
+                UpdRevNum : null,
+                EngName : "",
+                EngDate : "2024-06-02"
+        },
+
+        {NcrNo : "2024-011",
+                IPA : "wip",
+                //Product Details
+                SupplierName : "General Electric",
+                ProductNum : null,
+                SalesOrderNum : null,
+                QuantRec : null,
+                QuantDef : null,
+                //Item Details
+                DescriptionItem : "",
+                DescriptionDefect : null,
+                //final section
+                ItemMarkedNC : null,
+                QualRepName : "",
+                Dated : "2024-06-08",
+                Status : "Open",
+                //Engineer Section   
+                DispositionRadio : "use-as-is",
+                DispositionText : null,
+                CustomerNotification : "notifYes",
+                UpdateDrawing : "updYes",
+                OrgRevNum : null,
+                UpdRevNum : null,
+                EngName : "",
+                EngDate : "2024-06-02"
         },
         
 ]}
