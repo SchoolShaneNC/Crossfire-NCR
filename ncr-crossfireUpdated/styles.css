@@ -31,7 +31,7 @@ input:focus, textarea:focus{
     margin: 0 auto;
 }
 
-img, .webpageSettings, .topbar, .bar-image, input[type="text"], 
+img, .webpageSettings, .topbar, .bar-image, input[type="text"], input[type="password"],
 input[type="number"], textarea, input[type="date"], 
 .styled-table, #scrollbar, .filter-box {
     width: 100%;
@@ -410,7 +410,7 @@ li a{
 }
 
 /* General input styling */
-input[type="text"], input[type="number"], textarea, input[type="date"] {
+input[type="text"], input[type="password"], input[type="number"], textarea, input[type="date"] {
     padding: .75em;
     margin: 0.5em 0 0.2em;
     box-sizing: border-box;
@@ -431,6 +431,10 @@ input[type="text"], input[type="number"], textarea, input[type="date"] {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 0.25rem;
+}
+
+.grid-1 {
+    display: block;
 }
 
 /* Radio button group */
@@ -665,7 +669,6 @@ ul a:focus li, li:hover{
     color: #fff;
 }
 
-
 #logout{
     left: 80%;
     top: 15%;
@@ -689,4 +692,21 @@ ul a:focus li, li:hover{
 
 #li-storage{
     visibility: none;
+}
+
+/** Login Page **/
+.login-class { 
+    margin: 4em 25em 2em 25em;
+    padding: 1em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#loginName {
+    min-height: 2.2rem;
+}
+
+#loginPass {
+    min-height: 2.2rem;
 }
