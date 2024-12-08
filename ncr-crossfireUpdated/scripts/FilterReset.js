@@ -74,8 +74,6 @@ function searchFilter()
         document.getElementById("filter3").value = "";
         document.getElementById('endDate').value = ''
         document.getElementById('fromDate').value = ''
-        document.getElementById("Open").checked = false;
-        document.getElementById("Closed").checked = false;
         radFilter = undefined;
         //retrieves table once again, loops through each row and displays it
         //without table stays on the filtered version with emptied filters
