@@ -6,6 +6,7 @@ console.log('Data on Page 1:', Supplier);
 
 const comboBox = document.getElementById("comboBox");
 const companies1 = [];
+console.log(companies1);
 
     function populateComboBox() {
         for(z of Supplier){
@@ -78,6 +79,15 @@ const companies1 = [];
                 
                 if (optionToRemove) {
                     comboBox.removeChild(optionToRemove);
+                    console.log(optionToRemove.textContent);
+                    x = companies1.at(optionToRemove.textContent);
+                    console.log(x);
+                    companies1.pop(x);
+                    console.log(companies1);
+                    console.log(companies1);
+                    localStorage.setItem('SupplierData', JSON.stringify(companies1));
+                    y  = getData2();
+                    console.log(y);
                     alert(`"${inputText}" has been removed.`);
                 } else {
                     alert(`"${inputText}" not found in the list.`);
