@@ -696,11 +696,15 @@ ul a:focus li, li:hover{
 
 /** Login Page **/
 .login-class { 
-    margin: 10em 25em 2em 25em;
-    padding: 4em;
+    margin: 25vh 30vw;
+    padding: 3em;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
+}
+
+.login-class h1 {
+    font-size: 2em;
 }
 
 #loginName {
