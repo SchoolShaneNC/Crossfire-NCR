@@ -323,10 +323,10 @@ li a{
     visibility: hidden;
 }
 
-.form-class {
+/* .form-class {
     margin-left: 6%;
     padding-bottom: 60px;
-}
+} */
 
 #view-forms-h1 {
     margin-top: 20px;
@@ -696,8 +696,8 @@ ul a:focus li, li:hover{
 
 /** Login Page **/
 .login-class { 
-    margin: 4em 25em 2em 25em;
-    padding: 1em;
+    margin: 10em 25em 2em 25em;
+    padding: 4em;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
