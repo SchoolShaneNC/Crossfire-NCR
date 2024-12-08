@@ -67,8 +67,9 @@ document.getElementById("purchasing-change-doc-button").addEventListener("click"
 })
 
 
-//Save notifications
+
 function eventListener() {
+    //Save notifications
     document.getElementById("qi-save-doc-button")
     .addEventListener("click", function(event){
         event.preventDefault();
@@ -100,6 +101,7 @@ function eventListener() {
     
         QIEmail(message, ncrNumber, name)
     })
+
     //Submit notifications
     document.getElementById("qi-change-doc-button")
         .addEventListener("click", function(event){
@@ -129,35 +131,38 @@ function eventListener() {
     
             QIEmail(message, ncrNumber, name)
     })
+
+/*     //procurement notifications?
+    document.getElementById("procurement-change-doc-button")
+    .addEventListener("click", function(event){
+        event.preventDefault(); 
+        let ncrNumber = document.getElementById("ncrNo").value
+   
+        let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Engineer")
+        let ul = document.getElementById("notification-list")
+        let li = document.createElement("li")
+   
+        li.appendChild(test)
+        ul.appendChild(li)
+    })
+    
+     document.getElementById("procurement-change-doc-button")
+ .addEventListener("click", function(event){
+    event.preventDefault(); 
+     let ncrNumber = document.getElementById("ncrNo").value
+
+     let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Quality Inspector")
+     let ul = document.getElementById("notification-list")
+     let li = document.createElement("li")
+
+     li.appendChild(test)
+     ul.appendChild(li)
+ }) */
 }
 
 
 
-// //Edit notifications
-// document.addEventListener('DOMContentLoaded', function() {
-// document.getElementById("engineer-change-doc-button")
-// .addEventListener("click", function(){
-//     let ncrNumber = document.getElementById("ncrNo").value
 
-//     let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Engineer")
-//     let ul = document.getElementById("notification-list")
-//     let li = document.createElement("li")
 
-//     li.appendChild(test)
-//     ul.appendChild(li)
-// })
-// });
 
-// document.addEventListener('DOMContentLoaded', function() {
-// document.getElementById("qi-change-doc-button")
-// .addEventListener("click", function(){
-//     let ncrNumber = document.getElementById("ncrNo").value
 
-//     let test = document.createTextNode("NCR " + ncrNumber + "had changes made by Quality Inspector")
-//     let ul = document.getElementById("notification-list")
-//     let li = document.createElement("li")
-
-//     li.appendChild(test)
-//     ul.appendChild(li)
-// })
-// });
