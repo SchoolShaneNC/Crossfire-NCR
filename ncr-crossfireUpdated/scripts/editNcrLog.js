@@ -21,7 +21,8 @@ $.each(LogData.logs, function(i, logs) {
                         tblRow +="</td></tr>" 
                         literalString += tblRow;
                         document.getElementById("NcrLogTable").innerHTML = literalString;
-})};
+})
+searchFilter()};
 
 
 //this gets triggered by the onclick in literalstring and takes the value of what log its on
