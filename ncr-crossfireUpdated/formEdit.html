@@ -70,7 +70,7 @@
             <h1 class="header-text">Non-Conformance Report Edit</h1>
 
             <div>
-                <details>
+                <details id="QIview">
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
                     <form id="qi-form" class="ncr-form filter-box">
@@ -194,7 +194,7 @@
                     </form>
                 </details>
 
-                <details>
+                <details id="Engview">
                     <summary class="summary"><strong>Engineering</strong></summary>
                     
                     <form id="eng-form" class="ncr-form filter-box">
@@ -314,7 +314,7 @@
                     </form>
                 </details>
 
-                <details>
+                <details id="Purchview">
                     <summary class="summary"><strong>Purchasing</strong></summary>
                     
                     <form id="pur-form" class="ncr-form filter-box">
@@ -465,6 +465,10 @@
                             <button  title="Save changes of current document section" id="purchasing-save-doc-button">Save</button>
                             <button  title="Submit all changes" id="purchasing-change-doc-button" type="button">Submit</button>
                         </div>
+                        <div>
+                            <button style="margin-left: 0%;" title="Close NCR" id="pdf">Close</button>
+                        </div>
+                        
                     </form>
                 </details>
             </div>
@@ -491,5 +495,8 @@
     <script src="scripts/companyList.js"></script>
     <script src="scripts/login-form-restrictions.js"></script>
     <script src="scripts/redirect-login.js"></script>
+    <script src="scripts/accordionByRole.js"></script>
+    <script src="scripts/closeandcreatepdf.js"></script>
+    
 </body>
 </html>
