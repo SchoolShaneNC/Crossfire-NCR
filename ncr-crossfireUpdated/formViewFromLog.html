@@ -74,7 +74,7 @@
             <button class="pdfbutton" id="pdf" title="Export document as PDF">Export</button>
 
             <div>
-                <details>
+                <details id="QIview">
                     <summary class="summary"><strong>Quality Inspector</strong></summary>
 
                     <form id="qi-form" class="ncr-form filter-box">
@@ -192,7 +192,7 @@
                     </form>
                 </details>
 
-                <details>
+                <details id="Engview">
                     <summary class="summary"><strong>Engineering</strong></summary>
                     
                     <form id="eng-form" class="ncr-form filter-box">
@@ -259,7 +259,7 @@
                             </div>
                         </fieldset>
 
-                        <label for="org-rev-name">Revision Engineer Name</label>
+                        <label for="org-rev-name">Revision Engineer Namne</label>
                         <input id="org-rev-name" type="text">
                         <p id="danger-org-rev-name" class="danger-text">Error</p>
 
@@ -308,7 +308,7 @@
                     </form>
                 </details>
 
-                <details>
+                <details id="Purchview">
                     <summary class="summary"><strong>Purchasing</strong></summary>
                     
                     <form id="pur-form" class="ncr-form filter-box">
@@ -472,6 +472,7 @@
     <script src="./scripts/closeandcreatepdf.js"></script>
     <script src="scripts/login-on-load.js"></script>
     <script src="scripts/redirect-login.js"></script>
+    <script src="scripts/accordionByRole.js"></script>
     
 
 </body>
