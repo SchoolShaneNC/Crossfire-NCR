@@ -101,4 +101,7 @@ async function generatePDF(event) {
     const pdfFileName = `NCR_${formData.ncrNo.value}.pdf`;
     doc.save(pdfFileName);
     console.log(`PDF saved as ${pdfFileName}`);
+
+    //pop-up letting user know NCR is closed
+    alert("You have successfully closed this NCR!");
 }
