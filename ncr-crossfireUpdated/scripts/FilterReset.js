@@ -87,4 +87,6 @@ function searchFilter()
             if (tr[i].cells[3].textContent == "Open"){
                 tr[i].style.display = "";
         }}
+
+        searchFilter();
     }
