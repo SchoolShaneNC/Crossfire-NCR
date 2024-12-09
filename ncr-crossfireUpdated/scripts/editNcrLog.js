@@ -15,7 +15,7 @@ $.each(LogData.logs, function(i, logs) {
                         tblRow += "</td><td><button title='Edit NCR Fields' class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formEdit.html'" + " value=" + logs.NcrNo +">Edit</button>"
                         tblRow += "</td><td><button title='View NCR Details' class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Details</button>"
                         }else{
-                            tblRow += "</td><td><button title='Edit NCR Fields' class=button" + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editError();" +  " value=" + logs.NcrNo +">Edit</button>"
+                            tblRow += "</td><td><button title='Edit NCR Fields' class=button" + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = downloadPDF(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Download</button>"
                             tblRow += "</td><td><button title='View NCR Details' class=button" + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Details</button>"
                         }
                         tblRow +="</td></tr>" 
@@ -34,6 +34,12 @@ function editNCR(value){
 function editError(){
     alert(`Cannot edit log because status is Closed`);
 }
+
+function downloadPDF(value){
+    sessionStorage.setItem('editSelect', value);    
+
+}
+
 
 //Radio button interactions
 document.getElementById("revision-radio").addEventListener("change", function(e){

@@ -3,7 +3,7 @@
 //displays all log data from the log matched to the button
 //second if is needed since i had null in a log data, looking back on the create page it auto goes to yes (non conforming) so might not be needed
 let ncrButton = sessionStorage.getItem('editSelect');
-
+let theSupplier = getData2();
 for(var i = 0; i < LogData.logs.length; i++){
     if (LogData.logs[i].NcrNo == ncrButton){
 
@@ -13,13 +13,33 @@ for(var i = 0; i < LogData.logs.length; i++){
         }
         if (currentRole == "EN"){
             document.getElementById("engName").value = currentUser;
-            var today = new Date().toISOString().substring(0, 10);
+            var today = new Date().toISOString().substr(0, 10);
             document.getElementById("engDate").value = today;
         }
-
         document.getElementById("ncrNo").value = LogData.logs[i].NcrNo;
         document.getElementById(LogData.logs[i].IPA).checked = true;
-        document.getElementById("comboBox").value = LogData.logs[i].SupplierName;
+        const comboBox = document.getElementById("comboBox");
+        const companies1 = [];
+    
+                for(z of theSupplier){
+                  const option = document.createElement("option");
+                  option.value = z.supName.toLowerCase();
+                  option.textContent = z.supName;
+                  x = companies1.find(({ supName }) => supName === z.supName);
+                    if (x == undefined){
+                        companies1.push({'supName':option.textContent});
+                        comboBox.appendChild(option);
+                    }
+                    if (LogData.logs[i].SupplierName == z.supName){
+                        let k = "supName";
+                        let val = z.supName;
+                        let objIndex = companies1.findIndex(
+                            (temp) => temp[k] === val
+                        );
+                        document.getElementById("comboBox").selectedIndex = objIndex;
+                    }
+                }
+
         document.getElementById("poProdNo").value = LogData.logs[i].ProductNum;
         document.getElementById("salesOrderNo").value = LogData.logs[i].SalesOrderNum;
         document.getElementById("quantityReceived").value = LogData.logs[i].QuantRec;
@@ -35,10 +55,10 @@ for(var i = 0; i < LogData.logs.length; i++){
         }
         let html = `<div class="required-field"></div>
         <label for="dateString">Date:</label>
-        <p id="dateString">${LogData.logs[i].Dated}</p>`
-        document.getElementById("date").innerHTML = html;
-        
-        document.getElementById("date")
+        <p id="dateString">${LogData.logs[i].Dated}</p>`;
+        document.getElementById("engDate").innerHTML = html;
+        document.getElementById("QiDate").value = LogData.logs[i].Dated;
+        document.getElementById("engDate").value = LogData.logs[i].EngDate;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         break;
