@@ -1,7 +1,10 @@
 let login = getData3();
 console.log(login);
 
-document.getElementById("batoom").addEventListener("click", function(){
+async function Login() {
+  
+  event.preventDefault();
+
   let ncounter = 0;
 
   let name =  document.getElementById("loginName").value;
@@ -33,5 +36,5 @@ document.getElementById("batoom").addEventListener("click", function(){
     alert("Username is wrong");
     document.getElementById("loginName").value = "";
   }
-})
 
+}
