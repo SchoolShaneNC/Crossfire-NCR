@@ -4,7 +4,6 @@
 //second if is needed since i had null in a log data, looking back on the create page it auto goes to yes (non conforming) so might not be needed
 let ncrButton = sessionStorage.getItem('editSelect');
 let theSupplier = getData2();
-console.log(`this is the supplier list ${theSupplier.supName}`);
 for(var i = 0; i < LogData.logs.length; i++){
     if (LogData.logs[i].NcrNo == ncrButton){
 
@@ -17,11 +16,8 @@ for(var i = 0; i < LogData.logs.length; i++){
             var today = new Date().toISOString().substr(0, 10);
             document.getElementById("engDate").value = today;
         }
-
         document.getElementById("ncrNo").value = LogData.logs[i].NcrNo;
         document.getElementById(LogData.logs[i].IPA).checked = true;
-
-        
         const comboBox = document.getElementById("comboBox");
         const companies1 = [];
     
@@ -34,11 +30,7 @@ for(var i = 0; i < LogData.logs.length; i++){
                         companies1.push({'supName':option.textContent});
                         comboBox.appendChild(option);
                     }
-                    console.log(`THUS UIS THE Z VAL ${z}`);
-
                     if (LogData.logs[i].SupplierName == z.supName){
-                        console.log(`thsi is wha we want ${z.supName}`);
-
                         let k = "supName";
                         let val = z.supName;
                         let objIndex = companies1.findIndex(
@@ -65,8 +57,8 @@ for(var i = 0; i < LogData.logs.length; i++){
         <label for="dateString">Date:</label>
         <p id="dateString">${LogData.logs[i].Dated}</p>`;
         document.getElementById("engDate").innerHTML = html;
-        
-      //  document.getElementById("engDate")
+        document.getElementById("QiDate").value = LogData.logs[i].Dated;
+        document.getElementById("engDate").value = LogData.logs[i].EngDate;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         break;
