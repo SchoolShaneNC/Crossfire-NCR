@@ -1,5 +1,5 @@
 
-//localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
+localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
 
 
 LogDataFile = {"logs":[
@@ -136,7 +136,7 @@ LogDataFile = {"logs":[
         DescriptionDefect : null,
         //final section
         ItemMarkedNC : null,
-        QualRepName : "Connor Foy",
+        QualRepName : "Shane Milton",
         Dated : "2024-04-09",
         Status : "Open",
         //Engineer Section   

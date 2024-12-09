@@ -13,14 +13,13 @@ for(var i = 0; i < LogData.logs.length; i++){
         }
         if (currentRole == "EN"){
             document.getElementById("engName").value = currentUser;
-            var today = new Date().toISOString().substr(0, 10);
+            var today = new Date().toISOString().substring(0, 10);
             document.getElementById("engDate").value = today;
         }
 
-
         document.getElementById("ncrNo").value = LogData.logs[i].NcrNo;
         document.getElementById(LogData.logs[i].IPA).checked = true;
-       // document.getElementById("supplierName").value = LogData.logs[i].SupplierName;
+        document.getElementById("comboBox").value = LogData.logs[i].SupplierName;
         document.getElementById("poProdNo").value = LogData.logs[i].ProductNum;
         document.getElementById("salesOrderNo").value = LogData.logs[i].SalesOrderNum;
         document.getElementById("quantityReceived").value = LogData.logs[i].QuantRec;
