@@ -38,7 +38,7 @@
                 <img src="Images/home-icon.png" alt="Dashboard" height="512" width="512">
                 <p>Dashboard</p>
             </a>       
-            <a href="formCreate.html" title="Generate new NCR Document">
+            <a href="formCreate.html" title="Generate new NCR Document" id="create-ncr-side">
                 <img src="Images/add-file-icon.png" alt="Create NCR" height="512" width="512">
                 <p>Create NCR</p>
             </a> 
@@ -183,15 +183,14 @@
                                 </div>
                                 <div>
                                     <div class="required-field"></div>
-                                     <label for="engDate">Date:</label>
-                                     <input type="date" id="engDate" name="date"> 
+                                    <label id="date">Date</label>
                                  </div>
                             </div>
                         </div>
             
                         <!-- Save, Submit & Close Button -->
                         <div>
-                            <button  title="Save changes of current document section" id="qi-save-doc-button">Save</button>
+                            <button  title="Save changes of current document section" id="qi-save-doc-button" type="button">Save</button>
                             <button title="Submit all changes" id="qi-change-doc-button" type="button">Submit</button>
                         </div>
                     </form>

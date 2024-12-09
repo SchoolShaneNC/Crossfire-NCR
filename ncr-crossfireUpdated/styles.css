@@ -323,10 +323,10 @@ li a{
     visibility: hidden;
 }
 
-/* .form-class {
+.form-class {
     margin-left: 6%;
     padding-bottom: 60px;
-} */
+}
 
 #view-forms-h1 {
     margin-top: 20px;
@@ -346,7 +346,7 @@ li a{
     display: grid;
     grid-template-columns: 1fr 2.75fr;
     gap: 50px;
-    margin: 0 175px;
+    margin: 0 200px;
 }
 
 /* Container for the 4 sections */
@@ -397,11 +397,7 @@ li a{
     margin-bottom: 25px;
 }
 
-/* Center the h1 title */
-.header-text {
-    font-size: 2em;
-    margin: 20px 0 20px 200px;
-}
+
 
 /* Align h2 to the left */
 .left-align {
@@ -636,7 +632,7 @@ details summary {
     color: #fff;
 }
 
-details summary:focus{
+details summary:focus, details summary:hover{
     background-color: #173541;
 }
 
@@ -691,6 +687,7 @@ ul a:focus li, li:hover{
 }
 
 #li-storage{
+    display: none;
     visibility: none;
 }
 
@@ -713,4 +710,26 @@ ul a:focus li, li:hover{
 
 #loginPass {
     min-height: 2.2rem;
+}
+
+/* Center the h1 title */
+.header-text {
+    font-size: 2em;
+    margin: 20px 0 20px 200px;
+}
+
+#admin-content{
+    width:300px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+
+li{
+    color: #173541;
+}
+
+#dateString{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 15px;
 }

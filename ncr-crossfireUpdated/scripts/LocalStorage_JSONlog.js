@@ -289,38 +289,38 @@ LogDataFile = {"logs":[
         UpdRevNum : null,
         EngName : "Connor Foy",
         EngDate : "2023-08-15"
-        },
+    },
 
-        {
-                NcrNo : "2023-006",
-                IPA : "wip",
-                //Product Details
-                SupplierName : "Canadian Lumber",
-                ProductNum : 394756440364,
-                SalesOrderNum : 1600,
-                QuantRec : 200,
-                QuantDef : 200,
-                //Item Details
-                DescriptionItem : "big long 20 foot logs",
-                DescriptionDefect : "wood has mites and has no integrity",
-                //final section
-                ItemMarkedNC : "qi-yes",
-                QualRepName : "Mikhail Marsh",
-                Dated : "2023-08-18",
-                Status : "Closed",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : 1,
-                UpdRevNum : null,
-                EngName : "Connor Foy",
-                EngDate : "2023-08-18"
-        },
+    {
+        NcrNo : "2023-006",
+        IPA : "wip",
+        //Product Details
+        SupplierName : "Canadian Lumber",
+        ProductNum : 394756440364,
+        SalesOrderNum : 1600,
+        QuantRec : 200,
+        QuantDef : 200,
+        //Item Details
+        DescriptionItem : "big long 20 foot logs",
+        DescriptionDefect : "wood has mites and has no integrity",
+        //final section
+        ItemMarkedNC : "qi-yes",
+        QualRepName : "Mikhail Marsh",
+        Dated : "2023-08-18",
+        Status : "Closed",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : 1,
+        UpdRevNum : null,
+        EngName : "Connor Foy",
+        EngDate : "2023-08-18"
+    },
 
-        {
-                NcrNo : "2023-007",
+    {
+        NcrNo : "2023-007",
         IPA : "supplier-rec-insp",
          //Product Details
         SupplierName : "Welland Trading Inc",
@@ -345,12 +345,11 @@ LogDataFile = {"logs":[
         UpdRevNum : null,
         EngName : "Connor Foy",
         EngDate : "2023-08-24"
-        },
+    },
 
-        {
-                NcrNo : "2023-008",
+    {NcrNo : "2023-008",
         IPA : "supplier-rec-insp",
-         //Product Details
+        //Product Details
         SupplierName : "Welland Trading Inc",
         ProductNum : 777394829957,
         SalesOrderNum : 2222,
@@ -373,169 +372,169 @@ LogDataFile = {"logs":[
         UpdRevNum : null,
         EngName : "Connor Foy",
         EngDate : "2023-08-24"
-        },
+    },
 
-        {NcrNo : "2024-006",
-                IPA : "supplier-rec-insp",
-                //Product Details
-                SupplierName : "EcoMotive Technologies",
-                ProductNum : null,
-                SalesOrderNum : null,
-                QuantRec : null,
-                QuantDef : null,
-                //Item Details
-                DescriptionItem : "",
-                DescriptionDefect : null,
-                //final section
-                ItemMarkedNC : null,
-                QualRepName : "",
-                Dated : "2024-04-09",
-                Status : "Open",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : null,
-                UpdRevNum : null,
-                EngName : "",
-                EngDate : "2024-05-13"
-        },
+    {NcrNo : "2024-006",
+        IPA : "supplier-rec-insp",
+        //Product Details
+        SupplierName : "EcoMotive Technologies",
+        ProductNum : null,
+        SalesOrderNum : null,
+        QuantRec : null,
+        QuantDef : null,
+        //Item Details
+        DescriptionItem : "",
+        DescriptionDefect : null,
+        //final section
+        ItemMarkedNC : null,
+        QualRepName : "",
+        Dated : "2024-04-09",
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "",
+        EngDate : "2024-05-13"
+    },
 
-        {NcrNo : "2024-007",
-                IPA : "wip",
-                //Product Details
-                SupplierName : "NextGen Motors",
-                ProductNum : null,
-                SalesOrderNum : null,
-                QuantRec : null,
-                QuantDef : null,
-                //Item Details
-                DescriptionItem : "",
-                DescriptionDefect : null,
-                //final section
-                ItemMarkedNC : null,
-                QualRepName : "",
-                Dated : "2024-05-14",
-                Status : "Open",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : null,
-                UpdRevNum : null,
-                EngName : "",
-                EngDate : "2024-05-16"
-        },
+    {NcrNo : "2024-007",
+        IPA : "wip",
+        //Product Details
+        SupplierName : "NextGen Motors",
+        ProductNum : null,
+        SalesOrderNum : null,
+        QuantRec : null,
+        QuantDef : null,
+        //Item Details
+        DescriptionItem : "",
+        DescriptionDefect : null,
+        //final section
+        ItemMarkedNC : null,
+        QualRepName : "",
+        Dated : "2024-05-14",
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "",
+        EngDate : "2024-05-16"
+    },
 
-        {NcrNo : "2024-008",
-                IPA : "supplier-rec-insp",
-                //Product Details
-                SupplierName : "General Electric",
-                ProductNum : 892048362713,
-                SalesOrderNum : 2183,
-                QuantRec : 150,
-                QuantDef : 27,
-                //Item Details
-                DescriptionItem : "",
-                DescriptionDefect : null,
-                //final section
-                ItemMarkedNC : null,
-                QualRepName : "",
-                Dated : "2024-05-25",
-                Status : "Open",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : null,
-                UpdRevNum : null,
-                EngName : "",
-                EngDate : "2024-05-28"
-        },
+    {NcrNo : "2024-008",
+        IPA : "supplier-rec-insp",
+        //Product Details
+        SupplierName : "General Electric",
+        ProductNum : 892048362713,
+        SalesOrderNum : 2183,
+        QuantRec : 150,
+        QuantDef : 27,
+        //Item Details
+        DescriptionItem : "",
+        DescriptionDefect : null,
+        //final section
+        ItemMarkedNC : null,
+        QualRepName : "",
+        Dated : "2024-05-25",
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "",
+        EngDate : "2024-05-28"
+    },
 
-        {NcrNo : "2024-009",
-                IPA : "supplier-rec-insp",
-                //Product Details
-                SupplierName : "Quantum Components Ltd.",
-                ProductNum : 274837428418,
-                SalesOrderNum : 2190,
-                QuantRec : 150,
-                QuantDef : 27,
-                //Item Details
-                DescriptionItem : "",
-                DescriptionDefect : null,
-                //final section
-                ItemMarkedNC : null,
-                QualRepName : "",
-                Dated : "2024-05-30",
-                Status : "Open",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : null,
-                UpdRevNum : null,
-                EngName : "",
-                EngDate : "2024-06-02"
-        },
+    {NcrNo : "2024-009",
+        IPA : "supplier-rec-insp",
+        //Product Details
+        SupplierName : "Quantum Components Ltd.",
+        ProductNum : 274837428418,
+        SalesOrderNum : 2190,
+        QuantRec : 150,
+        QuantDef : 27,
+        //Item Details
+        DescriptionItem : "",
+        DescriptionDefect : null,
+        //final section
+        ItemMarkedNC : null,
+        QualRepName : "",
+        Dated : "2024-05-30",
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "",
+        EngDate : "2024-06-02"
+    },
 
-        {NcrNo : "2024-010",
-                IPA : "wip",
-                //Product Details
-                SupplierName : "Horizon Manufacturing",
-                ProductNum : 274837428418,
-                SalesOrderNum : 2190,
-                QuantRec : 150,
-                QuantDef : 27,
-                //Item Details
-                DescriptionItem : "",
-                DescriptionDefect : null,
-                //final section
-                ItemMarkedNC : null,
-                QualRepName : "",
-                Dated : "2024-05-30",
-                Status : "Open",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : null,
-                UpdRevNum : null,
-                EngName : "",
-                EngDate : "2024-06-02"
-        },
+    {NcrNo : "2024-010",
+        IPA : "wip",
+        //Product Details
+        SupplierName : "Horizon Manufacturing",
+        ProductNum : 274837428418,
+        SalesOrderNum : 2190,
+        QuantRec : 150,
+        QuantDef : 27,
+        //Item Details
+        DescriptionItem : "",
+        DescriptionDefect : null,
+        //final section
+        ItemMarkedNC : null,
+        QualRepName : "",
+        Dated : "2024-05-30",
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "",
+        EngDate : "2024-06-02"
+    },
 
-        {NcrNo : "2024-011",
-                IPA : "wip",
-                //Product Details
-                SupplierName : "General Electric",
-                ProductNum : null,
-                SalesOrderNum : null,
-                QuantRec : null,
-                QuantDef : null,
-                //Item Details
-                DescriptionItem : "",
-                DescriptionDefect : null,
-                //final section
-                ItemMarkedNC : null,
-                QualRepName : "",
-                Dated : "2024-06-08",
-                Status : "Open",
-                //Engineer Section   
-                DispositionRadio : "use-as-is",
-                DispositionText : null,
-                CustomerNotification : "notifYes",
-                UpdateDrawing : "updYes",
-                OrgRevNum : null,
-                UpdRevNum : null,
-                EngName : "",
-                EngDate : "2024-06-02"
-        },
+    {NcrNo : "2024-011",
+        IPA : "wip",
+        //Product Details
+        SupplierName : "General Electric",
+        ProductNum : null,
+        SalesOrderNum : null,
+        QuantRec : null,
+        QuantDef : null,
+        //Item Details
+        DescriptionItem : "",
+        DescriptionDefect : null,
+        //final section
+        ItemMarkedNC : null,
+        QualRepName : "",
+        Dated : "2024-06-08",
+        Status : "Open",
+        //Engineer Section   
+        DispositionRadio : "use-as-is",
+        DispositionText : null,
+        CustomerNotification : "notifYes",
+        UpdateDrawing : "updYes",
+        OrgRevNum : null,
+        UpdRevNum : null,
+        EngName : "",
+        EngDate : "2024-06-02"
+    },
         
 ]}
 

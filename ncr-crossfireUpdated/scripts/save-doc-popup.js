@@ -23,17 +23,28 @@ window.addEventListener("load", function(e){
 })
 
 
-//functions found in: submit-validation-functions
+//quality save doc
+//qi
+document.getElementById("qi-save-doc-button").addEventListener("click", function(){
+    let ncrNum = document.getElementById("ncrNo").value
+    
+    alert("NCR "+ ncrNum + " has been saved returning to log.")
+    QiSaveNotification()
+
+    window.location.href = "formView.html"
+})
+    
+
+//functions found in: submit-validation-functions, notifications-for-roles
 //Quality inspector submit validation
 document.getElementById("qi-change-doc-button").addEventListener("click", function(){
     QiValidation()
 
     if(SubmitBoolQI()){
         EngNotificationAdd()
+        alert("Submission Complete.  Sending Notification to Engineer.\n\nReturning to log.")
 
-        alert("Submission Complete.  Sending Notification to Engineer.")
-
-        //window.location.href ="formView.html"
+        window.location.href ="formView.html"
     }
     else{
         alert("Submission Failed.  Invalid Entries present.")
@@ -46,8 +57,8 @@ document.getElementById("engineer-change-doc-button").addEventListener("click", 
     
     if(SubmitBoolEN()){
         PaNotificationAdd()
-
-        alert("Submission Complete.  Sending Notification to Purchasing Agent.")
+        alert("Submission Complete.  Sending Notification to Purchasing Agent.\n\nReturning to log.")
+        window.location.href ="formView.html"
     }
     else{
         alert("Submission Failed.  Invalid Entries present.")
@@ -59,11 +70,33 @@ document.getElementById("purchasing-change-doc-button").addEventListener("click"
     PaValidation()
 
     if(SubmitBoolPA()){
-        alert("Submission Complete.  Document is now Closed.")
+        alert("Submission Complete.  Document is now Closed.\n\nReturning to log.")
+        window.location.href ="formView.html"
     }
     else{
         alert("Submission Failed.  Invalid Entries present.")
     }
+})
+
+
+//eng
+document.getElementById("engineer-save-doc-button").addEventListener("click", function(){
+    let ncrNum = document.getElementById("ncrNo").value
+    
+    alert("NCR "+ ncrNum + " has been saved returning to log.")
+    EnSaveNotification()
+
+    window.location.href = "formView.html"
+})
+
+//pa
+document.getElementById("purchasing-save-doc-button").addEventListener("click", function(){
+    let ncrNum = document.getElementById("ncrNo").value
+    
+    alert("NCR "+ ncrNum + " has been saved returning to log.")
+    PaSaveNotification()
+
+    window.location.href = "formView.html"
 })
 
 
@@ -84,6 +117,8 @@ function eventListener() {
         let message = "Email sent to Engineer"
     
         QIEmail(message, ncrNumber, name)
+
+        alert()
     })
     document.getElementById("engineer-save-doc-button")
     .addEventListener("click", function(event){
@@ -100,36 +135,6 @@ function eventListener() {
         let message = "Email sent to procurement"
     
         QIEmail(message, ncrNumber, name)
-    })
-
-    //Submit notifications
-    document.getElementById("qi-change-doc-button")
-        .addEventListener("click", function(event){
-            event.preventDefault();
-            let ncrNumber = document.getElementById("ncrNo").value
-            let name = document.getElementById("qualityRepName").value
-            let test = document.createTextNode("NCR " + ncrNumber + "Quality Inspector Section completed")
-            let ul = document.getElementById("notification-list")
-            let li = document.createElement("li")
-            li.appendChild(test)
-            ul.appendChild(li)
-            let message = "Email sent to Engineer"
-            QIEmail(message, ncrNumber, name)
-    })
-    
-    document.getElementById("engineer-change-doc-button")
-        .addEventListener("click", function(event){
-            event.preventDefault();    
-            let ncrNumber = document.getElementById("ncrNo").value
-            let name = document.getElementById("engName").value
-            let test = document.createTextNode("NCR " + ncrNumber + "Engineer Section completed")
-            let ul = document.getElementById("notification-list")
-            let li = document.createElement("li")
-            li.appendChild(test)
-            ul.appendChild(li)
-            let message = "Email sent to procurement"
-    
-            QIEmail(message, ncrNumber, name)
     })
 
 /*     //procurement notifications?

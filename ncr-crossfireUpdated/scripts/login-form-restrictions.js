@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-    var currentRole = localStorage.getItem("role")
+    var currentRole = sessionStorage.getItem("role")
 
     const quaInspFields = document.querySelectorAll('#qi-form input, #qi-form select, #qi-form textarea,#qi-form button')
     const engFields = document.querySelectorAll('#eng-form input, #eng-form select, #eng-form textarea, #eng-form button')

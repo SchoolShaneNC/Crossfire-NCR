@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
     
 
     let html = `<div class="required-field"></div>
-    <label for="dateString">Date:</label>
+    <label for="dateString">Date</label>
     <p id="dateString">${dateString}</p>`
   
     document.getElementById("date").innerHTML = html;
