@@ -15,7 +15,7 @@ $.each(LogData.logs, function(i, logs) {
                         tblRow += "</td><td><button title='Edit NCR Fields' class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formEdit.html'" + " value=" + logs.NcrNo +">Edit</button>"
                         tblRow += "</td><td><button title='View NCR Details' class=" +'button' + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Details</button>"
                         }else{
-                            tblRow += "</td><td><button title='Edit NCR Fields' class=button" + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = downloadPDF(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Download</button>"
+                            tblRow += "</td><td><button style='width: 5.1em' title='Edit NCR Fields' class=button" + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = downloadPDF(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Download</button>"
                             tblRow += "</td><td><button title='View NCR Details' class=button" + " id=" +logs.NcrNo+" type=" +"button" + " " + "onclick = editNCR(this.value);" + "location.href="+"'formViewFromLog.html'" + " value=" + logs.NcrNo +">Details</button>"
                         }
                         tblRow +="</td></tr>" 
