@@ -6,11 +6,9 @@ console.log('Data on Page 1:', Supplier);
 
 const comboBox = document.getElementById("comboBox");
 const companies1 = [];
-console.log(companies1);
 
     function populateComboBox() {
         for(z of Supplier){
-          console.log(z.supName);
           const option = document.createElement("option");
           option.value = z.supName.toLowerCase();
           option.textContent = z.supName;
@@ -52,8 +50,6 @@ console.log(companies1);
                 companies1.push({'supName':option.textContent});
                 localStorage.setItem('SupplierData', JSON.stringify(companies1));
                 alert(`"${newItem}" has been added.`);
-                console.log(companies1);
-
             }
             itemInput.value = ""; // Clear the input field
         }
@@ -76,18 +72,15 @@ console.log(companies1);
                 // Remove item if match is found
                 const options = Array.from(comboBox.options);
                 const optionToRemove = options.find(option => option.textContent.toLowerCase() === inputText.toLowerCase());
-                
                 if (optionToRemove) {
                     comboBox.removeChild(optionToRemove);
-                    console.log(optionToRemove.textContent);
-                    x = companies1.at(optionToRemove.textContent);
-                    console.log(x);
-                    companies1.pop(x);
-                    console.log(companies1);
-                    console.log(companies1);
+                    let k = "supName";
+                    let val = optionToRemove.textContent;
+                    let objIndex = companies1.findIndex(
+                        (temp) => temp[k] === val
+                    );
+                    companies1.splice(objIndex, 1);
                     localStorage.setItem('SupplierData', JSON.stringify(companies1));
-                    y  = getData2();
-                    console.log(y);
                     alert(`"${inputText}" has been removed.`);
                 } else {
                     alert(`"${inputText}" not found in the list.`);

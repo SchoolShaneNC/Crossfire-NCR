@@ -136,7 +136,7 @@ LogDataFile = {"logs":[
         DescriptionDefect : null,
         //final section
         ItemMarkedNC : null,
-        QualRepName : "Connor Foy",
+        QualRepName : "Shane Milton",
         Dated : "2024-04-09",
         Status : "Open",
         //Engineer Section   
