@@ -666,9 +666,9 @@ ul a:focus li, li:hover{
 }
 
 #logout{
-    left: 80%;
+    left: 81%;
     top: 15%;
-    padding: 12px 30px;
+    padding: 0.75rem 1rem;
     background-color: #2a6392;
     border-radius: 5px;
 }
