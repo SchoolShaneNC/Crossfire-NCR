@@ -8,11 +8,6 @@ async function generatePDF(event) {
     // Prevents the function from running over and over again
     event.preventDefault();
 
-    if (!confirm("Are you sure you want to close this NCR?")) {
-        console.log("User canceled the operation.");
-        return; 
-    }
-
     const formfromlog = document.getElementById('formViewFromLog');
     console.log(formfromlog);
 
