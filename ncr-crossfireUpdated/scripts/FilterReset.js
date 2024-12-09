@@ -61,8 +61,6 @@ function searchFilter()
                     txtvalue2 = tr[i].cells[1].textContent.toUpperCase();
                     txtvalue3 = tr[i].cells[2].textContent.toUpperCase();
                     txtvalue4 = tr[i].cells[3].textContent;
-                    console.log(txtvalue4);
-                    console.log(radFilter);
 //long ands and ors for each txtvalues keep txtval statements seperated by () txtval2 doubles as only endDate selected from there and anytime before thought it was good feature
                         if (txtValue.toUpperCase().indexOf(filter) > -1 && (txtvalue2 <= selectedEndDate && txtvalue2 >= selectedDate || txtvalue2 == selectedDate || selectedDate + selectedEndDate == "")  && txtvalue3.toUpperCase().indexOf(filter3) > -1 && (txtvalue4 == radFilter)) {
                             tr[i].style.display = "";
