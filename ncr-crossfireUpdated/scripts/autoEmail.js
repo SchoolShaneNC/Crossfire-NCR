@@ -1,5 +1,5 @@
 
-/* export const QIEmail = (message, parmNCR, username) =>
+export const QIEmail = (message, parmNCR, username) =>
  {
      console.log('firing qiemail')
      emailjs.init({
@@ -21,4 +21,4 @@
            console.log('FAILED...', error);
          },
        );
- }; */
+ }; 
