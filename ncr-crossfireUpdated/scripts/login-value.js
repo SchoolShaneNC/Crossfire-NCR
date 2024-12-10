@@ -16,7 +16,21 @@ async function Login() {
         if (login.emp[i].Pass == password){
             sessionStorage.setItem("role", login.emp[i].Role)
             sessionStorage.setItem("Name", login.emp[i].User)
-            alert(login.emp[i].Role);
+
+            if(login.emp[i].Role == "QI"){
+              alert(`Welcome, Quality Inspector ${login.emp[i].User}`);
+            }
+            if(login.emp[i].Role == "EN"){
+              alert(`Welcome, Engineer ${login.emp[i].User}`);
+            }
+            if(login.emp[i].Role == "PA"){
+              alert(`Welcome, Purchasing Agent ${login.emp[i].User}`);
+            }
+            if(login.emp[i].Role == "AD"){
+              alert(`Welcome, Admin ${login.emp[i].User}`);
+            }
+
+            
             window.location.href="index.html";
             break;
         }
