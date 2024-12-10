@@ -1,5 +1,5 @@
 
-//localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
+localStorage.clear();  //run this to reset when testing stuff because it will persist past tab closure
 
 
 LogDataFile = {"logs":[

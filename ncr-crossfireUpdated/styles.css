@@ -728,6 +728,10 @@ li{
     color: #173541;
 }
 
+.breadcrumb li a:hover{
+    color: #fff;
+}
+
 #dateString{
     width: 100px;
     margin-left: 20px;
