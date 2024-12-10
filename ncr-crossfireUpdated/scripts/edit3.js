@@ -27,6 +27,23 @@ for(var i = 0; i < LogData.logs.length; i++){
         if (LogData.logs[i].EngName != ""){
             document.getElementById("engName").value = LogData.logs[i].EngName;
         }
+
+        document.getElementById(LogData.logs[i].PurchDec).disabled = true;
+        document.getElementById(LogData.logs[i].CARRaised).disabled = true;
+        document.getElementById("car-num").disabled = true;
+        document.getElementById(LogData.logs[i].FollowUp).disabled = true;
+        document.getElementById("car-type").disabled = true;
+        document.getElementById("car-date").disabled = true,
+        document.getElementById("op-name").disabled = true,
+        document.getElementById("op-date").disabled = true,
+        document.getElementById("inspector-name").disabled = true,
+        document.getElementById("inspect-date").disabled = true,
+        document.getElementById("quality-name").disabled = true,
+        document.getElementById("quality-date").disabled = true,
+        document.getElementById(LogData.logs[i].NcrClosed).disabled = true
+
+
+
         }
 
 

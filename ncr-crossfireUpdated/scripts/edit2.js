@@ -16,6 +16,9 @@ for(var i = 0; i < LogData.logs.length; i++){
             var today = new Date().toISOString().substr(0, 10);
             document.getElementById("engDate").value = today;
         }
+        if (currentRole == "PA"){
+            document.getElementById("op-name").value = currentUser;
+        }
         document.getElementById("ncrNo").value = LogData.logs[i].NcrNo;
         document.getElementById(LogData.logs[i].IPA).checked = true;
         const comboBox = document.getElementById("comboBox");
@@ -61,6 +64,20 @@ for(var i = 0; i < LogData.logs.length; i++){
         document.getElementById("engDate").value = LogData.logs[i].EngDate;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
         document.getElementById("qualityRepName").value = LogData.logs[i].QualRepName;
+        
+        document.getElementById(LogData.logs[i].PurchDec).checked = true;
+        document.getElementById(LogData.logs[i].CARRaised).checked = true;
+        document.getElementById("car-num").value = LogData.logs[i].CARNum;
+        document.getElementById(LogData.logs[i].FollowUp).checked = true;
+        document.getElementById("car-type").value = LogData.logs[i].IndicateType;
+        document.getElementById("car-date").value = LogData.logs[i].IndicateDate,
+        document.getElementById("op-name").value = LogData.logs[i].OpManager,
+        document.getElementById("op-date").value = LogData.logs[i].OpDate,
+        document.getElementById("inspector-name").value = LogData.logs[i].InName,
+        document.getElementById("inspect-date").value = LogData.logs[i].InDate,
+        document.getElementById("quality-name").value = LogData.logs[i].QuName,
+        document.getElementById("quality-date").value = LogData.logs[i].QuDate,
+        document.getElementById(LogData.logs[i].NcrClosed).checked = true
         break;
     }
 }

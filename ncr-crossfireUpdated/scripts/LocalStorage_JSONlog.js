@@ -29,7 +29,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2024-01-24"
+        EngDate : "2024-01-24",
+        //Purchasing section
+        PurchDec : "return-to-supplier",
+        CARRaised : "CARYes",
+        CARNum : 2845,
+        FollowUp : "follow-yes",
+        IndicateType : "N/A",
+        IndicateDate : "2024-02-11",
+        OpManager : "Zach Milton",
+        OpDate : "2024-02-12",
+        InName : "Shane Milton",
+        InDate : "2024-02-12",
+        QuName : "Lucas Peacock",
+        QuDate : "2024-02-12",
+        NcrClosed : "closed-yes"
     },
 
     //NEW LOG ENTRY
@@ -58,7 +72,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 1,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2024-03-19"
+        EngDate : "2024-03-19",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
 
@@ -88,7 +116,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 2,
         UpdRevNum : 10,
         EngName : "Connor Foy",
-        EngDate : "2024-04-05"
+        EngDate : "2024-04-05",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
 
@@ -118,7 +160,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 3,
         UpdRevNum : 5,
         EngName : "Connor Foy",
-        EngDate : "2024-04-12"
+        EngDate : "2024-04-12",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
 
@@ -147,7 +203,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2024-04-13"
+        EngDate : "2024-04-13",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
         
@@ -176,7 +246,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-02-05"
+        EngDate : "2023-02-05",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
 
@@ -205,7 +289,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 70,
         UpdRevNum : 1234,
         EngName : "Connor Foy",
-        EngDate : "2023-05-19"
+        EngDate : "2023-05-19",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2023-003",
@@ -232,7 +330,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-07-02"
+        EngDate : "2023-07-02",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
 
@@ -260,7 +372,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 1,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-08-08"
+        EngDate : "2023-08-08",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {
@@ -288,7 +414,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 1,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-08-15"
+        EngDate : "2023-08-15",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {
@@ -316,7 +456,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 1,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-08-18"
+        EngDate : "2023-08-18",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {
@@ -344,7 +498,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 1,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-08-24"
+        EngDate : "2023-08-24",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2023-008",
@@ -371,7 +539,21 @@ LogDataFile = {"logs":[
         OrgRevNum : 1,
         UpdRevNum : null,
         EngName : "Connor Foy",
-        EngDate : "2023-08-24"
+        EngDate : "2023-08-24",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2024-006",
@@ -398,7 +580,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-05-13"
+        EngDate : "2024-05-13",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2024-007",
@@ -425,7 +621,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-05-16"
+        EngDate : "2024-05-16",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2024-008",
@@ -452,7 +662,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-05-28"
+        EngDate : "2024-05-28",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2024-009",
@@ -479,7 +703,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-06-02"
+        EngDate : "2024-06-02",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2024-010",
@@ -506,7 +744,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-06-02"
+        EngDate : "2024-06-02",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
 
     {NcrNo : "2024-011",
@@ -533,7 +785,21 @@ LogDataFile = {"logs":[
         OrgRevNum : null,
         UpdRevNum : null,
         EngName : "",
-        EngDate : "2024-06-02"
+        EngDate : "2024-06-02",
+          //Purchasing section
+          PurchDec : "return-to-supplier",
+          CARRaised : "CARYes",
+          CARNum : 2845,
+          FollowUp : "follow-yes",
+          IndicateType : "N/A",
+          IndicateDate : "2024-02-11",
+          OpManager : "Zach Milton",
+          OpDate : "2024-02-12",
+          InName : "Shane Milton",
+          InDate : "2024-02-12",
+          QuName : "Lucas Peacock",
+          QuDate : "2024-02-12",
+          NcrClosed : "closed-yes"
     },
         
 ]}
